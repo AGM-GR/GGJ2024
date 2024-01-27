@@ -61,7 +61,7 @@ public class TeethManager : MonoBehaviour
         nPos.y += heightThrow;
         newTooth.transform.position = nPos;
 
-        Debug.Break();
+        //Debug.Break();
         newTooth.SetAsPhysical();
         ThrowObject(newTooth.Rigidbody);
         UpdateWidget();
