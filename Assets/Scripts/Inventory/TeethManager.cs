@@ -1,96 +1,75 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
+
 
 public class TeethManager : MonoBehaviour
 {
-
-    public bool isDropingTeeth = false;
-    public GameObject prefabTeeth;
+    private Character _character;
+    public Rigidbody teethPrefab;
 
     public float throwForce = 12.0f;
-
     public float heightThrow = 10f;
-
     public float minThrow = 1f;
     public float maxThrow = 10f;
 
-    List<TeethType> teethInventory = new List<TeethType>();
+    //List<TeethType> teethInventory = new List<TeethType>();
+
+    public int TeethAmount = 3;
+
+    private TeethWidget _widget;
 
 
-    void Start()
+    private void Start()
     {
-        AddTeeth(GetRandomTeeth());
-        AddTeeth(GetRandomTeeth());
-        AddTeeth(GetRandomTeeth());
-           AddTeeth(GetRandomTeeth());
-        AddTeeth(GetRandomTeeth());
-        AddTeeth(GetRandomTeeth());
-           AddTeeth(GetRandomTeeth());
-        AddTeeth(GetRandomTeeth());
-        AddTeeth(GetRandomTeeth());
-           AddTeeth(GetRandomTeeth());
-        AddTeeth(GetRandomTeeth());
-        AddTeeth(GetRandomTeeth());
-        
-    }
-    void Update()
-    {
-        if (isDropingTeeth)
-        {
-            isDropingTeeth = false;
-            DropTeeth();
-        }
-
+        _character = GetComponent<Character>();
+        _widget = FindObjectsOfType<TeethWidget>().Where(s => s.Name == _character.Name).First();
+        UpdateWidget();
     }
 
-
-    public TeethType GetRandomTeeth()
-    {
-        return (TeethType)System.Enum.GetValues(typeof(TeethType)).GetValue(Random.Range(0, System.Enum.GetValues(typeof(TeethType)).Length - 1));
-    }
+    //public TeethType GetRandomTeeth()
+    //{
+    //    return (TeethType)System.Enum.GetValues(typeof(TeethType)).GetValue(Random.Range(0, System.Enum.GetValues(typeof(TeethType)).Length - 1));
+    //}
 
     public void AddTeeth(TeethType teeth)
     {
-        //puedes coger dientes iguales?
-        teethInventory.Add(teeth);
+        //teethInventory.Add(teeth);
+        TeethAmount++;
     }
 
-    public TeethType? RemoveTeeth()
-    {
-        if (teethInventory.Count > 0)
-        {
-            TeethType toDrop = teethInventory[Random.Range(0, teethInventory.Count - 1)];
-            teethInventory.Remove(toDrop);
-            return toDrop;
-        }
-        return null;
-    }
-
-    // Update is called once per frame
+    //public TeethType? RemoveTeeth()
+    //{
+    //    if (teethInventory.Count > 0)
+    //    {
+    //        TeethType toDrop = teethInventory[Random.Range(0, teethInventory.Count - 1)];
+    //        teethInventory.Remove(toDrop);
+    //        return toDrop;
+    //    }
+    //    return null;
+    //}
 
 
     public void DropTeeth()
     {
-        TeethType? teeth = RemoveTeeth();
-        if (teeth != null)
-        {
-            GameObject nTeeth = Instantiate(prefabTeeth);
-            nTeeth.GetComponent<TeethObject>().teethType = teeth.Value;
+        if (TeethAmount == 0) return;
 
-            Vector3 nPos = transform.position;
-            nPos.y += heightThrow;
-            nTeeth.transform.position = nPos;
+        TeethAmount = Mathf.Max(TeethAmount - 1, 0);
+        var teethRb = Instantiate(teethPrefab);
+        Vector3 nPos = transform.position;
+        nPos.y += heightThrow;
+        teethRb.transform.position = nPos;
 
-            ThrowObject(nTeeth.GetComponent<Rigidbody>());
-
-        }
-        else
-        {
-            //te dejaron sin dientes
-        }
+        ThrowObject(teethRb);
+        UpdateWidget();
     }
 
+    private void UpdateWidget()
+    {
+        _widget.TeethAmountText.text = TeethAmount.ToString();
+    }
 
     public void ThrowObject(Rigidbody rigidbody)
     {

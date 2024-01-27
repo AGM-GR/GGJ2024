@@ -15,5 +15,6 @@ public class CharacterData : ScriptableObject
 {
     public CharacterType Name;
     public Color Color;
+    public int Index;
 }
 

@@ -15,8 +15,11 @@ public class LobbyManager : MonoBehaviour
     public Button PlayGameButton;
 
     public List<GameObject> characterBanners;
+    [Space]
     public List<Transform> SpawningPoints;
-    private List<int> assignedSpawningPointsIndexes;
+    [Space]
+    [Tooltip("Assign on the final character indexes order")]
+    public List<CharacterData> CharacterDatas;
 
     //public MusicController musicController;
     //public List<Animator> characterBanners;
@@ -89,7 +92,7 @@ public class LobbyManager : MonoBehaviour
         Vector3 randomSpawningPoint = SpawningPoints[randomIndex].position;
         SpawningPoints.RemoveAt(randomIndex);
 
-        character.Initialize(player.playerIndex, player.currentControlScheme, randomSpawningPoint);
+        character.Initialize(player.playerIndex, player.currentControlScheme, CharacterDatas[player.playerIndex], randomSpawningPoint);
     }
 
     private void RefreshPlayButton()

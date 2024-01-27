@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public CharacterType Name => _characterData.Name;
     public Animator Animator { get; private set; }
     public int CharacterIndex;
     public string ControlScheme;
@@ -17,11 +18,14 @@ public class Character : MonoBehaviour
     private CharacterData _characterData;
 
 
-    public void Initialize(int index, string controlScheme, /*CharacterData characterData,*/ Vector3 spawningPosition)
+    public void Initialize(int index,
+                           string controlScheme,
+                           CharacterData characterData,
+                           Vector3 spawningPosition)
     {
         CharacterIndex = index;
         ControlScheme = controlScheme;
-        //_characterData = characterData;
+        _characterData = characterData;
 
         SetupModelDependences();
         IsInit = true;
