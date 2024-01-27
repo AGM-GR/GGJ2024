@@ -142,8 +142,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3125581551011329382}
-  - component: {fileID: 6344127221826605978}
+  - component: {fileID: 6094634078331375118}
   - component: {fileID: 6002112715552765692}
+  - component: {fileID: 5143584900800239003}
   m_Layer: 6
   m_Name: Hit trigger
   m_TagString: Untagged
@@ -166,8 +167,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8870835819245186999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &6344127221826605978
-SphereCollider:
+--- !u!65 &6094634078331375118
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -185,8 +186,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2, y: 1, z: 1.2}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!114 &6002112715552765692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2763303090491b4695b051789212ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitTrigger: {fileID: 6344127221826605978}
+  HitTrigger: {fileID: 6094634078331375118}
   Animator: {fileID: 8715564496471811280}
   _isHitting: 0
   PushCurve:
@@ -229,6 +230,21 @@ MonoBehaviour:
   PushDistance: 2
   PushVelocity: 10
   ForcePower: 10
+--- !u!114 &5143584900800239003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399091017078794849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5902415c09376479638df7f5ffba44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitTrigger: {fileID: 6094634078331375118}
+  _isHitting: 0
+  ToothHitCooldown: 2
 --- !u!1 &8870835819245186992
 GameObject:
   m_ObjectHideFlags: 0
