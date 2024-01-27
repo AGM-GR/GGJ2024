@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,8 +30,15 @@ public class Jumper : MonoBehaviour
     {
         if (value.isPressed && !IsJumping)
         {
+            ResetAllTriggers();
             StartCoroutine(Jump());
         }
+    }
+
+    private void ResetAllTriggers()
+    {
+        List<string> triggers = new List<string>{ "JumpRelease", "JumpAir", "JumpLanding", "JumpLanded" };
+        triggers.ForEach(trigger => _character.Animator.ResetTrigger(trigger));
     }
 
     void Update()
