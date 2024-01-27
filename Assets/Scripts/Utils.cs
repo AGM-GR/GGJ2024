@@ -21,7 +21,8 @@ public static class Utils
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => animator.isInitialized);
         yield return new WaitWhile(() => animator.IsInTransition(layer));
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(layer).normalizedTime >= 1f || animator.IsInTransition(layer));
+        AnimatorStateInfo currentAnimation = animator.GetCurrentAnimatorStateInfo(layer);
+        yield return new WaitUntil(() => currentAnimation.shortNameHash != animator.GetCurrentAnimatorStateInfo(layer).shortNameHash || animator.IsInTransition(layer));
     }
 
     public static IEnumerator WaitAnimToTime(Animator animator, float normalizedTime, int layer = 0)
