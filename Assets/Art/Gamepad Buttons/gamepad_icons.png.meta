@@ -1,0 +1,2138 @@
+fileFormatVersion: 2
+guid: 923ddeebe45868b46a23bcb6cc29d9d3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 2
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gamepad_icons_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 968
+        width: 80
+        height: 51
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2baae16e9a9fa46448b44c34c2cc968e
+      internalID: -1914058805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 968
+        width: 80
+        height: 51
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.76954, y: 25.5}
+        - {x: -39.76954, y: -19.187536}
+        - {x: -26.0586, y: -25.5}
+        - {x: 35.113277, y: -25.5}
+        - {x: 40, y: -13.914099}
+        - {x: 40, y: 25.5}
+      physicsShape: []
+      tessellationDetail: 0.18
+      bones: []
+      spriteID: 46b9842a8566d4543adb840a93ae2c75
+      internalID: 1604721354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 968
+        width: 76
+        height: 81
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70cefac2184f1741afa7ffa62c41ad4
+      internalID: -1629534994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_3
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 968
+        width: 77
+        height: 81
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93659580e3ecba542b270eaa85eda1c0
+      internalID: 1546889489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_4
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 968
+        width: 79
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d9c14a9b1c3504f8414b91554f8836
+      internalID: 904667054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_5
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 968
+        width: 80
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9422b68cfe3b20441b751048173c051f
+      internalID: -957090122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_6
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 968
+        width: 80
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aab7c547a7592140ac3fa08481ba345
+      internalID: 796877825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_7
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 968
+        width: 80
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a58173d5f016747bcbac82b57b7598
+      internalID: 569790460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_8
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 967
+        width: 82
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e02011ed9750d4188f4925b313bdec
+      internalID: -673126310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_9
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 967
+        width: 82
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cea02eea900e5345aaca261fe114f4d
+      internalID: -1613109084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 866
+        width: 81
+        height: 81
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1756edceb801d4e884047a20e621dd
+      internalID: 1402012753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_11
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 866
+        width: 81
+        height: 81
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ebb88b13e839343b8d649e32b99a77
+      internalID: -2117162395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_12
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 866
+        width: 81
+        height: 81
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41276ad5f0cf8f040b1d1113c4fed97d
+      internalID: -1826910081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_13
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 866
+        width: 81
+        height: 81
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5dedf0777f46f499d5f302c38e4791
+      internalID: 896069528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_14
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 866
+        width: 127
+        height: 81
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee5d85acb45f98418260d05d9ade7e3
+      internalID: -1009307554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_15
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 866
+        width: 80
+        height: 81
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccaa00dc18fa1843ad2e20e0ffc8ec9
+      internalID: 1289727417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_16
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 867
+        width: 80
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec02d9ab6d43f82439efe12fbcc01ad6
+      internalID: 1340102236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_17
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 866
+        width: 68
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0021882898, y: -0.00039258416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c543bd06450cf445a2d42de7e9ca6fc
+      internalID: 340321295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_19
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 866
+        width: 67
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0025388803, y: 0.0015771183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26915c5d9a31d8e42b156175ae0251b6
+      internalID: 2027163947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 775
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0023696334, y: -0.002708906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5001addc81c8a4ea5caad12a29be26
+      internalID: -782416786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_22
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 775
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0023622867, y: -0.00039258416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8cf3d9bda906a4e896637ea7a7e15a
+      internalID: -547751791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_23
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 775
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0015776835, y: 0.0015778719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e967fda7eb4fde47acbf67d6cf5878e
+      internalID: -754986062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_24
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 775
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0015778719, y: -0.00039258416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ba5019794748c409adb3d79ea55ab8
+      internalID: -1826071575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_25
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 775
+        width: 67
+        height: 82
+      alignment: 9
+      pivot: {x: 0.004606332, y: -0.002074451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1726a8f88535adc4b913b9088b46ce69
+      internalID: 1408510026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_26
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 776
+        width: 81
+        height: 80
+      alignment: 9
+      pivot: {x: -0.0043327427, y: -0.004653168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ee86c519e52734e864fb6741134d48
+      internalID: -279390085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_29
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 776
+        width: 81
+        height: 80
+      alignment: 9
+      pivot: {x: -0.00039258416, y: -0.004653168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ec92f2affe2b846ba805629c5aaa37
+      internalID: 1666843079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_32
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 776
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: -0.0006637573, y: -0.002658081}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1f9662cf67f6c449e69c36967da42d
+      internalID: -1669262436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_35
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 776
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: 0.003326416, y: -0.002658081}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591878fd312de354f9f4f42533148354
+      internalID: -783600270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_38
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 775
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0035475742, y: -0.0023622867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc2b568804a56d41b76967668ec83d0
+      internalID: -1726873296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_45
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 665
+        width: 121
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffeb03f3c9ed993418ee9a40a0d474b3
+      internalID: 88751792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_46
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 665
+        width: 121
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d19cbbac1a0f14784fa35ef36cdafa
+      internalID: 540122741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_47
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 602
+        width: 103
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0019128299, y: 0.0051796995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081c8990119b9ba468a4c984fb52e4d5
+      internalID: 1654755488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_48
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 602
+        width: 102
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0008431229, y: -0.0014173719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee580dbfe96ca5e4a8ae60ec33a9bcc2
+      internalID: 2016270793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_49
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 661
+        width: 122
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a825c10e585d4418d458ec9adbef46
+      internalID: 1690716840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_50
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 661
+        width: 122
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b8d73208fd0d346a7b3a678bca5dbe
+      internalID: -2055385224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_51
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 600
+        width: 120
+        height: 51
+      alignment: 9
+      pivot: {x: 0.0012207985, y: 0.007508521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be45abce129278a478c7a591470fa8c8
+      internalID: 37620809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_52
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 600
+        width: 121
+        height: 51
+      alignment: 9
+      pivot: {x: -0.0012818644, y: 0.007508521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6643b51c11fd9449a042cfaa4037a8
+      internalID: 452430143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_53
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 602
+        width: 121
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8746130ff4c8ee74980036972ae86c37
+      internalID: -51349160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_54
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 602
+        width: 121
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06af7ca6cb386794ca3fa7f006108a11
+      internalID: 687328608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_55
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 499
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0026368035, y: -0.0037393451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0264561930b0e9b4fbf82ebfcfc151f3
+      internalID: 176947684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_56
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 499
+        width: 80
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0028759004, y: 0.0026369449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9680313a23aebd4b97fd89537016958
+      internalID: -313513592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_57
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 499
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0037395337, y: -0.0037393451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa528006a42a8944b0f9eae5bba2a65
+      internalID: 515250498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_58
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 499
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.003739722, y: -0.006927867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275bbb9b6cd5a5e468291f084190db42
+      internalID: 1977240902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_59
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 499
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.00055157696, y: -0.0037393451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d52026deb4ac34f80dabf730c5af67
+      internalID: 169490247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_60
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 499
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.00055157696, y: -0.0037393451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67343adda9d46d4e939b5e014b1fa5d
+      internalID: 845392585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_61
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 499
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: 0.0061042784, y: 0.0061042784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac9871fe2a904249ab8fbf071694066
+      internalID: -781204023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_62
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 499
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: -0.0035804748, y: 0.0061042784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6646ec7199e97fc45abc1c4685cb38b6
+      internalID: -1493226802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_63
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 499
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: -0.001301485, y: -0.00035209657}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e33188aefdfcd48af3654ebb5c11bd
+      internalID: -1741924589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_65
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 499
+        width: 67
+        height: 80
+      alignment: 9
+      pivot: {x: -0.0010749475, y: -0.00035209657}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3209d4e948a45764a99c430f8597631e
+      internalID: 416617985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_67
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 399
+        width: 80
+        height: 81
+      alignment: 9
+      pivot: {x: 0.006104088, y: -0.0037393451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1207879d74ffe4abbba2a4d9fd3e2a
+      internalID: -1033480446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_68
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 399
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0058249016, y: -0.0005512002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c588b87b4e9e65149bdd24cbb867e89f
+      internalID: 626039766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_69
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 399
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0005513886, y: 0.0026369449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdf80460a241a34cad6dc34de71e38e
+      internalID: -1444421980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_70
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 399
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0026369449, y: 0.0058250898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a67e5499ba0d545828c2c9f6c323db
+      internalID: 570961300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_72
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 399
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.00055157696, y: 0.0026369449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a8f88977e69544e9ac9cf6df36482d
+      internalID: 206129770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_74
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 399
+        width: 80
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0035804748, y: -0.0037393451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1add29fc2f1c748a2d6cb8dadb4192
+      internalID: -231364864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_77
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 399
+        width: 80
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0100364685, y: 0.0026369449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886342c5316fa7a4383b309941bba78f
+      internalID: 1832491160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_80
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 399
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.00055157696, y: -0.0037393451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78401fcdb75e684492e8fdecf78add7
+      internalID: -656691725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_83
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 399
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.009012858, y: -0.0005512002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7e573efab00ea419bec099ea1bd1a7
+      internalID: -851650291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_86
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 399
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.012201756, y: 0.0058250898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c52a8375ad5744f9fe0a0c88c285c1
+      internalID: 79087041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_95
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 239
+        width: 86
+        height: 64
+      alignment: 9
+      pivot: {x: 0.00097651815, y: -0.0055019855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a42f02a174bea349801983e1185f6b7
+      internalID: 2098862554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_96
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 239
+        width: 85
+        height: 64
+      alignment: 9
+      pivot: {x: -0.0048943013, y: -0.0055019855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3f1f5e785c3cb4d98cbcf0c280746f
+      internalID: 1809390880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_97
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 239
+        width: 72
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0043549007, y: 0.0027770996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee9918ab8519f147ab493a64fe1139a
+      internalID: 1166790785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_98
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 239
+        width: 72
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0048149955, y: -0.0012985041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc811d1dddc14c4bb9a075fb1f98a1e
+      internalID: -910715086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_99
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 239
+        width: 86
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123a79602fc0116418b30ec49eaed6e1
+      internalID: -1795714621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_100
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 239
+        width: 85
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b215795cc4cea4bb0502689c49282e
+      internalID: 935128570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_101
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 239
+        width: 86
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0846d5940f8ef44851bbd636f21f64
+      internalID: -180680287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_102
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 239
+        width: 85
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573662a8409f2cb4b9b6c220d0fb7759
+      internalID: 872291567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_103
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 238
+        width: 88
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea874acc5dff34408582e111111e7e0
+      internalID: -534257325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_104
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 238
+        width: 87
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631411554869432418e3d011adcc16fa
+      internalID: 762710925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_105
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 137
+        width: 80
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0034377575, y: -0.005374108}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6b185b80c30fb45a63058d320c7cbf
+      internalID: 1790372136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_106
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 137
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.002777288, y: -0.005374108}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2b6332d99e824499168abee80d8fa1
+      internalID: -457314168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_107
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 137
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.002777288, y: -0.009449712}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bc7e93ec9b89346a0bcbdac3bf854a
+      internalID: -1550885220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_108
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 137
+        width: 80
+        height: 81
+      alignment: 9
+      pivot: {x: 0.00068855286, y: -0.0012985041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ca881d43be29f4f8fbe67ac7875cfe
+      internalID: -764150822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_109
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 137
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0012983157, y: -0.0012985041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c72885d49642144941bcfa61747848
+      internalID: 957979074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_110
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 137
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0012983157, y: 0.0027770996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85102c5fb34ec174e865e2f59772a4e4
+      internalID: -777827412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_111
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 138
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: 0.0048149107, y: 0.0048151016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be637ee9f7d8214d9a50a6ea267bc89
+      internalID: -1232909417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_112
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 138
+        width: 81
+        height: 80
+      alignment: 9
+      pivot: {x: 0.002776723, y: -0.003437996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f00e91531547cb478f59cdcaac49993
+      internalID: 1518627827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_113
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 137
+        width: 67
+        height: 81
+      alignment: 9
+      pivot: {x: 0.002350309, y: 0.006852703}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d83f0d7fb0b1d41aa19eb02eb74efe
+      internalID: -193797707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_115
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 137
+        width: 67
+        height: 81
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd18e9df28284ab40a9e32242f747544
+      internalID: -1958133471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_117
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.0007655297, y: 0.0007655532}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16648bd5efc06c7438bcb3fa5f874150
+      internalID: -882103535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_118
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0015861605, y: 0.0030316482}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911d3fb8ad90ef64ebcd69c81e83d76a
+      internalID: -864789848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_119
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.0035055655, y: -0.006242611}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7c68eba7e30704281d857937683aac
+      internalID: 1335893038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_120
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.003505377, y: 0.0019667353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b0e020fc84a404ea9bdc49d8e8b3b1
+      internalID: 550030734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_121
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.003505377, y: -0.0007697211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7833c5576aa264e8992515c36d1608
+      internalID: -2541064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_122
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.004704228, y: -0.0035061543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ada6f0e93ac06f41b4da088bf640372
+      internalID: 526545769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_123
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.00076859083, y: -0.0007697211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681232431dd9e1b4fa529af1784daeae
+      internalID: 707768075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_124
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: 0.004704228, y: -0.0007697211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d6edf01f853f94091ef6c6af5cd80e
+      internalID: 1577202464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamepad_icons_125
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 31
+        width: 81
+        height: 81
+      alignment: 9
+      pivot: {x: -0.00076859083, y: -0.0007697211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113b343413bb9344c848bda68f252da0
+      internalID: -1625428024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gamepad_icons_108: -764150822
+      gamepad_icons_99: -1795714621
+      gamepad_icons_37: -1495037720
+      gamepad_icons_71: 1385863960
+      gamepad_icons_54: 687328608
+      gamepad_icons_19: 2027163947
+      gamepad_icons_63: -1741924589
+      gamepad_icons_24: -1826071575
+      gamepad_icons_94: -1580461004
+      gamepad_icons_31: -1748653101
+      gamepad_icons_123: 707768075
+      gamepad_icons_124: 1577202464
+      gamepad_icons_52: 452430143
+      gamepad_icons_86: 79087041
+      gamepad_icons_38: -1726873296
+      gamepad_icons_30: -491244396
+      gamepad_icons_39: -1629610371
+      gamepad_icons_3: 1546889489
+      gamepad_icons_80: -656691725
+      gamepad_icons_2: -1629534994
+      gamepad_icons_36: 1850278609
+      gamepad_icons_118: -864789848
+      gamepad_icons_81: -1824093756
+      gamepad_icons_107: -1550885220
+      gamepad_icons_49: 1690716840
+      gamepad_icons_95: 2098862554
+      gamepad_icons_28: 1873855001
+      gamepad_icons_11: -2117162395
+      gamepad_icons_10: 1402012753
+      gamepad_icons_79: -203731052
+      gamepad_icons_67: -1033480446
+      gamepad_icons_111: -1232909417
+      gamepad_icons_50: -2055385224
+      gamepad_icons_51: 37620809
+      gamepad_icons_65: 416617985
+      gamepad_icons_96: 1809390880
+      gamepad_icons_1: 1604721354
+      gamepad_icons_57: 515250498
+      gamepad_icons_27: 382798801
+      gamepad_icons_61: -781204023
+      gamepad_icons_82: -2096536230
+      gamepad_icons_110: -777827412
+      gamepad_icons_41: 624888405
+      gamepad_icons_48: 2016270793
+      gamepad_icons_106: -457314168
+      gamepad_icons_84: -951118534
+      gamepad_icons_47: 1654755488
+      gamepad_icons_105: 1790372136
+      gamepad_icons_53: -51349160
+      gamepad_icons_72: 206129770
+      gamepad_icons_68: 626039766
+      gamepad_icons_58: 1977240902
+      gamepad_icons_90: 357971346
+      gamepad_icons_74: -231364864
+      gamepad_icons_75: 1183163424
+      gamepad_icons_56: -313513592
+      gamepad_icons_121: -2541064
+      gamepad_icons_60: 845392585
+      gamepad_icons_104: 762710925
+      gamepad_icons_109: 957979074
+      gamepad_icons_25: 1408510026
+      gamepad_icons_98: -910715086
+      gamepad_icons_64: -390662069
+      gamepad_icons_91: -178498512
+      gamepad_icons_15: 1289727417
+      gamepad_icons_78: -180548735
+      gamepad_icons_8: -673126310
+      gamepad_icons_69: -1444421980
+      gamepad_icons_88: -919243116
+      gamepad_icons_26: -279390085
+      gamepad_icons_23: -754986062
+      gamepad_icons_13: 896069528
+      gamepad_icons_115: -1958133471
+      gamepad_icons_35: -783600270
+      gamepad_icons_4: 904667054
+      gamepad_icons_62: -1493226802
+      gamepad_icons_101: -180680287
+      gamepad_icons_87: -2092724485
+      gamepad_icons_116: -1378462059
+      gamepad_icons_29: 1666843079
+      gamepad_icons_55: 176947684
+      gamepad_icons_114: 118298380
+      gamepad_icons_66: -1799362353
+      gamepad_icons_83: -851650291
+      gamepad_icons_93: -381569862
+      gamepad_icons_0: -1914058805
+      gamepad_icons_20: -160197690
+      gamepad_icons_73: 372943747
+      gamepad_icons_92: 2079858460
+      gamepad_icons_42: -1486782550
+      gamepad_icons_32: -1669262436
+      gamepad_icons_9: -1613109084
+      gamepad_icons_34: 2103350135
+      gamepad_icons_7: 569790460
+      gamepad_icons_59: 169490247
+      gamepad_icons_14: -1009307554
+      gamepad_icons_119: 1335893038
+      gamepad_icons_16: 1340102236
+      gamepad_icons_44: -634558758
+      gamepad_icons_5: -957090122
+      gamepad_icons_100: 935128570
+      gamepad_icons_33: -1202162649
+      gamepad_icons_103: -534257325
+      gamepad_icons_17: 340321295
+      gamepad_icons_18: 1494466283
+      gamepad_icons_76: -615877479
+      gamepad_icons_45: 88751792
+      gamepad_icons_89: -1590782063
+      gamepad_icons_120: 550030734
+      gamepad_icons_43: 1906339275
+      gamepad_icons_6: 796877825
+      gamepad_icons_46: 540122741
+      gamepad_icons_113: -193797707
+      gamepad_icons_97: 1166790785
+      gamepad_icons_117: -882103535
+      gamepad_icons_22: -547751791
+      gamepad_icons_102: 872291567
+      gamepad_icons_70: 570961300
+      gamepad_icons_85: 1730769712
+      gamepad_icons_40: 701969122
+      gamepad_icons_125: -1625428024
+      gamepad_icons_77: 1832491160
+      gamepad_icons_122: 526545769
+      gamepad_icons_21: -782416786
+      gamepad_icons_12: -1826910081
+      gamepad_icons_112: 1518627827
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
