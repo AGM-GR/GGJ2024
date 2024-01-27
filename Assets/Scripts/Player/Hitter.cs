@@ -90,6 +90,15 @@ public class Hitter : MonoBehaviour
             if (Vector3.Distance(pushedRigidbody.position, lastPosition) + 0.01f < Vector3.Distance(pushedRigidbody.position, nextPosition))
             {
                 Debug.Log(name + " Hitted something!!");
+                
+                if (pushedPlayer != null)
+                {
+                    Debug.Log(name + "Player Hitted something!!");
+                    //player pega contra algo
+                    pushedPlayer.GetComponent<TeethManager>().DropTeeth();
+
+                }
+
                 break;
             }
 
