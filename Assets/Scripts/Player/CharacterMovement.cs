@@ -32,6 +32,7 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody _rb;
     //private Character _character;
     public Animator Animator;
+    public Jumper Jumper;
 
     public bool IsMovementAllowed
     {
@@ -68,6 +69,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Jumper.IsJumping) return;
+
         //IsMovementAllowed = _character.IsInit && IsIdleOrLocomotion();
         Rotate();
 
