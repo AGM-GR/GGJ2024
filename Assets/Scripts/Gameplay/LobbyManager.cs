@@ -108,12 +108,11 @@ public class LobbyManager : MonoBehaviour
 
     private static void AllowPlayersMovement()
     {
-        /*var characterMovements = FindObjectsOfType<CharacterMovement>().ToList();
+        var characterMovements = FindObjectsOfType<CharacterMovement>().ToList();
         characterMovements.ForEach(o =>
         {
-            o.GetComponent<CharacterInfluenceAction>().CanInfluence = true;
             o.IsMovementAllowed = true;
-        });*/
+        });
     }
 
     private float GetPreviousAnimatorsNormalizedTime(int index)
