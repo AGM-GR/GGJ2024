@@ -25,6 +25,8 @@ public class Character : MonoBehaviour
     private ToothHitter _toothHitter;
     private PlayerInput _playerInput;
 
+    public CharacterMovement CharacterMovement => _characterMovement;
+
 
     private void Awake()
     {
