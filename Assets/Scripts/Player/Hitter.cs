@@ -67,10 +67,11 @@ public class Hitter : MonoBehaviour
         {
             pushedPlayer.ClearPlayer();
             pushedPlayer.SetPlayerInput(false);
+
+            pushedPlayer.GetComponent<TeethManager>().DropTooth();
         }
 
 
-        pushedRigidbody.GetComponent<TeethManager>().DropTooth();
 
         float pushDuration = PushDistance / PushVelocity;
         Vector3 initialPosition = pushedRigidbody.position;

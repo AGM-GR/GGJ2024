@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
     private void Awake()
     {
         _characterMovement = GetComponent<CharacterMovement>();
-        _grabController = GetComponent<GrabController>();
+        _grabController = GetComponentInChildren<GrabController>();
         _hitter = GetComponentInChildren<Hitter>();
         _toothHitter = GetComponentInChildren<ToothHitter>();
 
