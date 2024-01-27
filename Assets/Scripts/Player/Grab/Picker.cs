@@ -34,8 +34,7 @@ public class Picker : MonoBehaviour
 
         if (_PickCoroutine != null)
         {
-            Debug.LogWarning("The player is still picking the object.");
-            return;
+            StopCoroutine(_PickCoroutine);
         }
 
         if (picked)
