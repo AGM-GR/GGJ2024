@@ -15,6 +15,8 @@ public class LobbyManager : MonoBehaviour
     public Button PlayGameButton;
 
     public List<GameObject> characterBanners;
+    public List<Transform> SpawningPoints;
+    private List<int> assignedSpawningPointsIndexes;
 
     //public MusicController musicController;
     //public List<Animator> characterBanners;
@@ -79,10 +81,15 @@ public class LobbyManager : MonoBehaviour
         //characterBanners[player.playerIndex].Play("Loop", 1, GetPreviousAnimatorsNormalizedTime(player.playerIndex));
     }
 
-    private static void InitializeCharacter(PlayerInput player)
+    private void InitializeCharacter(PlayerInput player)
     {
-        //var character = player.GetComponent<Character>();
-        //character.Initialize(player.playerIndex, player.currentControlScheme);
+        var character = player.GetComponent<Character>();
+
+        int randomIndex = Random.Range(0, SpawningPoints.Count);
+        Vector3 randomSpawningPoint = SpawningPoints[randomIndex].position;
+        SpawningPoints.RemoveAt(randomIndex);
+
+        character.Initialize(player.playerIndex, player.currentControlScheme, randomSpawningPoint);
     }
 
     private void RefreshPlayButton()

@@ -71,7 +71,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Jumper.IsJumping) return;
 
-        //IsMovementAllowed = _character.IsInit && IsIdleOrLocomotion();
+        IsMovementAllowed = _character.IsInit /* && IsIdleOrLocomotion()*/;
         Rotate();
 
         if (!IsMovementAllowed || (LobbyManager.Instance != null && !LobbyManager.Instance.GameStarted)) return;
