@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7183726439456425020}
   - component: {fileID: 7299424020416424097}
   - component: {fileID: 1713942988221862128}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4879955536130056706}
   - component: {fileID: 440908867942450268}
   - component: {fileID: 1087678533986434446}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 8870835819245186997}
   - component: {fileID: 8870835819245187018}
   - component: {fileID: 5115097018870597193}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
