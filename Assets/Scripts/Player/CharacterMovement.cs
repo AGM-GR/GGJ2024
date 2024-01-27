@@ -71,7 +71,7 @@ public class CharacterMovement : MonoBehaviour
         //IsMovementAllowed = _character.IsInit && IsIdleOrLocomotion();
         Rotate();
 
-        if (!IsMovementAllowed || !LobbyManager.Instance.GameStarted) return;
+        if (!IsMovementAllowed || (LobbyManager.Instance != null && !LobbyManager.Instance.GameStarted)) return;
 
         Move();
         Animator.SetFloat("Speed", _inputAmount);
