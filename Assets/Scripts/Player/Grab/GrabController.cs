@@ -85,10 +85,8 @@ public class GrabController : MonoBehaviour
         if (_ObjectGrabbed)
         {
             _character.Animator.SetTrigger("ThrowObject");
-            _Thrower.ThrowObject(_ObjectGrabbed, transform.forward);
-            _ObjectGrabbed = null;
-
-            StartCoroutine(CheckCanGrab());
+            canGrab = false;
+   
         }
         else
         {
@@ -96,11 +94,23 @@ public class GrabController : MonoBehaviour
         }
     }
 
+    
+
+    public void DoThrow(){
+        _Thrower.ThrowObject(_ObjectGrabbed, transform.forward);
+        _ObjectGrabbed = null;
+
+        StartCoroutine(CheckCanGrab());
+
+    }
+
     private IEnumerator CheckCanGrab()
     {
         canGrab = false;
+         _character.CharacterMovement.IsMovementAllowed = false;
         yield return Utils.WaitAnimStateToChange(_character.Animator);
         canGrab = true;
+        _character.CharacterMovement.IsMovementAllowed = true;
     }
 
     public void Drop()
