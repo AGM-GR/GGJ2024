@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: 0_Rulas
   m_EditorClassIdentifier: 
   Name: 0
+  Portrait: {fileID: 1790372136, guid: 923ddeebe45868b46a23bcb6cc29d9d3, type: 3}
   Color: {r: 0.19607845, g: 0.4784314, b: 0.68235296, a: 1}
   Index: 0

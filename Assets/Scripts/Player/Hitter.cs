@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 
 public class Hitter : MonoBehaviour
 {
@@ -66,10 +67,11 @@ public class Hitter : MonoBehaviour
         {
             pushedPlayer.ClearPlayer();
             pushedPlayer.SetPlayerInput(false);
+
+            pushedPlayer.GetComponent<TeethManager>().DropTooth();
         }
 
 
-        pushedRigidbody.GetComponent<TeethManager>().DropTooth();
 
         float pushDuration = PushDistance / PushVelocity;
         Vector3 initialPosition = pushedRigidbody.position;
@@ -96,8 +98,8 @@ public class Hitter : MonoBehaviour
                 
                 if (pushedPlayer != null)
                 {
-                    Debug.Log(name + "Player Hitted something!!");
                     //player pega contra algo
+                    pushedPlayer.SetStunnedPlayer();
                     pushedPlayer.GetComponent<TeethManager>().DropTooth();
 
                 }

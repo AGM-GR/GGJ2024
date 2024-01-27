@@ -80,7 +80,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teethType: 1
-  mCollider: {fileID: 0}
   colliderTrigger: {fileID: 3127483654275227026}
+  Rigidbody: {fileID: 0}
   timeDisabled: 1
   Spawner: {fileID: 0}
 --- !u!135 &5620425579158144965
@@ -233,4 +233,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ed093af173b084ba8ea79ee8fb7c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 40
+  rotationSpeed: 1200
+  framesBeforeRotation: 15

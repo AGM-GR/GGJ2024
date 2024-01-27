@@ -15,8 +15,6 @@ public class Tooth : MonoBehaviour
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        colliderTrigger.enabled = false;
-        StartCoroutine(EnableTrigger());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +25,10 @@ public class Tooth : MonoBehaviour
             other.gameObject.GetComponent<TeethManager>().AddTooth(teethType);
             gameObject.SetActive(false);
             Spawner?.ItemDisabled();
+        }
+        else if (other.CompareTag("Ground"))
+        {
+            SetAsStatic();
         }
     }
 
@@ -39,15 +41,27 @@ public class Tooth : MonoBehaviour
     public void SetAsPhysical()
     {
         Rigidbody = GetComponent<Rigidbody>();
-
         Rigidbody.useGravity = true;
-        Rigidbody.isKinematic = false;
+
+        StartCoroutine(TriggerCooldown());
+    }
+
+    public void SetAsStatic()
+    {
+        var groundedPosition = transform.position;
+        groundedPosition.y = 0;
+        transform.position = groundedPosition;
+
+        Rigidbody.angularVelocity = Vector3.zero;
+        Rigidbody.velocity = Vector3.zero;
+        Rigidbody.useGravity = false;
     }
 
 
 
-    IEnumerator EnableTrigger()
+    IEnumerator TriggerCooldown()
     {
+        colliderTrigger.enabled = false;
         yield return new WaitForSeconds(timeDisabled);
         colliderTrigger.enabled = true;
         yield return null;
