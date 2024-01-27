@@ -59,13 +59,7 @@ public class GrabController : MonoBehaviour
     {
         if (_ObjectGrabbed)
         {
-            if (!_ObjectGrabbed.attachedRigidbody)
-            {
-                Debug.LogError("Enable the collider!");
-                return;
-            }
-
-            _Thrower.ThrowObject(_ObjectGrabbed.attachedRigidbody, transform.forward);
+            _Thrower.ThrowObject(_ObjectGrabbed, transform.forward);
             _ObjectGrabbed = null;
         }
         else

@@ -43,9 +43,9 @@ public class Picker : MonoBehaviour
 
             if (picked.attachedRigidbody.isKinematic)
             {
+                picked.attachedRigidbody.isKinematic = false;
                 picked.attachedRigidbody.velocity = Vector3.zero;
                 picked.attachedRigidbody.angularVelocity = Vector3.zero;
-                picked.attachedRigidbody.isKinematic = false;
             }
 
             if (picked.transform.parent == _PickSlot)
@@ -106,7 +106,7 @@ public class Picker : MonoBehaviour
             objectToPick.attachedRigidbody.angularVelocity = Vector3.zero;
             objectToPick.attachedRigidbody.useGravity = false;
             objectToPick.attachedRigidbody.isKinematic = true; // Sino constrain la posición
-            //other.enabled = false;
+            objectToPick.enabled = false;
         }
 
         _PickCoroutine = StartCoroutine(PickingAnimationCoroutine(objectToPick));

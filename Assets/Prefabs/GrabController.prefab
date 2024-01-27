@@ -78,6 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ViewDistance: 10
   _TagetTag: Player
+  _Myself: {fileID: 0}
 --- !u!108 &3248960515256514510
 Light:
   m_ObjectHideFlags: 0
@@ -230,8 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _PickSlot: {fileID: 624130429608383710}
-  _PickTime: 2
-  _DropImpulse: 2
+  _PickTime: 0.75
+  _DropImpulse: 5
   OnObjectPicked:
     m_PersistentCalls:
       m_Calls: []

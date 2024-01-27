@@ -16,8 +16,16 @@ public class ThrowForward : MonoBehaviour
     }
 
 
-    public void ThrowObject(Rigidbody rigidbody, Vector3 direction)
+    public void ThrowObject(Collider collider, Vector3 direction)
     {
+        collider.enabled = true;
+
+        collider.transform.parent = null;
+
+        Rigidbody rigidbody = collider.attachedRigidbody;
+
+        
+
         // Reset forces
         rigidbody.isKinematic = false;
         rigidbody.velocity = Vector3.zero;
