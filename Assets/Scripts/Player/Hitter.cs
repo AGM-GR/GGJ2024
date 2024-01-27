@@ -26,7 +26,7 @@ public class Hitter : MonoBehaviour
 
     void OnFirstAttack(InputValue value)
     {
-        if (value.isPressed)
+        if (!_isHitting && value.isPressed)
         {
             _character.Animator.SetTrigger("Hit");
         }
@@ -50,8 +50,8 @@ public class Hitter : MonoBehaviour
         if (_isHitting) return;
         if (other.attachedRigidbody == null) return;
 
-        _isHitting = true;
         HitTrigger.enabled = false;
+        _isHitting = true;
 
         Vector3 direction = transform.forward;
         StartCoroutine(Push(other.attachedRigidbody, direction));
