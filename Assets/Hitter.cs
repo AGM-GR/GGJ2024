@@ -52,6 +52,12 @@ public class Hitter : MonoBehaviour
 
     IEnumerator Push(Rigidbody pushedRigidbody, Vector3 dir)
     {
+        PlayerInput pushedPlayer = pushedRigidbody.GetComponent<PlayerInput>();
+        if (pushedPlayer != null)
+        {
+            pushedPlayer.enabled = false;
+        }
+
         float pushDuration = PushDistance / PushVelocity;
         Vector3 initialPosition = pushedRigidbody.position;
         Vector3 destPosition = pushedRigidbody.position + dir * PushDistance;
@@ -77,6 +83,11 @@ public class Hitter : MonoBehaviour
                 break;
             }
 
+        }
+        
+        if (pushedPlayer != null)
+        {
+            pushedPlayer.enabled = true;
         }
 
         _isHitting = false;
