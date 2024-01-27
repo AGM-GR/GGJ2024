@@ -57,7 +57,7 @@ public class ToothHitter : MonoBehaviour
         _isHitting = true;
         
         TeethManager characterTeeth = character.GetComponent<TeethManager>();
-        characterTeeth.DropTeeth();
+        characterTeeth.DropTooth();
 
         yield return new WaitForSeconds(ToothHitCooldown);
 

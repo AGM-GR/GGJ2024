@@ -66,7 +66,7 @@ public class Hitter : MonoBehaviour
         }
 
 
-        pushedRigidbody.GetComponent<TeethManager>().DropTeeth();
+        pushedRigidbody.GetComponent<TeethManager>().DropTooth();
 
         float pushDuration = PushDistance / PushVelocity;
         Vector3 initialPosition = pushedRigidbody.position;
@@ -95,7 +95,7 @@ public class Hitter : MonoBehaviour
                 {
                     Debug.Log(name + "Player Hitted something!!");
                     //player pega contra algo
-                    pushedPlayer.GetComponent<TeethManager>().DropTeeth();
+                    pushedPlayer.GetComponent<TeethManager>().DropTooth();
 
                 }
 
