@@ -64,7 +64,9 @@ public class Jumper : MonoBehaviour
         IsJumping = true;
         _character.Animator.SetTrigger("JumpRelease");
         yield return new WaitForSeconds(ReleaseTime);
-        rb.velocity = Vector3.up * jumpForce;
+        
+        Vector3 velocityY = Vector3.up * jumpForce;
+        rb.velocity = new Vector3(rb.velocity.x,velocityY.y,rb.velocity.z);
         _character.Animator.SetTrigger("JumpAir");
         yield return null;
     }
@@ -81,7 +83,8 @@ public class Jumper : MonoBehaviour
     private void Fall()
     {
         _character.Animator.SetTrigger("JumpLanding");
-        rb.velocity += Vector3.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        Vector3 velocityY = Vector3.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        rb.velocity += new Vector3(rb.velocity.x,velocityY.y,rb.velocity.z);
     }
 }
 
