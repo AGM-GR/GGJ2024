@@ -41,7 +41,7 @@ public class TeethManager : MonoBehaviour
         //Debug.Break();
         newTooth.SetAsPhysical();
         //AddImpulseForce(newTooth.Rigidbody, ThrowForce);
-        newTooth.Rigidbody.AddForce((transform.up + transform.forward) * ThrowForce, ForceMode.Impulse);
+        newTooth.Rigidbody.AddForce((transform.up/2f + transform.forward).normalized * ThrowForce, ForceMode.VelocityChange);
 
         UpdateWidget();
     }

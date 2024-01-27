@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider))]
 public class Picker : MonoBehaviour
@@ -58,6 +58,24 @@ public class Picker : MonoBehaviour
             Vector3 dropDirection = new Vector3(UnityEngine.Random.Range(-1f, 1f), 1f, UnityEngine.Random.Range(-1f, 1f));
             picked.attachedRigidbody.AddForce(dropDirection.normalized * _DropImpulse, ForceMode.Impulse);
 
+            if (picked.CompareTag("Player"))
+            {
+                PlayerInput pi = picked.GetComponent<PlayerInput>();
+                CharacterMovement cm = picked.GetComponent<CharacterMovement>();
+                Character ch = picked.GetComponent<Character>();
+
+                if (pi == null || cm == null || ch == null)
+                {
+                    Debug.LogWarning("Something went wrong");
+                }
+                else
+                {
+                    pi.enabled = false;
+                    cm.IsMovementAllowed = true;
+                    ch.ClearPlayer();
+                }
+            }
+
             // Asignar que se destruya o que no haga daño?
             OnObjectDropped.Invoke(picked);
         }
@@ -102,15 +120,28 @@ public class Picker : MonoBehaviour
             return;
         }
 
+        // Comprobar que es un objeto
+        // If layyer or tag...
 
         if (objectToPick.CompareTag("Player"))
         {
-            Debug.LogWarning($"Pickear personajes esta restringido demomento");
-            return;
+            PlayerInput pi = objectToPick.GetComponent<PlayerInput>();
+            CharacterMovement cm = objectToPick.GetComponent<CharacterMovement>();
+
+            if (pi == null || cm == null)
+            {
+                Debug.LogWarning("Something went wrong");
+            }
+            else
+            {
+                pi.enabled = false;
+                cm.IsMovementAllowed = false;
+            }
+
+            //Debug.LogWarning($"Pickear personajes esta restringido demomento");
+            //return;
         }
 
-        // Comprobar que es un objeto
-        // If layyer or tag...
 
         if (objectToPick.attachedRigidbody)
         {
