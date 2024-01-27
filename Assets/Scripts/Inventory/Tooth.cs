@@ -17,16 +17,20 @@ public class Tooth : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    Debug.Log(other.name);
-    //    if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-    //    {
-    //        other.gameObject.GetComponent<TeethManager>().AddTooth(teethType);
-    //        gameObject.SetActive(false);
-    //        Spawner?.ItemDisabled();
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.name);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            other.gameObject.GetComponent<TeethManager>().AddTooth(teethType);
+            gameObject.SetActive(false);
+            Spawner?.ItemDisabled();
+        }
+        else if (other.CompareTag("Ground"))
+        {
+            SetAsStatic();
+        }
+    }
 
     public int GetRandomTeeth()
     {
@@ -39,7 +43,18 @@ public class Tooth : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
         Rigidbody.useGravity = true;
 
-        //StartCoroutine(TriggerCooldown());
+        StartCoroutine(TriggerCooldown());
+    }
+
+    public void SetAsStatic()
+    {
+        var groundedPosition = transform.position;
+        groundedPosition.y = 0;
+        transform.position = groundedPosition;
+
+        Rigidbody.angularVelocity = Vector3.zero;
+        Rigidbody.velocity = Vector3.zero;
+        Rigidbody.useGravity = false;
     }
 
 
