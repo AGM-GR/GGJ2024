@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitTrigger: {fileID: 1945960316}
-  ForcePower: 30
+  ForcePower: 10
 --- !u!1 &2035555759
 GameObject:
   m_ObjectHideFlags: 0
