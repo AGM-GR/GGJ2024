@@ -30,8 +30,8 @@ public class CharacterMovement : MonoBehaviour
     // Component dependences
     private Camera _mainCamera;
     private Rigidbody _rb;
-    //private Character _character;
-    public Animator Animator;
+    private Character _character;
+    //public Animator Animator;
     public Jumper Jumper;
 
     public bool IsMovementAllowed
@@ -52,7 +52,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Awake()
     {
-        //_character = GetComponent<Character>();
+        _character = GetComponent<Character>();
         //_characterInfluence = GetComponent<CharacterInfluenceAction>();
 
         if (startWithMovement)
@@ -77,7 +77,7 @@ public class CharacterMovement : MonoBehaviour
         if (!IsMovementAllowed || (LobbyManager.Instance != null && !LobbyManager.Instance.GameStarted)) return;
 
         Move();
-        Animator.SetFloat("Speed", _inputAmount);
+        _character.Animator.SetFloat("Speed", _inputAmount);
         _rb.velocity = _moveDirection * MoveSpeed * _inputAmount * _currentSpeedMultiplier;
 
     }  

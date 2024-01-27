@@ -16,11 +16,19 @@ public class Hitter : MonoBehaviour
     public float PushDistance = 2f;
     public float PushVelocity = 10f;
 
-    private void OnFirstAttack(InputValue value)
+    public float ForcePower = 100f;
+    private Character _character;
+
+    private void Awake()
+    {
+        _character = GetComponentInParent<Character>();
+    }
+
+    void OnFirstAttack(InputValue value)
     {
         if (value.isPressed)
         {
-            Animator.SetTrigger("Hit");
+            _character.Animator.SetTrigger("Hit");
         }
     }
 
@@ -46,7 +54,6 @@ public class Hitter : MonoBehaviour
         HitTrigger.enabled = false;
 
         Vector3 direction = transform.forward;
-        //other.GetComponent<Rigidbody>().AddForce(direction * ForcePower, ForceMode.Impulse);
         StartCoroutine(Push(other.attachedRigidbody, direction));
     }
 

@@ -10,8 +10,9 @@ public class Jumper : MonoBehaviour
     public float fallingVelocityThreshold = -2f;
 
     public bool IsJumping = false;
-    public Animator Animator;
     private Rigidbody rb;
+    private Character _character;
+
 
     [Space]
     public float ReleaseTime = 0.5f;
@@ -20,6 +21,7 @@ public class Jumper : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        _character = GetComponentInParent<Character>();
     }
 
     public void OnJump(InputValue value)
@@ -37,7 +39,7 @@ public class Jumper : MonoBehaviour
             Fall();
         }
 
-        Animator.SetBool("IsGrounded", !IsJumping);
+        _character.Animator.SetBool("IsGrounded", !IsJumping);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -51,17 +53,17 @@ public class Jumper : MonoBehaviour
     IEnumerator Jump()
     {
         IsJumping = true;
-        Animator.SetTrigger("JumpRelease");
+        _character.Animator.SetTrigger("JumpRelease");
         yield return new WaitForSeconds(ReleaseTime);
         rb.velocity = Vector3.up * jumpForce;
-        Animator.SetTrigger("JumpAir");
+        _character.Animator.SetTrigger("JumpAir");
         yield return null;
     }
 
 
     IEnumerator Land()
     {
-        Animator.SetTrigger("JumpLanded");
+        _character.Animator.SetTrigger("JumpLanded");
         yield return new WaitForSeconds(LandingTime);
         IsJumping = false;
         yield return null;
@@ -69,7 +71,7 @@ public class Jumper : MonoBehaviour
 
     private void Fall()
     {
-        Animator.SetTrigger("JumpLanding");
+        _character.Animator.SetTrigger("JumpLanding");
         rb.velocity += Vector3.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
     }
 }
