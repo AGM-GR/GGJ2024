@@ -65,6 +65,9 @@ public class Hitter : MonoBehaviour
             pushedPlayer.enabled = false;
         }
 
+
+        pushedRigidbody.GetComponent<TeethManager>().DropTeeth();
+
         float pushDuration = PushDistance / PushVelocity;
         Vector3 initialPosition = pushedRigidbody.position;
         Vector3 destPosition = pushedRigidbody.position + dir * PushDistance;

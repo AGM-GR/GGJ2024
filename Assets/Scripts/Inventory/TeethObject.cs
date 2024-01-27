@@ -16,7 +16,7 @@ public class TeethObject : MonoBehaviour{
     private void OnTriggerEnter (Collider other){
         Debug.Log(other.name);
         if(other.gameObject.layer==LayerMask.NameToLayer("Player")){
-            other.gameObject.GetComponent<TeethManager>().addTeeth(teethType);
+            other.gameObject.GetComponent<TeethManager>().AddTeeth(teethType);
             Destroy(gameObject);
         }
     }
