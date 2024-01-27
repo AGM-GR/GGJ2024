@@ -507,6 +507,12 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &706148456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2690931304286446608, guid: 38e8a2cdb0f6fe94ba0ee868d0afb35a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1296883888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134075690
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +868,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1945960315}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690931304286446608, guid: 38e8a2cdb0f6fe94ba0ee868d0afb35a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1300110748}
   m_SourcePrefab: {fileID: 100100000, guid: 38e8a2cdb0f6fe94ba0ee868d0afb35a, type: 3}
 --- !u!4 &1296883889 stripped
 Transform:
@@ -888,6 +898,19 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1296883888}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1300110748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706148456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad1707e170cef3498a4dd85ec31ac4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hitter: {fileID: 1945960317}
 --- !u!1 &1622111948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,9 +1380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2763303090491b4695b051789212ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 1300110746}
   HitTrigger: {fileID: 1945960316}
   ForcePower: 10
+  Animator: {fileID: 1300110746}
 --- !u!1 &2035555759
 GameObject:
   m_ObjectHideFlags: 0
