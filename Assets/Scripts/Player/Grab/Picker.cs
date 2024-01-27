@@ -128,6 +128,8 @@ public class Picker : MonoBehaviour
 
     IEnumerator PickingAnimationCoroutine(Collider picked)
     {
+        OnObjectPicked.Invoke(picked);
+        
         Transform pickedTransform = picked.transform;
         Vector3 originalPos = pickedTransform.position;
 
@@ -155,7 +157,6 @@ public class Picker : MonoBehaviour
         while (progress < 1f); // Keep moving while we don't reach any goal
 
         pickedTransform.parent = _PickSlot;
-        OnObjectPicked.Invoke(picked);
 
         _PickCoroutine = null;
     }

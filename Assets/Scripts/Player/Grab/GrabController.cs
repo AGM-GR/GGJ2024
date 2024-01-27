@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GrabController : MonoBehaviour
 {
@@ -7,40 +8,52 @@ public class GrabController : MonoBehaviour
 
     Collider _ObjectGrabbed = null;
 
+    private Character _character;
+
     public Collider ObjectGrabbed
     {
         get { return _ObjectGrabbed; }
     }
 
+    private void Awake()
+    {
+        _character = GetComponentInParent<Character>();
+    }
+
     private void Start()
     {
-        _Picker.OnObjectPicked.AddListener((Collider col)=> { _ObjectGrabbed = col; }) ;
+        _Picker.OnObjectPicked.AddListener((Collider col)=> 
+        { 
+            _ObjectGrabbed = col;
+            _character.Animator.SetTrigger("PickUp");
+            _character.Animator.SetFloat("HangingObject", 1);
+        });
+
         _Picker.OnObjectDropped.AddListener((Collider col) => 
         {
-            if (col != _ObjectGrabbed) 
+            if (col != _ObjectGrabbed)
             {
-                Debug.LogWarning("Algo raro pasa");
+                Debug.LogWarning("Algo raro pasaba ... digievolucionaban !!!");
             }
 
             _ObjectGrabbed = null; 
         });
+
+        _character.Animator.SetFloat("HangingObject", 0);
     }
 
-    void Update()
+    void OnGrab(InputValue value)
     {
-        if (Input.GetKeyDown(KeyCode.P)) //Como si lo llamara desde la animación 
+        if (value.isPressed)
         {
-            Pick();
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Drop();
-        }
-
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Throw();
+            if (_ObjectGrabbed == null)
+            {
+                Pick();
+            } 
+            else 
+            {
+                Throw();
+            }
         }
     }
 
@@ -52,13 +65,17 @@ public class GrabController : MonoBehaviour
             return;
         }
 
+        _character.Animator.SetTrigger("TryPickUp");
         _Picker.TryPick();
     }
 
     public void Throw()
     {
+        _character.Animator.SetFloat("HangingObject", 0);
+
         if (_ObjectGrabbed)
         {
+            _character.Animator.SetTrigger("ThrowObject");
             _Thrower.ThrowObject(_ObjectGrabbed, transform.forward);
             _ObjectGrabbed = null;
         }
@@ -70,6 +87,8 @@ public class GrabController : MonoBehaviour
 
     public void Drop()
     {
+        _character.Animator.SetFloat("HangingObject", 0);
+
         if (_ObjectGrabbed)
         {
             _Picker.DropPicked(_ObjectGrabbed);
