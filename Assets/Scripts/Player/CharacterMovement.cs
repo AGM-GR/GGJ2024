@@ -7,6 +7,8 @@ public class CharacterMovement : MonoBehaviour
 {
     // Exposed variables
     public float MoveSpeed = 3f;
+    public float MoveSpeedSlow = 2f;
+    public bool isMovingSlow = false;
     public float MinInputAmount = 0.5f;
     public float SpeedDampTime = 0.2f;
     public float RotateSpeed = 6f;
@@ -69,8 +71,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Jumper.IsJumping) return;
-
+    
         IsMovementAllowed = _character.IsInit /* && IsIdleOrLocomotion()*/;
         Rotate();
 
@@ -78,9 +79,17 @@ public class CharacterMovement : MonoBehaviour
 
         Move();
         _character.Animator.SetFloat("Speed", _inputAmount);
-        _rb.velocity = _moveDirection * MoveSpeed * _inputAmount * _currentSpeedMultiplier;
+        Vector3 velocity = _moveDirection * GetSpeed() * _inputAmount * _currentSpeedMultiplier;
+        _rb.velocity = new Vector3(velocity.x,_rb.velocity.y,velocity.z);
 
     }  
+    private float GetSpeed(){
+        if(isMovingSlow){
+            return MoveSpeedSlow;
+        }else{
+            return MoveSpeed;
+        }
+    }
 
 
     public void OnMove(InputValue value)
