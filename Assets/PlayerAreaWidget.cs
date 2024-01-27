@@ -8,6 +8,7 @@ using System;
 
 public class PlayerAreaWidget : MonoBehaviour
 {
+    private CanvasGroup _canvasGroup;
     public CharacterData characterData;
     [Space]
     public Image PortraitImg;
@@ -20,12 +21,16 @@ public class PlayerAreaWidget : MonoBehaviour
         PortraitImg.sprite = characterData.Portrait;
         BgImgs.ForEach(i => i.color = characterData.Color);
         //NameText.text = characterData.Name.ToString();
+
+        _canvasGroup = GetComponent<CanvasGroup>();
+        _canvasGroup.alpha = 0;
     }
 
 
     public void Init(ReactiveProperty<int> reactiveAmount)
     {
         reactiveAmount.Subscribe(RefreshAmount);
+        _canvasGroup.alpha = 1;
     }
 
     private void RefreshAmount(int amount)

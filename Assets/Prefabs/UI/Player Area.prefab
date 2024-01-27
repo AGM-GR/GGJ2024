@@ -197,6 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2176586866695074229}
   - component: {fileID: 794638378973858297}
+  - component: {fileID: 4701435151842467715}
   m_Layer: 5
   m_Name: Player Area
   m_TagString: Untagged
@@ -248,6 +249,18 @@ MonoBehaviour:
   - {fileID: 7318383617205334120}
   - {fileID: 7545327026165514400}
   - {fileID: 182563859005121849}
+--- !u!225 &4701435151842467715
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490141623730322651}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &5665004026837471032
 GameObject:
   m_ObjectHideFlags: 0
