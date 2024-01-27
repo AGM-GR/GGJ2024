@@ -40,7 +40,8 @@ public class ThrowForward : MonoBehaviour
         if (targetInView != null) 
         {
             print("Al target");
-            direction =  targetInView.position - transform.position;
+            Vector3 newDirection = targetInView.position - transform.position;
+            direction =  new Vector3(newDirection.x, direction.y, newDirection.z);
         }
 
         // Add impulse
