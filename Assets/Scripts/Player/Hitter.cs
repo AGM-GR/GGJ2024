@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 
 public class Hitter : MonoBehaviour
 {
@@ -96,8 +97,8 @@ public class Hitter : MonoBehaviour
                 
                 if (pushedPlayer != null)
                 {
-                    Debug.Log(name + "Player Hitted something!!");
                     //player pega contra algo
+                    pushedPlayer.SetStunnedPlayer();
                     pushedPlayer.GetComponent<TeethManager>().DropTooth();
 
                 }

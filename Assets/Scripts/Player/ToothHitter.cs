@@ -58,7 +58,7 @@ public class ToothHitter : MonoBehaviour
     {
         _isHitting = false;
 
-        character.ClearPlayer();
+        character.SetStunnedPlayer();
         TeethManager characterTeeth = character.GetComponent<TeethManager>();
         characterTeeth.DropTooth();
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,6 +12,8 @@ public class Character : MonoBehaviour
     public string ControlScheme;
 
     public GameObject[] CharacterGOs;
+
+    public float StunnedTime = 1f;
 
     private GameObject _currentCharacterGO;
 
@@ -29,6 +32,9 @@ public class Character : MonoBehaviour
         _grabController = GetComponent<GrabController>();
         _hitter = GetComponentInChildren<Hitter>();
         _toothHitter = GetComponentInChildren<ToothHitter>();
+
+        if (_playerInput != null)
+            _playerInput = GetComponent<PlayerInput>();
     }
 
     public void Initialize(int index,
@@ -42,7 +48,8 @@ public class Character : MonoBehaviour
 
         SetupModelDependences();
         transform.position = spawningPosition;
-        _characterMovement.IsMovementAllowed = true;
+
+        _playerInput = GetComponent<PlayerInput>();
     }
 
     private void SetupModelDependences()
@@ -66,7 +73,36 @@ public class Character : MonoBehaviour
 
     public void SetPlayerInput(bool enabled)
     {
-        _playerInput.enabled = enabled;
+        if (enabled)
+        {
+            _playerInput.ActivateInput();
+        } 
+        else
+        {
+            _playerInput.DeactivateInput();
+        }
+    }
+
+    private Coroutine _stunnedCoroutine;
+
+    public void SetStunnedPlayer()
+    {
+        if (_stunnedCoroutine != null)
+        {
+            StopCoroutine(_stunnedCoroutine);
+        }
+
+        _stunnedCoroutine = StartCoroutine(StunPlayer());
+    }
+
+    private IEnumerator StunPlayer()
+    {
+        ClearPlayer();
+        SetPlayerInput(false);
+
+        yield return new WaitForSeconds(StunnedTime);
+
+        SetPlayerInput(true);
     }
 }
 
