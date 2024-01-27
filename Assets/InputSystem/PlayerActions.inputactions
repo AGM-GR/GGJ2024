@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "InfluenceRaver",
+                    "name": "Jump",
                     "type": "Button",
                     "id": "e6a3c420-25f0-495d-b1f3-a3ecf59f3fcd",
                     "expectedControlType": "Button",
@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ExecuteAction",
+                    "name": "FirstAttack",
                     "type": "Button",
                     "id": "9183c799-00d3-423b-9599-481d1500b9f0",
                     "expectedControlType": "Button",
@@ -316,7 +316,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "ExecuteAction",
+                    "action": "FirstAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -327,7 +327,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "ExecuteAction",
+                    "action": "FirstAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -338,7 +338,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "ExecuteAction",
+                    "action": "FirstAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -349,7 +349,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "ExecuteAction",
+                    "action": "FirstAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -360,18 +360,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "ExecuteAction",
+                    "action": "FirstAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "8d780a4e-0e75-4ad0-9a80-58367b59c84e",
-                    "path": "<Keyboard>/x",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "InfluenceRaver",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -382,7 +382,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "InfluenceRaver",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -393,7 +393,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "InfluenceRaver",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -404,7 +404,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "InfluenceRaver",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -415,7 +415,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "InfluenceRaver",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

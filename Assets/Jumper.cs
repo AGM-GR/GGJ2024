@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Jumper : MonoBehaviour
 {
@@ -21,13 +22,16 @@ public class Jumper : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    public void OnJump(InputValue value)
     {
-        if (Input.GetButtonDown("Jump") && !IsJumping)
+        if (value.isPressed && !IsJumping)
         {
             StartCoroutine(Jump());
         }
+    }
 
+    void Update()
+    {
         if (rb.velocity.y < fallingVelocityThreshold)
         {
             Fall();
@@ -47,17 +51,17 @@ public class Jumper : MonoBehaviour
     IEnumerator Jump()
     {
         IsJumping = true;
-        Animator.SetFloat("VerticalSpeed", 0);
+        Animator.SetTrigger("JumpRelease");
         yield return new WaitForSeconds(ReleaseTime);
         rb.velocity = Vector3.up * jumpForce;
-        Animator.SetFloat("VerticalSpeed", 0.5f);
+        Animator.SetTrigger("JumpAir");
         yield return null;
     }
 
 
     IEnumerator Land()
     {
-        Animator.SetFloat("VerticalSpeed", 0);
+        Animator.SetTrigger("JumpLanded");
         yield return new WaitForSeconds(LandingTime);
         IsJumping = false;
         yield return null;
@@ -65,7 +69,7 @@ public class Jumper : MonoBehaviour
 
     private void Fall()
     {
-        Animator.SetFloat("VerticalSpeed", 1f);
+        Animator.SetTrigger("JumpLanding");
         rb.velocity += Vector3.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
     }
 }
