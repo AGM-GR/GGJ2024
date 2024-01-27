@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
     private Camera _mainCamera;
     private Rigidbody _rb;
     //private Character _character;
-    //private Animator Animator => _character.CharacterAnimator;
+    public Animator Animator;
 
     public bool IsMovementAllowed
     {
@@ -74,7 +74,7 @@ public class CharacterMovement : MonoBehaviour
         if (!IsMovementAllowed || !LobbyManager.Instance.GameStarted) return;
 
         Move();
-        //Animator.SetFloat("Speed", _inputAmount);
+        Animator.SetFloat("Speed", _inputAmount);
         _rb.velocity = _moveDirection * MoveSpeed * _inputAmount * _currentSpeedMultiplier;
 
     }  
