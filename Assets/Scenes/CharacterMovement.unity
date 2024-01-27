@@ -797,7 +797,7 @@ PrefabInstance:
     - target: {fileID: 8870835819245186999, guid: 38e8a2cdb0f6fe94ba0ee868d0afb35a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54
+      value: 0.048
       objectReference: {fileID: 0}
     - target: {fileID: 8870835819245186999, guid: 38e8a2cdb0f6fe94ba0ee868d0afb35a,
         type: 3}
@@ -882,6 +882,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054595088978d0347b36f4e86fbbc55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1300110746 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8715564496471811280, guid: 38e8a2cdb0f6fe94ba0ee868d0afb35a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1296883888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1622111948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,6 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2763303090491b4695b051789212ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animator: {fileID: 1300110746}
   HitTrigger: {fileID: 1945960316}
   ForcePower: 10
 --- !u!1 &2035555759
