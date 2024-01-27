@@ -2,13 +2,15 @@ using UnityEngine;
 
 // FoV tutorial: https://youtu.be/TfhPBAe9Tt8?t=612
 
+// TODO: Take into account the sides of the target instead of the center point (transform).
+
 [RequireComponent(typeof(Light))]
 public class ThrowFoV : MonoBehaviour
 {
-    [SerializeField] Light _SpotLight;
     [SerializeField] float _ViewDistance = 10f;
     [SerializeField] string _TagetTag = "Player";
 
+    Light _SpotLight;
     float _ViewAngle;
 
     Transform[] _Targets;
@@ -22,7 +24,6 @@ public class ThrowFoV : MonoBehaviour
 
     void Start()
     {
-        // Get the player reference (remember: TAG the player!)
         GameObject[] go = GameObject.FindGameObjectsWithTag(_TagetTag);
 
         if (go.Length == 0) 
