@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Character : MonoBehaviour
 {
@@ -11,12 +13,31 @@ public class Character : MonoBehaviour
 
     public GameObject[] CharacterGOs;
 
-    private GameObject _currentCharacterGO;
+    public float StunnedTime = 1f;
 
-    public bool IsInit;
+    private GameObject _currentCharacterGO;
 
     private CharacterData _characterData;
 
+    private CharacterMovement _characterMovement;
+    private GrabController _grabController;
+    private Hitter _hitter;
+    private ToothHitter _toothHitter;
+    private PlayerInput _playerInput;
+
+    public CharacterMovement CharacterMovement => _characterMovement;
+
+
+    private void Awake()
+    {
+        _characterMovement = GetComponent<CharacterMovement>();
+        _grabController = GetComponentInChildren<GrabController>();
+        _hitter = GetComponentInChildren<Hitter>();
+        _toothHitter = GetComponentInChildren<ToothHitter>();
+
+        if (_playerInput != null)
+            _playerInput = GetComponent<PlayerInput>();
+    }
 
     public void Initialize(int index,
                            string controlScheme,
@@ -28,9 +49,9 @@ public class Character : MonoBehaviour
         _characterData = characterData;
 
         SetupModelDependences();
-        IsInit = true;
         transform.position = spawningPosition;
 
+        _playerInput = GetComponent<PlayerInput>();
     }
 
     private void SetupModelDependences()
@@ -43,6 +64,47 @@ public class Character : MonoBehaviour
         _currentCharacterGO = CharacterGOs[CharacterIndex];
         _currentCharacterGO.SetActive(true);
         Animator = _currentCharacterGO.GetComponentInChildren<Animator>();
+    }
+
+    public void ClearPlayer()
+    {
+        _grabController.Drop();
+        _hitter.Clear();
+        _toothHitter.Clear();
+    }
+
+    public void SetPlayerInput(bool enabled)
+    {
+        if (enabled)
+        {
+            _playerInput.ActivateInput();
+        } 
+        else
+        {
+            _playerInput.DeactivateInput();
+        }
+    }
+
+    private Coroutine _stunnedCoroutine;
+
+    public void SetStunnedPlayer()
+    {
+        if (_stunnedCoroutine != null)
+        {
+            StopCoroutine(_stunnedCoroutine);
+        }
+
+        _stunnedCoroutine = StartCoroutine(StunPlayer());
+    }
+
+    private IEnumerator StunPlayer()
+    {
+        ClearPlayer();
+        SetPlayerInput(false);
+
+        yield return new WaitForSeconds(StunnedTime);
+
+        SetPlayerInput(true);
     }
 }
 

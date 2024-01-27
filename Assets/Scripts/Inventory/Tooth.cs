@@ -15,20 +15,18 @@ public class Tooth : MonoBehaviour
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        colliderTrigger.enabled = false;
-        StartCoroutine(EnableTrigger());
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.name);
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-            other.gameObject.GetComponent<TeethManager>().AddTooth(teethType);
-            gameObject.SetActive(false);
-            Spawner?.ItemDisabled();
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    Debug.Log(other.name);
+    //    if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+    //    {
+    //        other.gameObject.GetComponent<TeethManager>().AddTooth(teethType);
+    //        gameObject.SetActive(false);
+    //        Spawner?.ItemDisabled();
+    //    }
+    //}
 
     public int GetRandomTeeth()
     {
@@ -39,15 +37,16 @@ public class Tooth : MonoBehaviour
     public void SetAsPhysical()
     {
         Rigidbody = GetComponent<Rigidbody>();
-
         Rigidbody.useGravity = true;
-        Rigidbody.isKinematic = false;
+
+        //StartCoroutine(TriggerCooldown());
     }
 
 
 
-    IEnumerator EnableTrigger()
+    IEnumerator TriggerCooldown()
     {
+        colliderTrigger.enabled = false;
         yield return new WaitForSeconds(timeDisabled);
         colliderTrigger.enabled = true;
         yield return null;

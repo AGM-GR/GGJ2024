@@ -93,6 +93,7 @@ public class LobbyManager : MonoBehaviour
         SpawningPoints.RemoveAt(randomIndex);
 
         character.Initialize(player.playerIndex, player.currentControlScheme, CharacterDatas[player.playerIndex], randomSpawningPoint);
+        character.SetPlayerInput(false);
     }
 
     private void RefreshPlayButton()
@@ -118,10 +119,10 @@ public class LobbyManager : MonoBehaviour
 
     private static void AllowPlayersMovement()
     {
-        var characterMovements = FindObjectsOfType<CharacterMovement>().ToList();
+        var characterMovements = FindObjectsOfType<Character>().ToList();
         characterMovements.ForEach(o =>
         {
-            o.IsMovementAllowed = true;
+            o.SetPlayerInput(true);
         });
     }
 

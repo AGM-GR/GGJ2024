@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7094146871151102518}
   - component: {fileID: 3248960515256514510}
   - component: {fileID: 31336753137767965}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrabController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 8069165559882370191}
   - component: {fileID: 1552106718607174695}
   - component: {fileID: 7252643136814503470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Picker
   m_TagString: Untagged
   m_Icon: {fileID: 0}

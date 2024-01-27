@@ -23,6 +23,7 @@ public class ToothHitter : MonoBehaviour
     {
         if (!_isHitting && value.isPressed)
         {
+            _isHitting = true;
             _character.Animator.SetTrigger("ToothHit");
         }
     }
@@ -37,12 +38,13 @@ public class ToothHitter : MonoBehaviour
         HitTrigger.enabled = true;
         yield return new WaitForSeconds(0.5f);
         HitTrigger.enabled = false;
+        _isHitting = false;
         yield return null;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_isHitting) return;
+        if (!_isHitting) return;
         if (other.attachedRigidbody == null) return;
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
@@ -54,13 +56,18 @@ public class ToothHitter : MonoBehaviour
 
     IEnumerator ToothHit(Character character)
     {
-        _isHitting = true;
-        
+        _isHitting = false;
+
+        character.SetStunnedPlayer();
         TeethManager characterTeeth = character.GetComponent<TeethManager>();
         characterTeeth.DropTooth();
 
         yield return new WaitForSeconds(ToothHitCooldown);
+    }
 
+    public void Clear()
+    {
         _isHitting = false;
+        HitTrigger.enabled = false;
     }
 }

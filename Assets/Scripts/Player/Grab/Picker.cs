@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider))]
 public class Picker : MonoBehaviour
@@ -34,8 +34,7 @@ public class Picker : MonoBehaviour
 
         if (_PickCoroutine != null)
         {
-            Debug.LogWarning("The player is still picking the object.");
-            return;
+            StopCoroutine(_PickCoroutine);
         }
 
         if (picked)
@@ -58,6 +57,24 @@ public class Picker : MonoBehaviour
 
             Vector3 dropDirection = new Vector3(UnityEngine.Random.Range(-1f, 1f), 1f, UnityEngine.Random.Range(-1f, 1f));
             picked.attachedRigidbody.AddForce(dropDirection.normalized * _DropImpulse, ForceMode.Impulse);
+
+            if (picked.CompareTag("Player"))
+            {
+                PlayerInput pi = picked.GetComponent<PlayerInput>();
+                CharacterMovement cm = picked.GetComponent<CharacterMovement>();
+                Character ch = picked.GetComponent<Character>();
+
+                if (pi == null || cm == null || ch == null)
+                {
+                    Debug.LogWarning("Something went wrong");
+                }
+                else
+                {
+                    pi.enabled = false;
+                    cm.IsMovementAllowed = true;
+                    ch.ClearPlayer();
+                }
+            }
 
             // Asignar que se destruya o que no haga daño?
             OnObjectDropped.Invoke(picked);
@@ -103,15 +120,28 @@ public class Picker : MonoBehaviour
             return;
         }
 
+        // Comprobar que es un objeto
+        // If layyer or tag...
 
         if (objectToPick.CompareTag("Player"))
         {
-            Debug.LogWarning($"Pickear personajes esta restringido demomento");
-            return;
+            PlayerInput pi = objectToPick.GetComponent<PlayerInput>();
+            CharacterMovement cm = objectToPick.GetComponent<CharacterMovement>();
+
+            if (pi == null || cm == null)
+            {
+                Debug.LogWarning("Something went wrong");
+            }
+            else
+            {
+                pi.enabled = false;
+                cm.IsMovementAllowed = false;
+            }
+
+            //Debug.LogWarning($"Pickear personajes esta restringido demomento");
+            //return;
         }
 
-        // Comprobar que es un objeto
-        // If layyer or tag...
 
         if (objectToPick.attachedRigidbody)
         {
@@ -128,6 +158,8 @@ public class Picker : MonoBehaviour
 
     IEnumerator PickingAnimationCoroutine(Collider picked)
     {
+        OnObjectPicked.Invoke(picked);
+        
         Transform pickedTransform = picked.transform;
         Vector3 originalPos = pickedTransform.position;
 
@@ -155,7 +187,6 @@ public class Picker : MonoBehaviour
         while (progress < 1f); // Keep moving while we don't reach any goal
 
         pickedTransform.parent = _PickSlot;
-        OnObjectPicked.Invoke(picked);
 
         _PickCoroutine = null;
     }

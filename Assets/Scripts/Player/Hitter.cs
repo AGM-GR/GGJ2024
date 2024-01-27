@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 
 public class Hitter : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Hitter : MonoBehaviour
     {
         if (!_isHitting && value.isPressed)
         {
+            _isHitting = true;
             _character.Animator.SetTrigger("Hit");
         }
     }
@@ -42,16 +44,17 @@ public class Hitter : MonoBehaviour
         HitTrigger.enabled = true;
         yield return new WaitForSeconds(0.5f);
         HitTrigger.enabled = false;
+        _isHitting = false;
         yield return null;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_isHitting) return;
+        if (!_isHitting) return;
         if (other.attachedRigidbody == null) return;
 
         HitTrigger.enabled = false;
-        _isHitting = true;
+        _isHitting = false;
 
         Vector3 direction = transform.forward;
         StartCoroutine(Push(other.attachedRigidbody, direction));
@@ -59,14 +62,16 @@ public class Hitter : MonoBehaviour
 
     IEnumerator Push(Rigidbody pushedRigidbody, Vector3 dir)
     {
-        PlayerInput pushedPlayer = pushedRigidbody.GetComponent<PlayerInput>();
+        Character pushedPlayer = pushedRigidbody.GetComponent<Character>();
         if (pushedPlayer != null)
         {
-            pushedPlayer.enabled = false;
+            pushedPlayer.ClearPlayer();
+            pushedPlayer.SetPlayerInput(false);
+
+            pushedPlayer.GetComponent<TeethManager>().DropTooth();
         }
 
 
-        pushedRigidbody.GetComponent<TeethManager>().DropTooth();
 
         float pushDuration = PushDistance / PushVelocity;
         Vector3 initialPosition = pushedRigidbody.position;
@@ -93,8 +98,8 @@ public class Hitter : MonoBehaviour
                 
                 if (pushedPlayer != null)
                 {
-                    Debug.Log(name + "Player Hitted something!!");
                     //player pega contra algo
+                    pushedPlayer.SetStunnedPlayer();
                     pushedPlayer.GetComponent<TeethManager>().DropTooth();
 
                 }
@@ -106,10 +111,14 @@ public class Hitter : MonoBehaviour
         
         if (pushedPlayer != null)
         {
-            pushedPlayer.enabled = true;
+            pushedPlayer.SetPlayerInput(true);
         }
+    }
 
+    public void Clear()
+    {
         _isHitting = false;
+        HitTrigger.enabled = false;
     }
 }
 
