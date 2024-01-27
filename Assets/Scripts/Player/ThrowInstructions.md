@@ -1,0 +1,4 @@
+- The spotlight can be disabled
+- Change the spotlight "Inner/Outter Spot Angle" to change the FoV angle range
+- Use the "Tag" to determine the targets of the FoV
+- The Transform of the GO determine the forward direction of the throw (rotation values affects)
