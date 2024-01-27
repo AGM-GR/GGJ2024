@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Hitter : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class Hitter : MonoBehaviour
 
     public bool _isHitting;
 
-    void Update()
+    public float PushDistance = 2f;
+    public float PushVelocity = 10f;
+
+    private void OnFirstAttack(InputValue value)
     {
-        if (Input.GetKey(KeyCode.Z))
+        if (value.isPressed)
         {
             Animator.SetTrigger("Hit");
         }
@@ -46,11 +50,12 @@ public class Hitter : MonoBehaviour
 
     IEnumerator Push(Transform transform, Vector3 dir)
     {
-        Debug.Log("Push");
+        float pushDuration = PushDistance / PushVelocity;
+
         float delta = 0;
-        while (delta <= 0.5f)
+        while (delta <= pushDuration)
         {
-            transform.position += dir * ForcePower * Time.deltaTime;
+            transform.position += dir * PushVelocity * Time.deltaTime;
             delta += Time.deltaTime;
             _isHitting = false;
             yield return null;

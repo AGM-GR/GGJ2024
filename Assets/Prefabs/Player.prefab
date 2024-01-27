@@ -70,6 +70,8 @@ MonoBehaviour:
   ForcePower: 10
   Animator: {fileID: 8715564496471811280}
   _isHitting: 0
+  PushDistance: 2
+  PushVelocity: 10
 --- !u!1 &8870835819245186992
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 79533fb907e33f8418e4bd51867b3eaf,
     type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 1
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:

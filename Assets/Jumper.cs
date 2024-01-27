@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Jumper : MonoBehaviour
 {
@@ -21,13 +22,16 @@ public class Jumper : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    public void OnJump(InputValue value)
     {
-        if (Input.GetButtonDown("Jump") && !IsJumping)
+        if (value.isPressed && !IsJumping)
         {
             StartCoroutine(Jump());
         }
+    }
 
+    void Update()
+    {
         if (rb.velocity.y < fallingVelocityThreshold)
         {
             Fall();
