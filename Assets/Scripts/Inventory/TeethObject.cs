@@ -8,8 +8,10 @@ public class TeethObject : MonoBehaviour{
     public TeethType teethType;
 
     private void OnTriggerEnter (Collider other){
+        Debug.Log(other.name);
         if(other.gameObject.layer==LayerMask.NameToLayer("Player")){
             other.gameObject.GetComponent<TeethManager>().addTeeth(teethType);
+            Destroy(gameObject);
         }
     }
 
