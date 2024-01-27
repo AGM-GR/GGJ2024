@@ -23,6 +23,16 @@ public class TeethManager : MonoBehaviour
         AddTeeth(GetRandomTeeth());
         AddTeeth(GetRandomTeeth());
         AddTeeth(GetRandomTeeth());
+           AddTeeth(GetRandomTeeth());
+        AddTeeth(GetRandomTeeth());
+        AddTeeth(GetRandomTeeth());
+           AddTeeth(GetRandomTeeth());
+        AddTeeth(GetRandomTeeth());
+        AddTeeth(GetRandomTeeth());
+           AddTeeth(GetRandomTeeth());
+        AddTeeth(GetRandomTeeth());
+        AddTeeth(GetRandomTeeth());
+        
     }
     void Update()
     {
