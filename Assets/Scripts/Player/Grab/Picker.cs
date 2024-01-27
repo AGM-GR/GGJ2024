@@ -11,6 +11,7 @@ public class Picker : MonoBehaviour
     [SerializeField] Transform _PickSlot;
     [SerializeField] float _PickTime = 2f;
     [SerializeField] float _DropImpulse = 2f;
+    [SerializeField] LayerMask _PickLayerMask;
 
     [Space]
     public UnityEvent<Collider> OnObjectPicked;
@@ -30,6 +31,7 @@ public class Picker : MonoBehaviour
 
     public void DropPicked(Collider picked)
     {
+
         if (_PickCoroutine != null)
         {
             Debug.LogWarning("The player is still picking the object.");
@@ -95,6 +97,18 @@ public class Picker : MonoBehaviour
             return;
         }
 
+        if (!IsInLayerMasks(objectToPick.gameObject, _PickLayerMask))
+        {
+            Debug.LogWarning($"Not pickable: {objectToPick.name}");
+            return;
+        }
+
+
+        if (objectToPick.CompareTag("Player"))
+        {
+            Debug.LogWarning($"Pickear personajes esta restringido demomento");
+            return;
+        }
 
         // Comprobar que es un objeto
         // If layyer or tag...
@@ -144,6 +158,11 @@ public class Picker : MonoBehaviour
         OnObjectPicked.Invoke(picked);
 
         _PickCoroutine = null;
+    }
+
+    private bool IsInLayerMasks(GameObject gameObject, int layerMasks)
+    {
+        return layerMasks == (layerMasks | (1 << gameObject.layer));
     }
 }
 

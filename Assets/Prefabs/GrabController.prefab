@@ -233,6 +233,9 @@ MonoBehaviour:
   _PickSlot: {fileID: 624130429608383710}
   _PickTime: 0.75
   _DropImpulse: 5
+  _PickLayerMask:
+    serializedVersion: 2
+    m_Bits: 192
   OnObjectPicked:
     m_PersistentCalls:
       m_Calls: []
