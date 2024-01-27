@@ -71,8 +71,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-    
-        IsMovementAllowed = _character.IsInit /* && IsIdleOrLocomotion()*/;
+  
         Rotate();
 
         if (!IsMovementAllowed || (LobbyManager.Instance != null && !LobbyManager.Instance.GameStarted)) return;
@@ -81,6 +80,7 @@ public class CharacterMovement : MonoBehaviour
         _character.Animator.SetFloat("Speed", _inputAmount);
         Vector3 velocity = _moveDirection * GetSpeed() * _inputAmount * _currentSpeedMultiplier;
         _rb.velocity = new Vector3(velocity.x,_rb.velocity.y,velocity.z);
+
 
     }  
     private float GetSpeed(){

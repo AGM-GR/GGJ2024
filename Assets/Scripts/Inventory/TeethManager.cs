@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-
-
 public class TeethManager : MonoBehaviour
 {
     private Character _character;
-    public Rigidbody teethPrefab;
+    public Tooth toothPrefab;
 
-    public float throwForce = 12.0f;
+    public float ThrowForce = 12.0f;
     public float heightThrow = 10f;
     public float minThrow = 1f;
     public float maxThrow = 10f;
@@ -34,10 +32,11 @@ public class TeethManager : MonoBehaviour
     //    return (TeethType)System.Enum.GetValues(typeof(TeethType)).GetValue(Random.Range(0, System.Enum.GetValues(typeof(TeethType)).Length - 1));
     //}
 
-    public void AddTeeth(TeethType teeth)
+    public void AddTooth(TeethType teeth)
     {
         //teethInventory.Add(teeth);
         TeethAmount++;
+        UpdateWidget();
     }
 
     //public TeethType? RemoveTeeth()
@@ -51,18 +50,20 @@ public class TeethManager : MonoBehaviour
     //    return null;
     //}
 
-
-    public void DropTeeth()
+    [ContextMenu("Drop tooth")]
+    public void DropTooth()
     {
         if (TeethAmount == 0) return;
 
         TeethAmount = Mathf.Max(TeethAmount - 1, 0);
-        var teethRb = Instantiate(teethPrefab);
+        Tooth newTooth = Instantiate(toothPrefab);
         Vector3 nPos = transform.position;
         nPos.y += heightThrow;
-        teethRb.transform.position = nPos;
+        newTooth.transform.position = nPos;
 
-        ThrowObject(teethRb);
+        //Debug.Break();
+        newTooth.SetAsPhysical();
+        ThrowObject(newTooth.Rigidbody);
         UpdateWidget();
     }
 
@@ -73,13 +74,14 @@ public class TeethManager : MonoBehaviour
 
     public void ThrowObject(Rigidbody rigidbody)
     {
-        Vector3 direction = Vector3.forward;
-        direction = Quaternion.Euler(new Vector3(0, Random.Range(0, 359), 0)) * direction * Random.Range(minThrow, maxThrow);
+
+        Vector3 direction = Vector3.up;
+        //direction = Quaternion.Euler(new Vector3(0, Random.Range(0, 359), 0)) * direction * Random.Range(minThrow, maxThrow);
 
         // Reset forces
         rigidbody.velocity = Vector3.zero;
 
         // Add impulse
-        rigidbody.AddForce(direction.normalized * throwForce, ForceMode.Impulse); // To exclude the mass -> ForceMode.VelocityChange
+        rigidbody.AddForce(direction.normalized * ThrowForce, ForceMode.Impulse); // To exclude the mass -> ForceMode.VelocityChange
     }
 }

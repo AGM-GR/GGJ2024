@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Character : MonoBehaviour
 {
@@ -13,10 +14,22 @@ public class Character : MonoBehaviour
 
     private GameObject _currentCharacterGO;
 
-    public bool IsInit;
-
     private CharacterData _characterData;
 
+    private CharacterMovement _characterMovement;
+    private GrabController _grabController;
+    private Hitter _hitter;
+    private ToothHitter _toothHitter;
+    private PlayerInput _playerInput;
+
+
+    private void Awake()
+    {
+        _characterMovement = GetComponent<CharacterMovement>();
+        _grabController = GetComponent<GrabController>();
+        _hitter = GetComponentInChildren<Hitter>();
+        _toothHitter = GetComponentInChildren<ToothHitter>();
+    }
 
     public void Initialize(int index,
                            string controlScheme,
@@ -28,9 +41,8 @@ public class Character : MonoBehaviour
         _characterData = characterData;
 
         SetupModelDependences();
-        IsInit = true;
         transform.position = spawningPosition;
-
+        _characterMovement.IsMovementAllowed = true;
     }
 
     private void SetupModelDependences()
@@ -43,6 +55,18 @@ public class Character : MonoBehaviour
         _currentCharacterGO = CharacterGOs[CharacterIndex];
         _currentCharacterGO.SetActive(true);
         Animator = _currentCharacterGO.GetComponentInChildren<Animator>();
+    }
+
+    public void ClearPlayer()
+    {
+        _grabController.Drop();
+        _hitter.Clear();
+        _toothHitter.Clear();
+    }
+
+    public void SetPlayerInput(bool enabled)
+    {
+        _playerInput.enabled = enabled;
     }
 }
 

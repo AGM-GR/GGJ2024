@@ -9,6 +9,7 @@ public class ThrowFoV : MonoBehaviour
 {
     [SerializeField] float _ViewDistance = 10f;
     [SerializeField] string _TagetTag = "Player";
+    [SerializeField] Transform _Myself;
 
     Light _SpotLight;
     float _ViewAngle;
@@ -59,6 +60,11 @@ public class ThrowFoV : MonoBehaviour
     {
         foreach (Transform target in _Targets) 
         {
+            if (target == _Myself)
+            {
+                continue;
+            }
+
             // Check the distance with the player
             if (Vector3.Distance(transform.position, target.position) < _ViewDistance)
             {
