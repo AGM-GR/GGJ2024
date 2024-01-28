@@ -68,7 +68,7 @@ public class LobbyIntro : MonoBehaviour
 
     private void PlayCharacterAnimation(int index)
     {
-        //Animators[index].SetTrigger("Hover");
+        Animators[index].SetTrigger("select");
         Debug.Log("Selected " + index);
     }
 
