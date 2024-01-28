@@ -15,7 +15,10 @@ public class TeethManager : MonoBehaviour
     public float maxThrow = 10f;
 
     public ReactiveCollection<TeethType> teeths = new();
+
     public int TeethAmount => teeths.Count;
+    private int normalTeeth;
+    private int goldTeeth;
 
     private PlayerAreaWidget _widget;
 
@@ -25,16 +28,32 @@ public class TeethManager : MonoBehaviour
         _character = GetComponent<Character>();
         _widget = FindObjectsOfType<PlayerAreaWidget>().Where(s => s.characterData.Name == _character.Name).First();
         _widget.Init(teeths);
+        AddTooth(TeethType.Normal);
     }
+
+    public bool CanAdd(TeethType teethType)
+    {
+        if (teeths.Where(t => t == TeethType.Normal).Count() >= 4 && teethType == TeethType.Normal) return false;
+        return true;
+    }
+
+    // Solo puedes coger el que te hace falta, si ya no tienes huecos para blancos, no los coges
 
     public void AddTooth(TeethType teeth)
     {
         teeths.Add(teeth);
+        if (teeth == TeethType.Normal) normalTeeth++;
+        else goldTeeth++;
 
         if (TeethAmount == 4)
         {
             FindObjectOfType<GoldToothManager>().TrySpawnGoldTooth();
-        }        
+        }
+
+        if (normalTeeth == 4 && goldTeeth == 1)
+        {
+            FindObjectOfType<FinalDoorsManager>().OpenRandomDoor();
+        }
     }
 
 
@@ -43,10 +62,25 @@ public class TeethManager : MonoBehaviour
     {
         if (TeethAmount == 0) return;
 
+        TeethType tooth = RemoveRandomFromList();
+        InstantiateTooth(tooth);
+        FindObjectOfType<FinalDoorsManager>().CloseOpenedDoor();
+    }
+
+    private TeethType RemoveRandomFromList()
+    {
         int index = Random.Range(0, teeths.Count);
-        TeethType tooth = teeths[index];           
+        TeethType tooth = teeths[index];
         teeths.RemoveAt(index);
 
+        if (tooth == TeethType.Normal) normalTeeth--;
+        else goldTeeth--;
+
+        return tooth;
+    }
+
+    private void InstantiateTooth(TeethType tooth)
+    {
         var prefab = toothPrefabs.Where(p => p.TeethType == tooth).First();
         Tooth newTooth = Instantiate(prefab, SpawningPoint.position, Quaternion.identity);
 
