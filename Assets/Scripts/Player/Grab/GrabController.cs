@@ -149,6 +149,7 @@ public class GrabController : MonoBehaviour
 
     public void Drop()
     {
+        print("dropeando");
         _character.Animator.SetFloat("HangingObject", 0);
         _character.CharacterMovement.isMovingSlow = false;
 
