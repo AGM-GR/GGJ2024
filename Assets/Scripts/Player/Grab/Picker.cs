@@ -38,6 +38,7 @@ public class Picker : MonoBehaviour
         if (_PickCoroutine != null)
         {
             StopCoroutine(_PickCoroutine);
+            _PickCoroutine = null;
         }
 
         if (picked)
@@ -52,7 +53,8 @@ public class Picker : MonoBehaviour
                 picked.attachedRigidbody.angularVelocity = Vector3.zero;
             }
 
-            Destroy(picked.GetComponent<ParentConstraint>());
+            //Destroy(picked.GetComponent<ParentConstraint>());
+            Destroy(picked.GetComponent<PositionConstraint>());
 
 
             Vector3 dropDirection = new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f));
