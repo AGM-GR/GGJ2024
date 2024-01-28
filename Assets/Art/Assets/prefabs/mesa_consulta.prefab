@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7920166064490953189}
   - component: {fileID: 5007222679658490966}
   - component: {fileID: 5885402394902262922}
+  - component: {fileID: 3835405833630192290}
   m_Layer: 0
   m_Name: mesa_consulta
   m_TagString: Untagged
@@ -87,6 +88,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3835405833630192290
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063733531274913886}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.1434155, y: 1.6702126, z: 0.8}
+  m_Center: {x: -0.05453986, y: -0.07019253, z: 0.4}
 --- !u!1 &6185957509284659714
 GameObject:
   m_ObjectHideFlags: 0
