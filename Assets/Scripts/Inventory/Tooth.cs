@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Tooth : MonoBehaviour
 {
-    public TeethType teethType;
+    public TeethType teethType = TeethType.Normal;
 
     public Collider colliderTrigger;
     public Rigidbody Rigidbody;
