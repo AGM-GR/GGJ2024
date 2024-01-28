@@ -44,6 +44,7 @@ public class Jumper : MonoBehaviour
         List<string> triggers = new List<string>{ "JumpRelease", "JumpAir", "JumpLanding", "JumpLanded" };
         triggers.ForEach(trigger => _character.Animator.ResetTrigger(trigger));
     }
+    bool wasGround = true;
 
     void Update()
     {
@@ -55,10 +56,11 @@ public class Jumper : MonoBehaviour
 
         _character.Animator.SetBool("IsGrounded", IsGrounded);
 
-        if(IsGrounded)
+        if(IsGrounded && !wasGround)
         {
              StartCoroutine(Land());
         }
+        wasGround = IsGrounded;
     }
 
     bool IsGround(){

@@ -26,11 +26,17 @@ public class ThrowForward : MonoBehaviour
 
     public void ThrowObject(Collider collider, Vector3 direction)
     {
+        if (collider == null) 
+        {
+            Debug.LogWarning("Throw vacio");
+            return;
+        }
 
         collider.enabled = true;
+        
 
-        //ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
-        PositionConstraint constraint = collider.GetComponent<PositionConstraint>();
+        ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
+        //PositionConstraint constraint = collider.GetComponent<PositionConstraint>();
         constraint.RemoveSource(0);
         constraint.constraintActive = false;
         Destroy(constraint); // Hacer un wait de un par de frames??
