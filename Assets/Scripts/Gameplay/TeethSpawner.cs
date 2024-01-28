@@ -27,7 +27,7 @@ public class TeethSpawner : NavMeshSpawner<Tooth>
 
                     if (itemSpawned != null)
                     {
-                        //aSource.PlayOneShot(spawnSfx);
+                        aSource?.PlayOneShot(spawnSfx);
                         itemSpawned.Spawner = this;
                         yield return new WaitForSeconds(_spawnRatio);
                         itemSpawned.gameObject.SetActive(true);
