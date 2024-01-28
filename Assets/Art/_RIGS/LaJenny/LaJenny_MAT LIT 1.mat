@@ -165,16 +165,16 @@ Material:
     - _RampBandsSmoothing: 0.1
     - _RampOffset: 0
     - _RampScale: 1
-    - _RampSmoothing: 0.1
-    - _RampThreshold: 0.55
+    - _RampSmoothing: 0.053
+    - _RampThreshold: 0.495
     - _RampType: 0
     - _ReceiveShadows: 1
     - _ReceiveShadowsOff: 1
     - _ReflectionMapType: 0
     - _ReflectionSmoothness: 0.5
     - _RenderingMode: 0
-    - _RimMax: 1.07
-    - _RimMin: 0.38
+    - _RimMax: 0.89
+    - _RimMin: 0.6
     - _SampleGI: 0
     - _ShadowColorLightAtten: 1
     - _SingleIndirectColor: 0
