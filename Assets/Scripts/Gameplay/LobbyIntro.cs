@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class LobbyIntro : MonoBehaviour
 {
     private PlayerInputManager _inputManager;
@@ -24,7 +25,7 @@ public class LobbyIntro : MonoBehaviour
     [Header("Lobby Input Actions")]
     [SerializeField] InputAction startGame = null;
 
-    private void Awake()
+    public void Start()
     {
         PlayGameButton.interactable = false;
         PlayGameButton.onClick.AddListener(StartGame);
