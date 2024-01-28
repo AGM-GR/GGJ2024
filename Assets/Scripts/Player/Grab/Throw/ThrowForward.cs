@@ -37,6 +37,12 @@ public class ThrowForward : MonoBehaviour
 
         Rigidbody rigidbody = collider.attachedRigidbody;
 
+        ObjectCollisionHelper och = collider.GetComponent<ObjectCollisionHelper>();
+        if (och) 
+        { 
+            och.InvulnerableCollider = GetComponentInParent<Collider>(); // Player collider
+            och.HitCollisionsEnabled = true;
+        }
         
 
         // Reset forces
