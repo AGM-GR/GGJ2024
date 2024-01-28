@@ -646,7 +646,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 14afa83c49c84924b8ab8fffd8a43f9f,
         type: 3}
       propertyPath: m_Name
-      value: Richarl_RIG (1)
+      value: Richarl_RIG_end_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14afa83c49c84924b8ab8fffd8a43f9f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 14afa83c49c84924b8ab8fffd8a43f9f,
         type: 3}
@@ -1294,7 +1299,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7cd921f9683b0fc43afc327445f499d7,
         type: 3}
       propertyPath: m_Name
-      value: ElRulas_RIG (1)
+      value: ElRulas_RIG_end_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7cd921f9683b0fc43afc327445f499d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 7cd921f9683b0fc43afc327445f499d7,
         type: 3}
@@ -1479,10 +1489,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2993968269367958687, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_Name
+      value: LaJenny_RIG_end
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993968269367958687, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152377609799849408, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_Name
+      value: Richarl_RIG_end
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152377609799849408, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3255861399438240826, guid: 509508130e97d5a4185e66a48d429905,
         type: 3}
       propertyPath: m_Name
       value: FinalSet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255861399438240826, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3687777743552077327, guid: 509508130e97d5a4185e66a48d429905,
         type: 3}
@@ -1533,6 +1568,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427855162176473515, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_Name
+      value: LaVane_RIG_end
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427855162176473515, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010975964409527985, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_Name
+      value: ElRulas_RIG_end
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010975964409527985, guid: 509508130e97d5a4185e66a48d429905,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2243,7 +2298,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0c382fad040357c4cb863802ee29faad,
         type: 3}
       propertyPath: m_Name
-      value: LaVane_RIG (1)
+      value: LaVane_RIG_end_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c382fad040357c4cb863802ee29faad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 0c382fad040357c4cb863802ee29faad,
         type: 3}
@@ -2322,7 +2382,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3d32f72b1b29b624c92e414610e20df9,
         type: 3}
       propertyPath: m_Name
-      value: LaJenny_RIG (1)
+      value: LaJenny_RIG_end_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3d32f72b1b29b624c92e414610e20df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 3d32f72b1b29b624c92e414610e20df9,
         type: 3}
