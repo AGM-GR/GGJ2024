@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class LobbyIntro : MonoBehaviour
 {
     private PlayerInputManager _inputManager;
@@ -24,7 +25,7 @@ public class LobbyIntro : MonoBehaviour
     [Header("Lobby Input Actions")]
     [SerializeField] InputAction startGame = null;
 
-    private void Awake()
+    public void Start()
     {
         PlayGameButton.interactable = false;
         PlayGameButton.onClick.AddListener(StartGame);
@@ -58,6 +59,7 @@ public class LobbyIntro : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput player)
     {
+        player.gameObject.transform.position = new Vector3(666, 666, 666);
         Debug.Log("Control scheme: " + player.currentControlScheme);
         PlayCharacterAnimation(player.playerIndex);
         ConnectedPlayersAmount++;

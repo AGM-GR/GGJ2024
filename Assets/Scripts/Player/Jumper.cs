@@ -32,6 +32,8 @@ public class Jumper : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
+        if (!_character.IsInit) return;
+
         if (value.isPressed && !IsJumping && IsGround())
         {
             ResetAllTriggers();
