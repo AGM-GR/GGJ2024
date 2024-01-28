@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
@@ -49,13 +50,10 @@ public class Picker : MonoBehaviour
                 picked.attachedRigidbody.angularVelocity = Vector3.zero;
             }
 
-            if (picked.transform.parent == _PickSlot)
-            {
-                picked.transform.parent = null;
-            }
+            Destroy(picked.GetComponent<ParentConstraint>());
 
 
-            Vector3 dropDirection = new Vector3(UnityEngine.Random.Range(-1f, 1f), 1f, UnityEngine.Random.Range(-1f, 1f));
+            Vector3 dropDirection = new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f));
             picked.attachedRigidbody.AddForce(dropDirection.normalized * _DropImpulse, ForceMode.Impulse);
 
             if (picked.CompareTag("Player"))
@@ -186,7 +184,17 @@ public class Picker : MonoBehaviour
         }
         while (progress < 1f); // Keep moving while we don't reach any goal
 
-        pickedTransform.parent = _PickSlot;
+        //pickedTransform.parent = _PickSlot;
+
+        ParentConstraint constraint = pickedTransform.gameObject.AddComponent<ParentConstraint>();
+
+        ConstraintSource constraintSource = new ConstraintSource();
+        constraintSource.weight = 1f;
+        constraintSource.sourceTransform = _PickSlot;
+
+        constraint.AddSource(constraintSource);
+
+        constraint.constraintActive = true;
 
         _PickCoroutine = null;
     }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
 /* Be careful and get sure the thowing object it's not colliding with the player collider */
@@ -19,9 +20,10 @@ public class ThrowForward : MonoBehaviour
 
     public void ThrowObject(Collider collider, Vector3 direction)
     {
+
         collider.enabled = true;
 
-        collider.transform.parent = null;
+        Destroy(collider.GetComponent<ParentConstraint>());
 
         Rigidbody rigidbody = collider.attachedRigidbody;
 
