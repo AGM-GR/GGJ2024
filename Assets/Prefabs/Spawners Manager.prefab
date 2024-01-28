@@ -107,8 +107,8 @@ MonoBehaviour:
   meshGround: {fileID: 0}
   _maxItemsCount: 5
   _itemsSpawnBatch: 1
-  _spawnRatio: 5
-  nextBatchRatio: 2
+  _spawnRatio: 15
+  nextBatchRatio: 0
   aSource: {fileID: 0}
   spawnSfx: {fileID: 0}
 --- !u!1 &8314821776484007281
