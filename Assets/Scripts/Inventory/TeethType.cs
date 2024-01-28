@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum TeethType 
-{
-    
-    pallete,
-    fang,
-    mole
+{    
+    //Pallete,
+    //Fang,
+    //Mole,
+    Normal,
+    Gold
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Tooth : MonoBehaviour
 {
-    public TeethType teethType;
+    public TeethType teethType = TeethType.Normal;
 
     public Collider colliderTrigger;
     public Rigidbody Rigidbody;
@@ -41,7 +41,7 @@ public class Tooth : MonoBehaviour
     public void SetAsPhysical()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        Rigidbody.useGravity = true;
+        //Rigidbody.useGravity = true;
 
         StartCoroutine(TriggerCooldown());
     }
