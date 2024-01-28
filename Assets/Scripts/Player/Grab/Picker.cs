@@ -17,6 +17,7 @@ public class Picker : MonoBehaviour
 
     [Space]
     public UnityEvent<Collider> OnObjectPicked;
+    public UnityEvent<Collider> OnObjectPlacedOnHead;
     public UnityEvent<Collider> OnObjectDropped;
 
     Collider _PickTriggerCollider;
@@ -199,6 +200,8 @@ public class Picker : MonoBehaviour
         constraint.AddSource(constraintSource);
 
         constraint.constraintActive = true;
+
+        OnObjectPlacedOnHead.Invoke(picked);
 
         _PickCoroutine = null;
     }
