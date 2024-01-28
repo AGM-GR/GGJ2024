@@ -26,6 +26,7 @@ public class Character : MonoBehaviour
     private ToothHitter _toothHitter;
     private PlayerInput _playerInput;
     private TeethManager _teethManager;
+    private EffectHandler _effectHandler;
 
     public CharacterMovement CharacterMovement => _characterMovement;
 
@@ -78,6 +79,7 @@ public class Character : MonoBehaviour
         _currentCharacterGO = CharacterGOs[CharacterIndex];
         _currentCharacterGO.SetActive(true);
         Animator = _currentCharacterGO.GetComponentInChildren<Animator>();
+        _effectHandler = Animator.GetComponent<EffectHandler>();
     }
 
     public void ClearPlayer()
@@ -121,6 +123,9 @@ public class Character : MonoBehaviour
 
         Animator.SetBool("Stunned", false);
         SetPlayerInput(true);
+
+        yield return null;
+        _effectHandler.Stop("stun");
     }
 
     private Coroutine _animatorCoroutine;
