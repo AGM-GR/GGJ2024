@@ -25,7 +25,7 @@ public class TeethManager : MonoBehaviour
     private PlayerAreaWidget _widget;
 
 
-    private void Start()
+    public void Initialize()
     {
         _character = GetComponent<Character>();
         _widget = FindObjectsOfType<PlayerAreaWidget>().Where(s => s.characterData.Name == _character.Name).First();

@@ -27,7 +27,7 @@ public class GrabController : MonoBehaviour
         _PlayerInput = GetComponentInParent<PlayerInput>();
     }
 
-    private void Start()
+    public void Initialize()
     {
         _Picker.OnObjectPicked.AddListener((Collider col) => 
         { 
