@@ -38,6 +38,7 @@ public class Picker : MonoBehaviour
         if (_PickCoroutine != null)
         {
             StopCoroutine(_PickCoroutine);
+            _PickCoroutine = null;
         }
 
         if (picked)
@@ -52,7 +53,8 @@ public class Picker : MonoBehaviour
                 picked.attachedRigidbody.angularVelocity = Vector3.zero;
             }
 
-            Destroy(picked.GetComponent<ParentConstraint>());
+            //Destroy(picked.GetComponent<ParentConstraint>());
+            Destroy(picked.GetComponent<PositionConstraint>());
 
 
             Vector3 dropDirection = new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f));
@@ -76,7 +78,7 @@ public class Picker : MonoBehaviour
                 }
             }
 
-            // Asignar que se destruya o que no haga daño?
+            // Asignar que se destruya o que no haga daï¿½o?
             OnObjectDropped.Invoke(picked);
         }
         else
@@ -150,7 +152,7 @@ public class Picker : MonoBehaviour
             objectToPick.attachedRigidbody.velocity = Vector3.zero;
             objectToPick.attachedRigidbody.angularVelocity = Vector3.zero;
             objectToPick.attachedRigidbody.useGravity = false;
-            objectToPick.attachedRigidbody.isKinematic = true; // Sino constrain la posición
+            objectToPick.attachedRigidbody.isKinematic = true; // Sino constrain la posiciï¿½n
             objectToPick.enabled = false;
         }
 
@@ -189,18 +191,23 @@ public class Picker : MonoBehaviour
 
         //pickedTransform.parent = _PickSlot;
 
-        //ParentConstraint constraint = pickedTransform.gameObject.AddComponent<ParentConstraint>();
-        PositionConstraint posConstraint = pickedTransform.gameObject.AddComponent<PositionConstraint>();
+        ParentConstraint constraint = pickedTransform.gameObject.AddComponent<ParentConstraint>();
+        //PositionConstraint posConstraint = pickedTransform.gameObject.AddComponent<PositionConstraint>();
+        //RotationConstraint rotConstraint = pickedTransform.gameObject.AddComponent<RotationConstraint>();
 
         ConstraintSource constraintSource = new ConstraintSource();
         constraintSource.weight = 1f;
         constraintSource.sourceTransform = _PickSlot;
+        
+        constraint.AddSource(constraintSource);
 
-        //constraint.AddSource(constraintSource);
-        posConstraint.AddSource(constraintSource);
 
-        //constraint.constraintActive = true;
-        posConstraint.constraintActive = true;
+        constraint.SetRotationOffset(0,(Quaternion.Inverse(transform.rotation)* pickedTransform.rotation).eulerAngles);
+
+        //posConstraint.AddSource(constraintSource);
+
+        constraint.constraintActive = true;
+        //posConstraint.constraintActive = true;
 
         OnObjectPlacedOnHead.Invoke(picked);
 
