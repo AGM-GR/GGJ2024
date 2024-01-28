@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f5566e1e7c38745ae699d5045bc614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 3
+  MoveSpeed: 6
   MoveSpeedSlow: 2
   isMovingSlow: 0
   MinInputAmount: 0.5
@@ -882,7 +882,8 @@ MonoBehaviour:
   heightThrow: 1.5
   minThrow: 1
   maxThrow: 10
-  TeethAmount: 100
+  TeethAmount:
+    value: 3
 --- !u!114 &3975860673456706496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,13 +896,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054595088978d0347b36f4e86fbbc55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  fallMultiplier: 2.5
+  jumpForce: 10
+  fallMultiplier: 1.7
   lowJumpMultiplier: 2
-  fallingVelocityThreshold: -2
+  fallingVelocityThreshold: 6
   IsJumping: 0
-  ReleaseTime: 0.2
-  LandingTime: 0.2
+  ReleaseTime: 0.1
+  LandingTime: 0
 --- !u!114 &2241708436979208506
 MonoBehaviour:
   m_ObjectHideFlags: 0
