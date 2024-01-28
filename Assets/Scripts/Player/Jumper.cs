@@ -84,7 +84,7 @@ public class Jumper : MonoBehaviour
     {
         _character.Animator.SetTrigger("JumpLanding");
         Vector3 velocityY = Vector3.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        rb.velocity += new Vector3(rb.velocity.x,velocityY.y,rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + velocityY.y, rb.velocity.z);
     }
 }
 
