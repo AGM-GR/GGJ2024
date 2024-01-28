@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Richarl Intro Override
+  m_Controller: {fileID: 9100000, guid: 51ab04a23b9c65f49832f428b49022ea, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 4334729280421649053, guid: 7b58d9a796f985e4ea7025a2fb1a914f,
+      type: 3}
+    m_OverrideClip: {fileID: 4334729280421649053, guid: 998054065b0419242a9bc6d8f5135feb,
+      type: 3}
+  - m_OriginalClip: {fileID: -4718155422829175165, guid: f4cc55699a22710458673b9d1201152d,
+      type: 3}
+    m_OverrideClip: {fileID: -4718155422829175165, guid: 9a3abe1aca16fcb479f187dcd0eb9114,
+      type: 3}
