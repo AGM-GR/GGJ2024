@@ -29,8 +29,8 @@ public class ThrowForward : MonoBehaviour
 
         collider.enabled = true;
 
-        //ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
-        PositionConstraint constraint = collider.GetComponent<PositionConstraint>();
+        ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
+        //PositionConstraint constraint = collider.GetComponent<PositionConstraint>();
         constraint.RemoveSource(0);
         constraint.constraintActive = false;
         Destroy(constraint); // Hacer un wait de un par de frames??
