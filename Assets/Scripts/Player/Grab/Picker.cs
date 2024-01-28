@@ -53,8 +53,7 @@ public class Picker : MonoBehaviour
                 picked.attachedRigidbody.angularVelocity = Vector3.zero;
             }
 
-            //Destroy(picked.GetComponent<ParentConstraint>());
-            Destroy(picked.GetComponent<PositionConstraint>());
+            Destroy(picked.GetComponent<ParentConstraint>());
 
 
             Vector3 dropDirection = new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f));
@@ -75,6 +74,7 @@ public class Picker : MonoBehaviour
                     ch.SetPlayerInput(true);
                     ch.CharacterMovement.IsMovementAllowed = true;
                     ch.CharacterMovement.Jumper.enabled = true;
+                    
                 }
             }
 
@@ -143,6 +143,11 @@ public class Picker : MonoBehaviour
 
             //Debug.LogWarning($"Pickear personajes esta restringido demomento");
             //return;
+        }
+
+        if(objectToPick.attachedRigidbody.isKinematic){
+            //ya esta agarrao
+            return;
         }
 
 

@@ -28,6 +28,7 @@ public class ThrowForward : MonoBehaviour
     {
 
         collider.enabled = true;
+        
 
         ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
         //PositionConstraint constraint = collider.GetComponent<PositionConstraint>();
