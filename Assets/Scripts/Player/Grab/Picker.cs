@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Sprites;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Events;
@@ -60,17 +61,18 @@ public class Picker : MonoBehaviour
             {
                 PlayerInput pi = picked.GetComponent<PlayerInput>();
                 CharacterMovement cm = picked.GetComponent<CharacterMovement>();
-                Character ch = picked.GetComponent<Character>();
+                //Character ch = picked.GetComponent<Character>();
 
-                if (pi == null || cm == null || ch == null)
+                if (pi == null || cm == null) //|| ch == null)
                 {
                     Debug.LogWarning("Something went wrong");
                 }
                 else
                 {
-                    pi.enabled = false;
+                    print("Clear");
+                    pi.enabled = true;
                     cm.IsMovementAllowed = true;
-                    ch.ClearPlayer();
+                    //ch.ClearPlayer();
                 }
             }
 
@@ -125,8 +127,9 @@ public class Picker : MonoBehaviour
         {
             PlayerInput pi = objectToPick.GetComponent<PlayerInput>();
             CharacterMovement cm = objectToPick.GetComponent<CharacterMovement>();
+            Character ch = objectToPick.GetComponent<Character>();
 
-            if (pi == null || cm == null)
+            if (pi == null || ch == null || cm == null)
             {
                 Debug.LogWarning("Something went wrong");
             }
@@ -134,6 +137,7 @@ public class Picker : MonoBehaviour
             {
                 pi.enabled = false;
                 cm.IsMovementAllowed = false;
+                ch.ClearPlayer();
             }
 
             //Debug.LogWarning($"Pickear personajes esta restringido demomento");

@@ -23,7 +23,10 @@ public class ThrowForward : MonoBehaviour
 
         collider.enabled = true;
 
-        Destroy(collider.GetComponent<ParentConstraint>());
+        ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
+        constraint.RemoveSource(0);
+        constraint.constraintActive = false;
+        Destroy(constraint);
 
         Rigidbody rigidbody = collider.attachedRigidbody;
 
@@ -35,11 +38,10 @@ public class ThrowForward : MonoBehaviour
 
         rigidbody.useGravity = true;
 
-        
 
         Transform targetInView = _FieldOfView.GetTargetInFoV();
 
-        if (targetInView != null) 
+        if (targetInView != null && targetInView != collider.transform) 
         {
             print("Al target");
             Vector3 newDirection = targetInView.position - transform.position;
@@ -48,7 +50,6 @@ public class ThrowForward : MonoBehaviour
 
         // Add impulse
         rigidbody.AddForce(direction.normalized * _Impulse, ForceMode.Impulse); // To exclude the mass -> ForceMode.VelocityChange
-
 
 
         if (rigidbody.CompareTag("Player"))
@@ -62,7 +63,7 @@ public class ThrowForward : MonoBehaviour
             }
             else
             {
-                pi.enabled = false;
+                pi.enabled = true;
                 cm.IsMovementAllowed = true;
             }
         }
