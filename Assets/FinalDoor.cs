@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class FinalDoor : MonoBehaviour
 {
-    public GameObject Platform;
     public Collider Trigger;
+    public GameObject PortalFX;
 
     private void Start()
     {
@@ -15,14 +15,14 @@ public class FinalDoor : MonoBehaviour
 
     public void Open()
     {
+        PortalFX.SetActive(true);
         Trigger.enabled = true;
-        Platform.SetActive(true);
     }
 
     public void Close()
     {
         Trigger.enabled = false;
-        Platform.SetActive(false);
+        PortalFX.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
