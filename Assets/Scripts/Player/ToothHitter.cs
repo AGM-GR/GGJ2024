@@ -68,7 +68,9 @@ public class ToothHitter : MonoBehaviour
     {
         _isHitting = false;
 
-        character.SetStunnedPlayer();
+        character.CharacterMovement.LookAt(_character.transform.position);
+        character.Animator.SetTrigger("ToothHitReceived");
+        character.SetPlayerWaitAnimation();
         TeethManager characterTeeth = character.GetComponent<TeethManager>();
         characterTeeth.DropTooth();
 

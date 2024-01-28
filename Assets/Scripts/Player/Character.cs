@@ -106,5 +106,27 @@ public class Character : MonoBehaviour
 
         SetPlayerInput(true);
     }
+
+    private Coroutine _animatorCoroutine;
+
+    public void SetPlayerWaitAnimation()
+    {
+        if (_animatorCoroutine != null)
+        {
+            StopCoroutine(_animatorCoroutine);
+        }
+
+        _animatorCoroutine = StartCoroutine(PlayerWaitAnimation());
+    }
+
+    private IEnumerator PlayerWaitAnimation()
+    {
+        ClearPlayer();
+        SetPlayerInput(false);
+
+        yield return Utils.WaitAnimStateToChange(Animator);
+
+        SetPlayerInput(true);
+    }
 }
 

@@ -63,10 +63,9 @@ public class Hitter : MonoBehaviour
         Character pushedPlayer = pushedRigidbody.GetComponent<Character>();
         if (pushedPlayer != null)
         {
-            pushedPlayer.ClearPlayer();
-            pushedPlayer.SetPlayerInput(false);
-
-            pushedPlayer.GetComponent<TeethManager>().DropTooth();
+            pushedPlayer.CharacterMovement.LookAt(_character.transform.position);
+            pushedPlayer.Animator.SetTrigger("HitReceived");
+            pushedPlayer.SetPlayerWaitAnimation();
         }
 
 

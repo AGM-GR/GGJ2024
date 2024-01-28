@@ -129,4 +129,9 @@ public class CharacterMovement : MonoBehaviour
         Quaternion targetRotation = Quaternion.Slerp(transform.rotation, rot, Time.fixedDeltaTime * _inputAmount * RotateSpeed);
         transform.rotation = targetRotation;
     }
+
+    public void LookAt(Vector3 target)
+    {
+        transform.rotation = Quaternion.LookRotation(new Vector3(target.x, 0, target.z) - new Vector3(transform.position.x, 0, transform.position.z));
+    }
 }
