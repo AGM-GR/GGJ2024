@@ -41,7 +41,7 @@ public class Tooth : MonoBehaviour
     public void SetAsPhysical()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        Rigidbody.useGravity = true;
+        //Rigidbody.useGravity = true;
 
         StartCoroutine(TriggerCooldown());
     }

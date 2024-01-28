@@ -51,6 +51,7 @@ public class Hitter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!_isHitting) return;
+        if (other.isTrigger) return;
         if (other.attachedRigidbody == null) return;
 
         HitTrigger.enabled = false;
