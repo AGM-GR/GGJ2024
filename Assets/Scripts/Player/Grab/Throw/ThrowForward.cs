@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 /* Be careful and get sure the thowing object it's not colliding with the player collider */
@@ -7,6 +9,10 @@ using UnityEngine.InputSystem;
 public class ThrowForward : MonoBehaviour
 {
     [SerializeField] float _Impulse = 12.0f;
+
+    [Space]
+    public UnityEvent<Collider> OnObjectThrowed;
+
 
     ThrowFoV _FieldOfView;
 
@@ -19,9 +25,13 @@ public class ThrowForward : MonoBehaviour
 
     public void ThrowObject(Collider collider, Vector3 direction)
     {
+
         collider.enabled = true;
 
-        collider.transform.parent = null;
+        ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
+        constraint.RemoveSource(0);
+        constraint.constraintActive = false;
+        Destroy(constraint); // Hacer un wait de un par de frames??
 
         Rigidbody rigidbody = collider.attachedRigidbody;
 
@@ -33,11 +43,10 @@ public class ThrowForward : MonoBehaviour
 
         rigidbody.useGravity = true;
 
-        
 
         Transform targetInView = _FieldOfView.GetTargetInFoV();
 
-        if (targetInView != null) 
+        if (targetInView != null && targetInView != collider.transform) 
         {
             print("Al target");
             Vector3 newDirection = targetInView.position - transform.position;
@@ -46,7 +55,6 @@ public class ThrowForward : MonoBehaviour
 
         // Add impulse
         rigidbody.AddForce(direction.normalized * _Impulse, ForceMode.Impulse); // To exclude the mass -> ForceMode.VelocityChange
-
 
 
         if (rigidbody.CompareTag("Player"))
@@ -60,10 +68,12 @@ public class ThrowForward : MonoBehaviour
             }
             else
             {
-                pi.enabled = false;
+                pi.enabled = true;
                 cm.IsMovementAllowed = true;
             }
         }
+
+        OnObjectThrowed.Invoke(collider);
     }
 
 

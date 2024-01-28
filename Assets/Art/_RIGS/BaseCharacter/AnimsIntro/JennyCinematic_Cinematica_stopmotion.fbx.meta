@@ -57,6 +57,173 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_L/BaseCharacter_RIG:Knee_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_L/BaseCharacter_RIG:Knee_L/BaseCharacter_RIG:Ankle_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_L/BaseCharacter_RIG:Knee_L/BaseCharacter_RIG:Ankle_L/BaseCharacter_RIG:Toes_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_L/BaseCharacter_RIG:Knee_L/BaseCharacter_RIG:Ankle_L/BaseCharacter_RIG:Toes_L/BaseCharacter_RIG:ToesEnd_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_R/BaseCharacter_RIG:Knee_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_R/BaseCharacter_RIG:Knee_R/BaseCharacter_RIG:Ankle_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_R/BaseCharacter_RIG:Knee_R/BaseCharacter_RIG:Ankle_R/BaseCharacter_RIG:Toes_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Hip_R/BaseCharacter_RIG:Knee_R/BaseCharacter_RIG:Ankle_R/BaseCharacter_RIG:Toes_R/BaseCharacter_RIG:ToesEnd_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Neck_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Neck_M/BaseCharacter_RIG:Head_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Neck_M/BaseCharacter_RIG:Head_M/BaseCharacter_RIG:HeadEnd_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Neck_M/BaseCharacter_RIG:Head_M/BaseCharacter_RIG:Jaw_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Neck_M/BaseCharacter_RIG:Head_M/BaseCharacter_RIG:Jaw_M/BaseCharacter_RIG:JawEnd_M
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:IndexFinger1_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:IndexFinger1_L/BaseCharacter_RIG:IndexFinger2_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:IndexFinger1_L/BaseCharacter_RIG:IndexFinger2_L/BaseCharacter_RIG:IndexFinger3_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:IndexFinger1_L/BaseCharacter_RIG:IndexFinger2_L/BaseCharacter_RIG:IndexFinger3_L/BaseCharacter_RIG:IndexFinger4_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:MiddleFinger1_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:MiddleFinger1_L/BaseCharacter_RIG:MiddleFinger2_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:MiddleFinger1_L/BaseCharacter_RIG:MiddleFinger2_L/BaseCharacter_RIG:MiddleFinger3_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:MiddleFinger1_L/BaseCharacter_RIG:MiddleFinger2_L/BaseCharacter_RIG:MiddleFinger3_L/BaseCharacter_RIG:MiddleFinger4_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:PinkyFinger1_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:PinkyFinger1_L/BaseCharacter_RIG:PinkyFinger2_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:PinkyFinger1_L/BaseCharacter_RIG:PinkyFinger2_L/BaseCharacter_RIG:PinkyFinger3_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:PinkyFinger1_L/BaseCharacter_RIG:PinkyFinger2_L/BaseCharacter_RIG:PinkyFinger3_L/BaseCharacter_RIG:PinkyFinger4_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:RingFinger1_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:RingFinger1_L/BaseCharacter_RIG:RingFinger2_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:RingFinger1_L/BaseCharacter_RIG:RingFinger2_L/BaseCharacter_RIG:RingFinger3_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:RingFinger1_L/BaseCharacter_RIG:RingFinger2_L/BaseCharacter_RIG:RingFinger3_L/BaseCharacter_RIG:RingFinger4_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:ThumbFinger1_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:ThumbFinger1_L/BaseCharacter_RIG:ThumbFinger2_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:ThumbFinger1_L/BaseCharacter_RIG:ThumbFinger2_L/BaseCharacter_RIG:ThumbFinger3_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_L/BaseCharacter_RIG:Shoulder_L/BaseCharacter_RIG:Elbow_L/BaseCharacter_RIG:Wrist_L/BaseCharacter_RIG:ThumbFinger1_L/BaseCharacter_RIG:ThumbFinger2_L/BaseCharacter_RIG:ThumbFinger3_L/BaseCharacter_RIG:ThumbFinger4_L
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:IndexFinger1_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:IndexFinger1_R/BaseCharacter_RIG:IndexFinger2_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:IndexFinger1_R/BaseCharacter_RIG:IndexFinger2_R/BaseCharacter_RIG:IndexFinger3_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:IndexFinger1_R/BaseCharacter_RIG:IndexFinger2_R/BaseCharacter_RIG:IndexFinger3_R/BaseCharacter_RIG:IndexFinger4_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:MiddleFinger1_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:MiddleFinger1_R/BaseCharacter_RIG:MiddleFinger2_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:MiddleFinger1_R/BaseCharacter_RIG:MiddleFinger2_R/BaseCharacter_RIG:MiddleFinger3_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:MiddleFinger1_R/BaseCharacter_RIG:MiddleFinger2_R/BaseCharacter_RIG:MiddleFinger3_R/BaseCharacter_RIG:MiddleFinger4_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:PinkyFinger1_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:PinkyFinger1_R/BaseCharacter_RIG:PinkyFinger2_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:PinkyFinger1_R/BaseCharacter_RIG:PinkyFinger2_R/BaseCharacter_RIG:PinkyFinger3_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:PinkyFinger1_R/BaseCharacter_RIG:PinkyFinger2_R/BaseCharacter_RIG:PinkyFinger3_R/BaseCharacter_RIG:PinkyFinger4_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:RingFinger1_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:RingFinger1_R/BaseCharacter_RIG:RingFinger2_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:RingFinger1_R/BaseCharacter_RIG:RingFinger2_R/BaseCharacter_RIG:RingFinger3_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:RingFinger1_R/BaseCharacter_RIG:RingFinger2_R/BaseCharacter_RIG:RingFinger3_R/BaseCharacter_RIG:RingFinger4_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:ThumbFinger1_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:ThumbFinger1_R/BaseCharacter_RIG:ThumbFinger2_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:ThumbFinger1_R/BaseCharacter_RIG:ThumbFinger2_R/BaseCharacter_RIG:ThumbFinger3_R
+        weight: 1
+      - path: BaseCharacter_RIG:DeformationSystem/BaseCharacter_RIG:Root_M/BaseCharacter_RIG:Spine1_M/BaseCharacter_RIG:Spine2_M/BaseCharacter_RIG:Chest_M/BaseCharacter_RIG:Scapula_R/BaseCharacter_RIG:Shoulder_R/BaseCharacter_RIG:Elbow_R/BaseCharacter_RIG:Wrist_R/BaseCharacter_RIG:ThumbFinger1_R/BaseCharacter_RIG:ThumbFinger2_R/BaseCharacter_RIG:ThumbFinger3_R/BaseCharacter_RIG:ThumbFinger4_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cinematica_IDLE
+      takeName: Cinematica_stopmotion
+      internalID: -4718155422829175165
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

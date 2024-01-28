@@ -29,7 +29,7 @@ public class Hitter : MonoBehaviour
     {
         if (!_isHitting && value.isPressed)
         {
-            _isHitting = true;
+          
             _character.Animator.SetTrigger("Hit");
         }
     }
@@ -41,20 +41,18 @@ public class Hitter : MonoBehaviour
 
     IEnumerator HitEnabler()
     {
+        _isHitting = true;
         HitTrigger.enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForFixedUpdate();
         HitTrigger.enabled = false;
         _isHitting = false;
-        yield return null;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!_isHitting) return;
+        if (other.isTrigger) return;
         if (other.attachedRigidbody == null) return;
-
-        HitTrigger.enabled = false;
-        _isHitting = false;
 
         Vector3 direction = transform.forward;
         StartCoroutine(Push(other.attachedRigidbody, direction));

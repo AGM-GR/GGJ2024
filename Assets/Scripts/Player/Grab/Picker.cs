@@ -1,5 +1,7 @@
 using System.Collections;
+using UnityEditor.Sprites;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
@@ -49,30 +51,28 @@ public class Picker : MonoBehaviour
                 picked.attachedRigidbody.angularVelocity = Vector3.zero;
             }
 
-            if (picked.transform.parent == _PickSlot)
-            {
-                picked.transform.parent = null;
-            }
+            Destroy(picked.GetComponent<ParentConstraint>());
 
 
-            Vector3 dropDirection = new Vector3(UnityEngine.Random.Range(-1f, 1f), 1f, UnityEngine.Random.Range(-1f, 1f));
+            Vector3 dropDirection = new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f));
             picked.attachedRigidbody.AddForce(dropDirection.normalized * _DropImpulse, ForceMode.Impulse);
 
             if (picked.CompareTag("Player"))
             {
                 PlayerInput pi = picked.GetComponent<PlayerInput>();
                 CharacterMovement cm = picked.GetComponent<CharacterMovement>();
-                Character ch = picked.GetComponent<Character>();
+                //Character ch = picked.GetComponent<Character>();
 
-                if (pi == null || cm == null || ch == null)
+                if (pi == null || cm == null) //|| ch == null)
                 {
                     Debug.LogWarning("Something went wrong");
                 }
                 else
                 {
-                    pi.enabled = false;
+                    print("Clear");
+                    pi.enabled = true;
                     cm.IsMovementAllowed = true;
-                    ch.ClearPlayer();
+                    //ch.ClearPlayer();
                 }
             }
 
@@ -127,8 +127,9 @@ public class Picker : MonoBehaviour
         {
             PlayerInput pi = objectToPick.GetComponent<PlayerInput>();
             CharacterMovement cm = objectToPick.GetComponent<CharacterMovement>();
+            Character ch = objectToPick.GetComponent<Character>();
 
-            if (pi == null || cm == null)
+            if (pi == null || ch == null || cm == null)
             {
                 Debug.LogWarning("Something went wrong");
             }
@@ -136,6 +137,7 @@ public class Picker : MonoBehaviour
             {
                 pi.enabled = false;
                 cm.IsMovementAllowed = false;
+                ch.ClearPlayer();
             }
 
             //Debug.LogWarning($"Pickear personajes esta restringido demomento");
@@ -186,7 +188,17 @@ public class Picker : MonoBehaviour
         }
         while (progress < 1f); // Keep moving while we don't reach any goal
 
-        pickedTransform.parent = _PickSlot;
+        //pickedTransform.parent = _PickSlot;
+
+        ParentConstraint constraint = pickedTransform.gameObject.AddComponent<ParentConstraint>();
+
+        ConstraintSource constraintSource = new ConstraintSource();
+        constraintSource.weight = 1f;
+        constraintSource.sourceTransform = _PickSlot;
+
+        constraint.AddSource(constraintSource);
+
+        constraint.constraintActive = true;
 
         _PickCoroutine = null;
     }

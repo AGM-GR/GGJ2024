@@ -480,6 +480,37 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.18323219, y: 0.15328851, z: -0.00034862757}
     m_Extent: {x: 0.8542532, y: 0.44895062, z: 1.0907965}
   m_DirtyAABB: 0
+--- !u!1 &7586226386792194395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6846641496564013658}
+  m_Layer: 6
+  m_Name: raycast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6846641496564013658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586226386792194395}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8870835819245186999}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8399091017078794849
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +777,7 @@ Transform:
   m_GameObject: {fileID: 8870835819245186992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -756,6 +787,7 @@ Transform:
   - {fileID: 1781321534187732988}
   - {fileID: 2778448280861849013}
   - {fileID: 3034965403944466235}
+  - {fileID: 6846641496564013658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &2384903291921942781
@@ -765,7 +797,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8870835819245186992}
-  m_Material: {fileID: 13400000, guid: f52af1649eaaea542a9c9d715b681894, type: 2}
+  m_Material: {fileID: 13400000, guid: 6d48409f1b83e4a44b246ab6df208633, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -851,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f5566e1e7c38745ae699d5045bc614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 3
+  MoveSpeed: 6
   MoveSpeedSlow: 2
   isMovingSlow: 0
   MinInputAmount: 0.5
@@ -875,14 +907,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba28f7af4ccc1c4587aaa6a922740f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothPrefab: {fileID: 1473133768382895754, guid: 6ac47a101a9b2c847a8f832573b54640,
-    type: 3}
+  toothPrefabs:
+  - {fileID: 1473133768382895754, guid: 6ac47a101a9b2c847a8f832573b54640, type: 3}
+  - {fileID: 1473133768382895754, guid: 15877264b7a8cb041b0c81607c2bcca9, type: 3}
   SpawningPoint: {fileID: 3034965403944466235}
   ThrowForce: 5
   heightThrow: 1.5
   minThrow: 1
   maxThrow: 10
-  TeethAmount: 100
 --- !u!114 &3975860673456706496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,13 +927,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054595088978d0347b36f4e86fbbc55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  fallMultiplier: 2.5
+  jumpForce: 10
+  fallMultiplier: 1.7
   lowJumpMultiplier: 2
-  fallingVelocityThreshold: -2
+  fallingVelocityThreshold: 6
+  checkFloor: {fileID: 6846641496564013658}
   IsJumping: 0
-  ReleaseTime: 0.2
-  LandingTime: 0.2
+  ReleaseTime: 0.1
+  LandingTime: 0.1
 --- !u!114 &2241708436979208506
 MonoBehaviour:
   m_ObjectHideFlags: 0

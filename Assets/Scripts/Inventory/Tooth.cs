@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Tooth : MonoBehaviour
 {
-    public TeethType teethType;
+    public TeethType TeethType = TeethType.Normal;
 
     public Collider colliderTrigger;
     public Rigidbody Rigidbody;
@@ -22,7 +22,7 @@ public class Tooth : MonoBehaviour
         Debug.Log(other.name);
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            other.gameObject.GetComponent<TeethManager>().AddTooth(teethType);
+            other.gameObject.GetComponent<TeethManager>().AddTooth(TeethType);
             gameObject.SetActive(false);
             Spawner?.ItemDisabled();
         }
@@ -41,7 +41,7 @@ public class Tooth : MonoBehaviour
     public void SetAsPhysical()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        Rigidbody.useGravity = true;
+        //Rigidbody.useGravity = true;
 
         StartCoroutine(TriggerCooldown());
     }

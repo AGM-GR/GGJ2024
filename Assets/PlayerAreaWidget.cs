@@ -12,6 +12,7 @@ public class PlayerAreaWidget : MonoBehaviour
     public CharacterData characterData;
     [Space]
     public Image PortraitImg;
+    public Image GoldenImg;
     public List<Image> BgImgs;
     //public TextMeshProUGUI NameText;
     public List<GameObject> TeethGOs;
@@ -24,16 +25,35 @@ public class PlayerAreaWidget : MonoBehaviour
 
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvasGroup.alpha = 0;
+        Refresh(0);
     }
 
 
-    public void Init(ReactiveProperty<int> reactiveAmount)
+    public void Init(ReactiveCollection<TeethType> collection)
     {
-        reactiveAmount.Subscribe(RefreshAmount);
+        collection.ObserveCountChanged().Subscribe(Refresh);
+        collection.ObserveAdd().Subscribe(CheckGolden);
+        collection.ObserveRemove().Subscribe(CheckGolden);
         _canvasGroup.alpha = 1;
     }
 
-    private void RefreshAmount(int amount)
+    private void CheckGolden(CollectionRemoveEvent<TeethType> obj)
+    {
+        if (obj.Value == TeethType.Gold)
+        {
+            GoldenImg.enabled = false;
+        }
+    }
+
+    private void CheckGolden(CollectionAddEvent<TeethType> obj)
+    {
+        if(obj.Value == TeethType.Gold)
+        {
+            GoldenImg.enabled = true;
+        }
+    }
+
+    private void Refresh(int amount)
     {
         TeethGOs.ForEach(t => t.SetActive(false));
 

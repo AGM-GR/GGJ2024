@@ -11,6 +11,8 @@ public class Jumper : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float fallingVelocityThreshold = -2f;
 
+    public Transform checkFloor;
+
     public bool IsJumping = false;
     private Rigidbody rb;
     private Character _character;
@@ -28,7 +30,7 @@ public class Jumper : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
-        if (value.isPressed && !IsJumping)
+        if (value.isPressed && !IsJumping && IsGround())
         {
             ResetAllTriggers();
             StartCoroutine(Jump());
@@ -43,21 +45,23 @@ public class Jumper : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity.y < fallingVelocityThreshold)
+        bool isGround = IsGround();
+        if (rb.velocity.y < fallingVelocityThreshold && !isGround)
         {
             Fall();
         }
 
-        _character.Animator.SetBool("IsGrounded", !IsJumping);
-    }
+        _character.Animator.SetBool("IsGrounded", isGround);
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            StartCoroutine(Land());
+        if(isGround){
+             StartCoroutine(Land());
         }
     }
+
+    bool IsGround(){
+        return Physics.Raycast(checkFloor.position,Vector3.down,1f,Physics.AllLayers);
+    }
+    
 
     IEnumerator Jump()
     {
@@ -84,7 +88,7 @@ public class Jumper : MonoBehaviour
     {
         _character.Animator.SetTrigger("JumpLanding");
         Vector3 velocityY = Vector3.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        rb.velocity += new Vector3(rb.velocity.x,velocityY.y,rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + velocityY.y, rb.velocity.z);
     }
 }
 

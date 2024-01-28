@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Linq;
 using UniRx;
+using System.Collections.Generic;
 
 public class TeethManager : MonoBehaviour
 {
     private Character _character;
-    public Tooth toothPrefab;
+    public List<Tooth> toothPrefabs;
     public Transform SpawningPoint;
 
     public float ThrowForce = 12.0f;
@@ -13,7 +14,8 @@ public class TeethManager : MonoBehaviour
     public float minThrow = 1f;
     public float maxThrow = 10f;
 
-    public ReactiveProperty<int> TeethAmount = new(3);
+    public ReactiveCollection<TeethType> teeths = new();
+    public int TeethAmount => teeths.Count;
 
     private PlayerAreaWidget _widget;
 
@@ -22,22 +24,31 @@ public class TeethManager : MonoBehaviour
     {
         _character = GetComponent<Character>();
         _widget = FindObjectsOfType<PlayerAreaWidget>().Where(s => s.characterData.Name == _character.Name).First();
-        _widget.Init(TeethAmount);
+        _widget.Init(teeths);
     }
 
     public void AddTooth(TeethType teeth)
     {
-        TeethAmount.Value++;
+        teeths.Add(teeth);
+
+        if (TeethAmount == 4)
+        {
+            FindObjectOfType<GoldToothManager>().TrySpawnGoldTooth();
+        }        
     }
 
 
     [ContextMenu("Drop tooth")]
     public void DropTooth()
     {
-        if (TeethAmount.Value == 0) return;
+        if (TeethAmount == 0) return;
 
-        TeethAmount.Value = Mathf.Max(TeethAmount.Value - 1, 0);
-        Tooth newTooth = Instantiate(toothPrefab, SpawningPoint.position, Quaternion.identity);
+        int index = Random.Range(0, teeths.Count);
+        TeethType tooth = teeths[index];           
+        teeths.RemoveAt(index);
+
+        var prefab = toothPrefabs.Where(p => p.TeethType == tooth).First();
+        Tooth newTooth = Instantiate(prefab, SpawningPoint.position, Quaternion.identity);
 
         //Debug.Break();
         newTooth.SetAsPhysical();

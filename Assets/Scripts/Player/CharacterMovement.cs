@@ -33,7 +33,6 @@ public class CharacterMovement : MonoBehaviour
     private Camera _mainCamera;
     private Rigidbody _rb;
     private Character _character;
-    //public Animator Animator;
     public Jumper Jumper;
 
     public bool IsMovementAllowed
@@ -55,7 +54,6 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         _character = GetComponent<Character>();
-        //_characterInfluence = GetComponent<CharacterInfluenceAction>();
 
         if (startWithMovement)
         {
@@ -71,7 +69,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-  
+
         Rotate();
 
         if (!IsMovementAllowed || (LobbyManager.Instance != null && !LobbyManager.Instance.GameStarted)) return;
@@ -79,14 +77,18 @@ public class CharacterMovement : MonoBehaviour
         Move();
         _character.Animator.SetFloat("Speed", _inputAmount);
         Vector3 velocity = _moveDirection * GetSpeed() * _inputAmount * _currentSpeedMultiplier;
-        _rb.velocity = new Vector3(velocity.x,_rb.velocity.y,velocity.z);
+        _rb.velocity = new Vector3(velocity.x, _rb.velocity.y, velocity.z);
 
 
-    }  
-    private float GetSpeed(){
-        if(isMovingSlow){
+    }
+    private float GetSpeed()
+    {
+        if (isMovingSlow)
+        {
             return MoveSpeedSlow;
-        }else{
+        }
+        else
+        {
             return MoveSpeed;
         }
     }
@@ -99,18 +101,16 @@ public class CharacterMovement : MonoBehaviour
     }
 
 
-    //private bool IsIdleOrLocomotion()
-    //{
-    //    return Animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || Animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
-    //}
-
     private void Move()
     {
         _moveDirection = Vector3.zero; // reset movement
 
-
         Vector3 correctedVertical = _verticalAxis * Vector3.forward;
         Vector3 correctedHorizontal = _horizontalAxis * Vector3.right;
+
+        // Transformar las direcciones de entrada en el espacio de la cámara
+        correctedVertical = _mainCamera.transform.TransformDirection(correctedVertical);
+        correctedHorizontal = _mainCamera.transform.TransformDirection(correctedHorizontal);
 
         Vector3 combinedInput = correctedVertical + correctedHorizontal;
         _moveDirection = new Vector3(combinedInput.normalized.x, 0, combinedInput.normalized.z);
@@ -119,7 +119,6 @@ public class CharacterMovement : MonoBehaviour
         _inputAmount = Mathf.Clamp01(inputMagnitude);
         if (_inputAmount <= MinInputAmount) _inputAmount = 0;
     }
-
 
 
 

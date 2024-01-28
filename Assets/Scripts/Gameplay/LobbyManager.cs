@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class LobbyManager : MonoBehaviour
     [Space]
     [Tooltip("Assign on the final character indexes order")]
     public List<CharacterData> CharacterDatas;
+
+    public CinemachineTargetGroup TargetGroup;
 
     //public MusicController musicController;
     //public List<Animator> characterBanners;
@@ -72,8 +75,14 @@ public class LobbyManager : MonoBehaviour
         Debug.Log("Control scheme: " + player.currentControlScheme);
         PlayBannerAnimation(player);
         InitializeCharacter(player);
+        AddToCameraTargetGroup(player.transform);
         ConnectedPlayersAmount++;
         RefreshPlayButton();
+    }
+
+    private void AddToCameraTargetGroup(Transform transform)
+    {
+        TargetGroup.AddMember(transform, 1, 1);
     }
 
     private void PlayBannerAnimation(PlayerInput player)
