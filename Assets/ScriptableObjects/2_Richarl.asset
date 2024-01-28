@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 2_Richarl
   m_EditorClassIdentifier: 
   Name: 2
-  Portrait: {fileID: -1550885220, guid: 923ddeebe45868b46a23bcb6cc29d9d3, type: 3}
+  Portrait: {fileID: 21300000, guid: f932be11dd7c4aa468fc7f671b8fb5ee, type: 3}
   Color: {r: 0.57254905, g: 0.34509805, b: 0.53333336, a: 1}
   Index: 2
