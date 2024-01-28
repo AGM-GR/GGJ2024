@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Linq;
+using UniRx;
 
 public class TeethManager : MonoBehaviour
 {
@@ -11,45 +12,37 @@ public class TeethManager : MonoBehaviour
     public float heightThrow = 10f;
     public float minThrow = 1f;
     public float maxThrow = 10f;
-    public int TeethAmount = 3;
 
-    private TeethWidget _widget;
+    public ReactiveProperty<int> TeethAmount = new(3);
+
+    private PlayerAreaWidget _widget;
 
 
     private void Start()
     {
         _character = GetComponent<Character>();
-        _widget = FindObjectsOfType<TeethWidget>().Where(s => s.Name == _character.Name).First();
-        UpdateWidget();
+        _widget = FindObjectsOfType<PlayerAreaWidget>().Where(s => s.characterData.Name == _character.Name).First();
+        _widget.Init(TeethAmount);
     }
 
     public void AddTooth(TeethType teeth)
     {
-        TeethAmount++;
-        UpdateWidget();
+        TeethAmount.Value++;
     }
 
 
     [ContextMenu("Drop tooth")]
     public void DropTooth()
     {
-        if (TeethAmount == 0) return;
+        if (TeethAmount.Value == 0) return;
 
-        TeethAmount = Mathf.Max(TeethAmount - 1, 0);
+        TeethAmount.Value = Mathf.Max(TeethAmount.Value - 1, 0);
         Tooth newTooth = Instantiate(toothPrefab, SpawningPoint.position, Quaternion.identity);
 
         //Debug.Break();
         newTooth.SetAsPhysical();
 
         Vector3 direction = Vector3.right * Random.Range(-1, 2) + Vector3.forward * Random.Range(-1, 2) + Vector3.up;
-
         newTooth.Rigidbody.AddForce(direction.normalized * ThrowForce, ForceMode.VelocityChange);
-
-        UpdateWidget();
-    }
-
-    private void UpdateWidget()
-    {
-        _widget.TeethAmountText.text = TeethAmount.ToString();
     }
 }

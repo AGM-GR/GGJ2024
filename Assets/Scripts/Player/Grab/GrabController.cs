@@ -10,8 +10,11 @@ public class GrabController : MonoBehaviour
     Collider _ObjectGrabbed = null;
 
     private Character _character;
+    PlayerInput _PlayerInput;
 
     private bool canGrab = true;
+
+    Coroutine _CheckGrabCoroutine;
 
     public Collider ObjectGrabbed
     {
@@ -21,6 +24,7 @@ public class GrabController : MonoBehaviour
     private void Awake()
     {
         _character = GetComponentInParent<Character>();
+        _PlayerInput = GetComponentInParent<PlayerInput>();
     }
 
     private void Start()
@@ -32,16 +36,28 @@ public class GrabController : MonoBehaviour
             _character.Animator.SetFloat("HangingObject", 1);
             _character.CharacterMovement.isMovingSlow = true;
 
+            foreach (InputAction action in _PlayerInput.actions)
+            {
+                action.Disable();
+            }
+             _PlayerInput.actions.FindAction("Grab").Enable();
+             _PlayerInput.actions.FindAction("Move").Enable();
+             _PlayerInput.actions.FindAction("Jump").Enable();
         });
 
         _Picker.OnObjectDropped.AddListener((Collider col) => 
         {
             if (col != _ObjectGrabbed)
             {
-                Debug.LogWarning("Algo raro pasaba ... digievolucionaban !!!");
+                Debug.LogWarning("Algo raro pasaba ... digievolucionaban !!! En tamaño y color, ellos son los DIGIMOOOOON :D");
             }
 
-            _ObjectGrabbed = null; 
+            _ObjectGrabbed = null;
+
+            foreach (InputAction action in _PlayerInput.actions)
+            {
+                action.Enable();
+            }
         });
 
         _character.Animator.SetFloat("HangingObject", 0);
@@ -74,7 +90,12 @@ public class GrabController : MonoBehaviour
         _character.Animator.SetTrigger("TryPickUp");
         _Picker.TryPick();
 
-        StartCoroutine(CheckCanGrab());
+        if (_CheckGrabCoroutine != null)
+        {
+            Debug.LogError("Cuidadin");
+        }
+
+        _CheckGrabCoroutine = StartCoroutine(CheckCanGrab());
     }
 
     public void Throw()
@@ -100,7 +121,17 @@ public class GrabController : MonoBehaviour
         _Thrower.ThrowObject(_ObjectGrabbed, transform.forward);
         _ObjectGrabbed = null;
 
-        StartCoroutine(CheckCanGrab());
+        foreach (InputAction action in _PlayerInput.actions)
+        {
+            action.Enable();
+        }
+
+        if (_CheckGrabCoroutine != null)
+        {
+            Debug.LogError("Cuidadin");
+        }
+
+        _CheckGrabCoroutine = StartCoroutine(CheckCanGrab());
 
     }
 
@@ -111,6 +142,8 @@ public class GrabController : MonoBehaviour
         yield return Utils.WaitAnimStateToChange(_character.Animator);
         canGrab = true;
         _character.CharacterMovement.IsMovementAllowed = true;
+
+        _CheckGrabCoroutine = null;
     }
 
     public void Drop()

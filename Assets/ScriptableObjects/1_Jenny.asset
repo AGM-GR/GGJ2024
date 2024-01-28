@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: 1_Jenny
   m_EditorClassIdentifier: 
   Name: 1
+  Portrait: {fileID: -457314168, guid: 923ddeebe45868b46a23bcb6cc29d9d3, type: 3}
   Color: {r: 0.8588236, g: 0.63529414, b: 0.2392157, a: 1}
   Index: 1

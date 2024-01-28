@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: 3_Vane
   m_EditorClassIdentifier: 
   Name: 3
+  Portrait: {fileID: -764150822, guid: 923ddeebe45868b46a23bcb6cc29d9d3, type: 3}
   Color: {r: 0.56078434, g: 0.16470589, b: 0.16470589, a: 1}
   Index: 3
