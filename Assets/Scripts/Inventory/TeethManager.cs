@@ -20,6 +20,8 @@ public class TeethManager : MonoBehaviour
     private int normalTeeth;
     private int goldTeeth;
 
+    public int GoldTeeth => goldTeeth;
+
     private PlayerAreaWidget _widget;
 
 
