@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3930355306310141771}
   - component: {fileID: 8254476426293290168}
   - component: {fileID: 3530887665984207019}
+  - component: {fileID: 2941464675282971090}
   m_Layer: 0
   m_Name: radiador
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2941464675282971090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176150123517765429}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0346329, y: 0.27788723, z: 0.8963802}
+  m_Center: {x: 0.061621904, y: 0, z: 0.4481901}
