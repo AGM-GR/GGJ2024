@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 /* Be careful and get sure the thowing object it's not colliding with the player collider */
@@ -8,6 +9,10 @@ using UnityEngine.InputSystem;
 public class ThrowForward : MonoBehaviour
 {
     [SerializeField] float _Impulse = 12.0f;
+
+    [Space]
+    public UnityEvent<Collider> OnObjectThrowed;
+
 
     ThrowFoV _FieldOfView;
 
@@ -26,7 +31,7 @@ public class ThrowForward : MonoBehaviour
         ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
         constraint.RemoveSource(0);
         constraint.constraintActive = false;
-        Destroy(constraint);
+        Destroy(constraint); // Hacer un wait de un par de frames??
 
         Rigidbody rigidbody = collider.attachedRigidbody;
 
@@ -67,6 +72,8 @@ public class ThrowForward : MonoBehaviour
                 cm.IsMovementAllowed = true;
             }
         }
+
+        OnObjectThrowed.Invoke(collider);
     }
 
 
