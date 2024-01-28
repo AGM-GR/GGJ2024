@@ -495,7 +495,7 @@
                 {
                     "name": "",
                     "id": "68c60e82-6428-4fd0-8126-0f04e5de108c",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -506,7 +506,7 @@
                 {
                     "name": "",
                     "id": "30061c95-203a-4774-91a9-e800c6517921",
-                    "path": "<XInputController>/rightTrigger",
+                    "path": "<XInputController>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
@@ -517,7 +517,7 @@
                 {
                     "name": "",
                     "id": "8c658a83-927c-49a7-b7b0-936622b1ec72",
-                    "path": "<DualShockGamepad>/rightTrigger",
+                    "path": "<DualShockGamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",

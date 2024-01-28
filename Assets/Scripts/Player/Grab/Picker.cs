@@ -1,10 +1,7 @@
 using System.Collections;
-using UnityEditor.Sprites;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
-using UnityEngine.TextCore.Text;
 
 [RequireComponent(typeof(Collider))]
 public class Picker : MonoBehaviour
