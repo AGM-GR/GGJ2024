@@ -113,6 +113,8 @@ public class Hitter : MonoBehaviour
 
     private void PlayerCollide(Character character, Collision collision, ref bool stopPush)
     {
+        if (stopPush) return;
+
         if (collision.rigidbody == null && collision.gameObject.layer != LayerMask.NameToLayer("Object"))
         {
             stopPush = true;

@@ -116,6 +116,8 @@ public class ThrowForward : MonoBehaviour
 
     private void PlayerCollide(Rigidbody characterRigidbody, Character character, Collision collision, ref bool willStun)
     {
+        if (willStun) return;
+
         if (collision.rigidbody == null && collision.gameObject.layer != LayerMask.NameToLayer("Object"))
         {
             if (!character.CharacterMovement.Jumper.IsGrounded) {
