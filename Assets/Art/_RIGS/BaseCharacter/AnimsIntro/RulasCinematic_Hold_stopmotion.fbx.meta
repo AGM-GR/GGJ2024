@@ -33,14 +33,14 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Hold_stopmotion
+      name: Hold_stopmotion A
       takeName: Hold_stopmotion
       internalID: 7520670264788475109
       firstFrame: 124
       lastFrame: 126
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: 0.242
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
@@ -51,7 +51,7 @@ ModelImporter:
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000

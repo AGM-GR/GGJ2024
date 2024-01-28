@@ -33,6 +33,8 @@ public class Jumper : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
+        if (!_character.IsInit) return;
+
         if (value.isPressed && !IsJumping && IsGround())
         {
             ResetAllTriggers();
@@ -49,6 +51,9 @@ public class Jumper : MonoBehaviour
 
     void Update()
     {
+        if (!_character.IsInit) return;
+
+
         IsGrounded = IsGround();
         if (rb.velocity.y < fallingVelocityThreshold && !IsGrounded)
         {
