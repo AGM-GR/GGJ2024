@@ -14,6 +14,8 @@ public class Jumper : MonoBehaviour
     public Transform checkFloor;
 
     public bool IsJumping = false;
+    public bool IsGrounded = false;
+
     private Rigidbody rb;
     private Character _character;
 
@@ -22,7 +24,6 @@ public class Jumper : MonoBehaviour
     public float ReleaseTime = 0.5f;
     public float LandingTime = 0.5f;
 
-    public bool IsGrounded {  get; private set; }
 
     void Awake()
     {
@@ -44,6 +45,7 @@ public class Jumper : MonoBehaviour
         List<string> triggers = new List<string>{ "JumpRelease", "JumpAir", "JumpLanding", "JumpLanded" };
         triggers.ForEach(trigger => _character.Animator.ResetTrigger(trigger));
     }
+    bool wasGround = true;
 
     void Update()
     {
@@ -55,14 +57,15 @@ public class Jumper : MonoBehaviour
 
         _character.Animator.SetBool("IsGrounded", IsGrounded);
 
-        if(IsGrounded)
+        if(IsGrounded && !wasGround)
         {
              StartCoroutine(Land());
         }
+        wasGround = IsGrounded;
     }
 
-    bool IsGround(){
-        return Physics.Raycast(checkFloor.position, Vector3.down, 0.5f, Physics.AllLayers);
+    public bool IsGround(){
+        return Physics.Raycast(checkFloor.position, Vector3.down, 0.25f, Physics.AllLayers);
     }
     
 

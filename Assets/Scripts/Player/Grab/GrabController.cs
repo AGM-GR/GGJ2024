@@ -79,6 +79,11 @@ public class GrabController : MonoBehaviour
                 detructible.CanDestruct = true;
             }
 
+            if (col.gameObject.CompareTag("Player"))
+            {
+                OnCharacterPlacedOnHead(col);
+            }
+
         });
 
         _character.Animator.SetFloat("HangingObject", 0);
@@ -98,6 +103,25 @@ public class GrabController : MonoBehaviour
                 Throw();
             }
         }
+    }
+
+    private void OnCharacterPlacedOnHead(Collider playerCollider) 
+    {
+        print("Character on head");
+        /*
+        Character character = playerCollider.GetComponent<Character>();
+        character.SetPlayerInput(true);
+
+        PlayerInput playerInput = playerCollider.GetComponent<PlayerInput>();
+        playerInput.onActionTriggered += (callbackContext)=> 
+        {
+            print("ActionTiggered: " + callbackContext.action);
+        };
+        */
+
+
+        Invoke("Drop", 3f);
+
     }
 
     public void Pick()
@@ -181,7 +205,7 @@ public class GrabController : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Nothing to drop");
+            Debug.Log("Nothing to drop");
         }
     }
 }

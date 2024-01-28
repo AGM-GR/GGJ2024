@@ -101,9 +101,11 @@ public class Character : MonoBehaviour
     {
         ClearPlayer();
         SetPlayerInput(false);
+        Animator.SetBool("Stunned", true);
 
         yield return new WaitForSeconds(StunnedTime);
 
+        Animator.SetBool("Stunned", false);
         SetPlayerInput(true);
     }
 
@@ -127,6 +129,25 @@ public class Character : MonoBehaviour
         yield return Utils.WaitAnimStateToChange(Animator);
 
         SetPlayerInput(true);
+    }
+
+    private bool NotifyCollisions = false;
+    public Action<Collision> onPlayerCollided;
+
+    public void NotifiyCollisions(bool notify)
+    {
+        NotifyCollisions = notify;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (NotifyCollisions)
+        {
+            if (onPlayerCollided != null)
+            {
+                onPlayerCollided.Invoke(collision);
+            }
+        }
     }
 }
 
