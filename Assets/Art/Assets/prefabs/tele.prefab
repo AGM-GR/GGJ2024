@@ -178,7 +178,8 @@ GameObject:
   - component: {fileID: 8575256982708122675}
   - component: {fileID: 5069381625809473939}
   - component: {fileID: 3152225398056966059}
-  m_Layer: 0
+  - component: {fileID: 7969038732591782197}
+  m_Layer: 7
   m_Name: tele
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,6 +275,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0743333, y: 0.7026831, z: 0.7056285}
   m_Center: {x: -0.038322747, y: 0.04666389, z: 0.3525008}
+--- !u!54 &7969038732591782197
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944121879049939746}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7295268975389729522
 GameObject:
   m_ObjectHideFlags: 0

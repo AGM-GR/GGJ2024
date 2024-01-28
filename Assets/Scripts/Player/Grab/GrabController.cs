@@ -42,7 +42,7 @@ public class GrabController : MonoBehaviour
             }
              _PlayerInput.actions.FindAction("Grab").Enable();
              _PlayerInput.actions.FindAction("Move").Enable();
-             _PlayerInput.actions.FindAction("Jump").Enable();
+             //_PlayerInput.actions.FindAction("Jump").Enable();
         });
 
         _Picker.OnObjectDropped.AddListener((Collider col) => 
@@ -68,6 +68,16 @@ public class GrabController : MonoBehaviour
             }
 
             _ObjectGrabbed = null;
+
+        });
+
+        _Picker.OnObjectPlacedOnHead.AddListener((Collider col) =>
+        {
+            Destructible detructible = col.GetComponentInParent<Destructible>();
+            if (detructible)
+            {
+                detructible.CanDestruct = true;
+            }
 
         });
 
@@ -130,9 +140,7 @@ public class GrabController : MonoBehaviour
     
 
     public void DoThrow(){
-        print("Trhowe " + _Thrower);
-        print("_ObjectGrabbed " + _ObjectGrabbed);
-        print("transform" + transform);
+
         _Thrower.ThrowObject(_ObjectGrabbed, transform.forward);
         //_ObjectGrabbed = null;
 

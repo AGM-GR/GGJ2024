@@ -17,6 +17,7 @@ public class Picker : MonoBehaviour
 
     [Space]
     public UnityEvent<Collider> OnObjectPicked;
+    public UnityEvent<Collider> OnObjectPlacedOnHead;
     public UnityEvent<Collider> OnObjectDropped;
 
     Collider _PickTriggerCollider;
@@ -190,15 +191,20 @@ public class Picker : MonoBehaviour
 
         //pickedTransform.parent = _PickSlot;
 
-        ParentConstraint constraint = pickedTransform.gameObject.AddComponent<ParentConstraint>();
+        //ParentConstraint constraint = pickedTransform.gameObject.AddComponent<ParentConstraint>();
+        PositionConstraint posConstraint = pickedTransform.gameObject.AddComponent<PositionConstraint>();
 
         ConstraintSource constraintSource = new ConstraintSource();
         constraintSource.weight = 1f;
         constraintSource.sourceTransform = _PickSlot;
 
-        constraint.AddSource(constraintSource);
+        //constraint.AddSource(constraintSource);
+        posConstraint.AddSource(constraintSource);
 
-        constraint.constraintActive = true;
+        //constraint.constraintActive = true;
+        posConstraint.constraintActive = true;
+
+        OnObjectPlacedOnHead.Invoke(picked);
 
         _PickCoroutine = null;
     }
