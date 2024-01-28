@@ -61,18 +61,20 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void Initialize()
     {
         _mainCamera = Camera.main;
         _rb = GetComponent<Rigidbody>();
+
     }
 
     private void Update()
     {
+        if (_character != null && !_character.IsInit) return;
 
         Rotate();
 
-        if (!IsMovementAllowed || (LobbyManager.Instance != null && !LobbyManager.Instance.GameStarted)) return;
+        if (!IsMovementAllowed || (PlayersSetupManager.Instance != null && !PlayersSetupManager.Instance.GameStarted)) return;
 
         Move();
         _character.Animator.SetFloat("Speed", _inputAmount);

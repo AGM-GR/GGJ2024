@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class FinalDoor : MonoBehaviour
 {
     public Collider Trigger;
@@ -29,10 +30,15 @@ public class FinalDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+
             Character character = other.GetComponent<Character>();
-            Debug.Log(character.Name + "WINS");
-            PlayerPrefs.SetInt("Winner", character.CharacterIndex);
-            //SceneManager
+
+            if(character.GetComponent<TeethManager>().GoldTeeth>0){
+                Debug.Log(character.Name + "WINS");
+                PlayerPrefs.SetInt("Winner", character.CharacterIndex);
+                //SceneManager
+            }
+           
         }
     }
 }

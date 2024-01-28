@@ -20,10 +20,12 @@ public class TeethManager : MonoBehaviour
     private int normalTeeth;
     private int goldTeeth;
 
+    public int GoldTeeth => goldTeeth;
+
     private PlayerAreaWidget _widget;
 
 
-    private void Start()
+    public void Initialize()
     {
         _character = GetComponent<Character>();
         _widget = FindObjectsOfType<PlayerAreaWidget>().Where(s => s.characterData.Name == _character.Name).First();
