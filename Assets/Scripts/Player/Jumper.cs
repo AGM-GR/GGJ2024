@@ -30,7 +30,7 @@ public class Jumper : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
-        if (value.isPressed && !IsJumping)
+        if (value.isPressed && !IsJumping && IsGround())
         {
             ResetAllTriggers();
             StartCoroutine(Jump());
