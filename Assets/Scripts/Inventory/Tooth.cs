@@ -24,7 +24,14 @@ public class Tooth : MonoBehaviour
         {
             other.gameObject.GetComponent<TeethManager>().AddTooth(TeethType);
             gameObject.SetActive(false);
-            Spawner?.ItemDisabled();
+            if (Spawner != null)
+            {
+                Spawner.ItemDisabled();
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
         }
         else if (other.CompareTag("Ground"))
         {
