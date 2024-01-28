@@ -160,8 +160,8 @@ Material:
     - _ReflectionMapType: 0
     - _ReflectionSmoothness: 0.5
     - _RenderingMode: 0
-    - _RimMax: 0.74
-    - _RimMin: 0.3
+    - _RimMax: 0.62
+    - _RimMin: 0.56
     - _SampleGI: 0
     - _ShadowColorLightAtten: 1
     - _SingleIndirectColor: 0

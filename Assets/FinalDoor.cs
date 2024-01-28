@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalDoor : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class FinalDoor : MonoBehaviour
             Character character = other.GetComponent<Character>();
             Debug.Log(character.Name + "WINS");
             PlayerPrefs.SetInt("Winner", character.CharacterIndex);
+            //SceneManager
         }
     }
 }

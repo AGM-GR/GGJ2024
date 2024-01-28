@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Events;
@@ -28,7 +29,8 @@ public class ThrowForward : MonoBehaviour
 
         collider.enabled = true;
 
-        ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
+        //ParentConstraint constraint = collider.GetComponent<ParentConstraint>();
+        PositionConstraint constraint = collider.GetComponent<PositionConstraint>();
         constraint.RemoveSource(0);
         constraint.constraintActive = false;
         Destroy(constraint); // Hacer un wait de un par de frames??
@@ -54,27 +56,28 @@ public class ThrowForward : MonoBehaviour
         }
 
         // Add impulse
-        rigidbody.AddForce(direction.normalized * _Impulse, ForceMode.Impulse); // To exclude the mass -> ForceMode.VelocityChange
-
-
-        if (rigidbody.CompareTag("Player"))
-        {
-            PlayerInput pi = rigidbody.GetComponent<PlayerInput>();
-            CharacterMovement cm = rigidbody.GetComponent<CharacterMovement>();
-
-            if (pi == null || cm == null)
-            {
-                Debug.LogWarning("Something went wrong");
-            }
-            else
-            {
-                pi.enabled = true;
-                cm.IsMovementAllowed = true;
-            }
-        }
+        rigidbody.AddForce(direction.normalized * _Impulse * rigidbody.mass, ForceMode.Impulse); // To exclude the mass -> ForceMode.VelocityChange
 
         OnObjectThrowed.Invoke(collider);
+        
+        if (rigidbody.CompareTag("Player"))
+        {
+            StartCoroutine(ThrowCharacter(rigidbody.GetComponent<Character>()));
+        }
     }
 
+    private IEnumerator ThrowCharacter(Character character)
+    {
+        character.CharacterMovement.Jumper.enabled = true;
+        character.CharacterMovement.IsMovementAllowed = false;
+        character.SetPlayerInput(false);
+
+        yield return new WaitForFixedUpdate();
+        yield return null;
+        yield return new WaitUntil(() => character.CharacterMovement.Jumper.IsGrounded);
+
+        character.SetPlayerInput(true);
+        character.CharacterMovement.IsMovementAllowed = true;
+    }
 
 }
