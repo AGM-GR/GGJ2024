@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e753e1320c00f0d4eb3a1e3a21063fc0
+guid: 0c11758730c2f014fbcb0eff9786a851
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -12,20 +12,14 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleCurves: 0
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'VolarHaciaPared' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'BaseCharacter_RIG:Elbow_R' has translation
-      animation that will be discarded.\n\t'BaseCharacter_RIG:Wrist_R' has translation
-      animation that will be discarded.\n\t'BaseCharacter_RIG:Elbow_L' has translation
-      animation that will be discarded.\n\t'BaseCharacter_RIG:Wrist_L' has translation
-      animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -39,98 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: VolarHaciaPared
-      takeName: VolarHaciaPared
-      internalID: 4792998443284364672
-      firstFrame: 301
-      lastFrame: 317
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 300.96
-    - serializedVersion: 16
-      name: ChocarContraPared
-      takeName: ChocarContraPared
-      internalID: -8037935258486994064
-      firstFrame: 320
-      lastFrame: 322
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 319.91998
-    - serializedVersion: 16
-      name: DeslizarsePared
-      takeName: DeslizarsePared
-      internalID: 7533939361965810028
-      firstFrame: 323
-      lastFrame: 324
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 322.8
-    - serializedVersion: 16
-      name: CaerSueloPared
-      takeName: CaerSueloPared
-      internalID: 8297116478100603430
-      firstFrame: 326
-      lastFrame: 360
+      name: Victoria
+      takeName: Victoria
+      internalID: -5053348890544849027
+      firstFrame: 361
+      lastFrame: 442
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -153,7 +60,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 325.91998
+      additiveReferencePoseFrame: 360.96
     isReadable: 0
   meshes:
     lODScreenPercentages: []
