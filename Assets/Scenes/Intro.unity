@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1810,6 +1810,31 @@ PrefabInstance:
       propertyPath: _inputManager
       value: 
       objectReference: {fileID: 2017261281}
+    - target: {fileID: 8326435818210731626, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: Animators.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326435818210731626, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: Animators.Array.data[0]
+      value: 
+      objectReference: {fileID: 486984129}
+    - target: {fileID: 8326435818210731626, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: Animators.Array.data[1]
+      value: 
+      objectReference: {fileID: 1680376539}
+    - target: {fileID: 8326435818210731626, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: Animators.Array.data[2]
+      value: 
+      objectReference: {fileID: 537518743}
+    - target: {fileID: 8326435818210731626, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: Animators.Array.data[3]
+      value: 
+      objectReference: {fileID: 1690359756}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
