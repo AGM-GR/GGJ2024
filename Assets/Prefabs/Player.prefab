@@ -40,7 +40,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633758018372679288}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -276,7 +276,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6780825217895985271}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -414,7 +414,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7566838565147263865}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -679,7 +679,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8839409092046230260}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -967,6 +967,7 @@ MonoBehaviour:
   fallingVelocityThreshold: 6
   checkFloor: {fileID: 6846641496564013658}
   IsJumping: 0
+  IsGrounded: 0
   ReleaseTime: 0.1
   LandingTime: 0.1
 --- !u!114 &2241708436979208506
