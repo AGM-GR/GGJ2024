@@ -58,7 +58,7 @@ public class EffectsPlayer : MonoBehaviour
             {
                 if (particles != null)
                 {
-                    particles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+                    particles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
                 }
             }
         }
