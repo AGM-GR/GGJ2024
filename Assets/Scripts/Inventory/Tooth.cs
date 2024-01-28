@@ -22,7 +22,13 @@ public class Tooth : MonoBehaviour
         Debug.Log(other.name);
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            other.gameObject.GetComponent<TeethManager>().AddTooth(TeethType);
+            var teethManager = other.gameObject.GetComponent<TeethManager>();
+            if (!teethManager.CanAdd(TeethType))
+            {
+                return;
+            }
+
+            teethManager.AddTooth(TeethType);
             gameObject.SetActive(false);
             if (Spawner != null)
             {
