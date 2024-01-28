@@ -17,7 +17,7 @@ public class PlayerAreaWidget : MonoBehaviour
     //public TextMeshProUGUI NameText;
     public List<Animator> TeethAnimators;
 
-    public void Start()
+    public void Awake()
     {
         PortraitImg.sprite = characterData.Portrait;
         BgImgs.ForEach(i => i.color = characterData.Color);
