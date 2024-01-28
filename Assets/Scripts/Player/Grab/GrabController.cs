@@ -60,6 +60,17 @@ public class GrabController : MonoBehaviour
             }
         });
 
+        _Thrower.OnObjectThrowed.AddListener((Collider col) =>
+        {
+            if (col != _ObjectGrabbed)
+            {
+                Debug.LogWarning("Raro");
+            }
+
+            _ObjectGrabbed = null;
+
+        });
+
         _character.Animator.SetFloat("HangingObject", 0);
         _character.CharacterMovement.isMovingSlow = false;
     }
@@ -100,6 +111,7 @@ public class GrabController : MonoBehaviour
 
     public void Throw()
     {
+        // Esto?
         _character.Animator.SetFloat("HangingObject", 0);
         _character.CharacterMovement.isMovingSlow = false;
 
@@ -118,8 +130,11 @@ public class GrabController : MonoBehaviour
     
 
     public void DoThrow(){
+        print("Trhowe " + _Thrower);
+        print("_ObjectGrabbed " + _ObjectGrabbed);
+        print("transform" + transform);
         _Thrower.ThrowObject(_ObjectGrabbed, transform.forward);
-        _ObjectGrabbed = null;
+        //_ObjectGrabbed = null;
 
         foreach (InputAction action in _PlayerInput.actions)
         {
@@ -149,7 +164,6 @@ public class GrabController : MonoBehaviour
 
     public void Drop()
     {
-        print("dropeando");
         _character.Animator.SetFloat("HangingObject", 0);
         _character.CharacterMovement.isMovingSlow = false;
 
@@ -159,7 +173,7 @@ public class GrabController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Nothing to drop");
+            //Debug.Log("Nothing to drop");
         }
     }
 }
