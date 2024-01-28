@@ -15,7 +15,7 @@ public class PlayerAreaWidget : MonoBehaviour
     public Image GoldenImg;
     public List<Image> BgImgs;
     //public TextMeshProUGUI NameText;
-    public List<GameObject> TeethGOs;
+    public List<Animator> TeethAnimators;
 
     public void Start()
     {
@@ -55,13 +55,13 @@ public class PlayerAreaWidget : MonoBehaviour
 
     private void Refresh(int amount)
     {
-        TeethGOs.ForEach(t => t.SetActive(false));
+        TeethAnimators.ForEach(t => t.SetBool("showTooth", false));
 
-        for (int i = 0; i < TeethGOs.Count; i++)
+        for (int i = 0; i < TeethAnimators.Count; i++)
         {
             if (i + 1 <= amount)
             {
-                TeethGOs[i].SetActive(true);
+                TeethAnimators[i].SetBool("showTooth", true);
             }
         }
     }

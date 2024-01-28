@@ -769,7 +769,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &7037066948953220522
 MonoBehaviour:
@@ -841,6 +841,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 976c1f9f71ea7484a85a24bfa29e8516, type: 2}
   - {fileID: 11400000, guid: 0e3f316326065154db76e8c5bdb02f30, type: 2}
   - {fileID: 11400000, guid: 4e061b8f4a2dde94cb4c1ecc6f467ae3, type: 2}
+  TargetGroup: {fileID: 0}
   startGame:
     m_Name: Start Game
     m_Type: 0
