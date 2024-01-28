@@ -60,12 +60,17 @@ public class Hitter : MonoBehaviour
 
     IEnumerator Push(Rigidbody pushedRigidbody, Vector3 dir)
     {
+        bool stopPushing = false;
+
         Character pushedPlayer = pushedRigidbody.GetComponent<Character>();
         if (pushedPlayer != null)
         {
             pushedPlayer.CharacterMovement.LookAt(_character.transform.position);
             pushedPlayer.Animator.SetTrigger("HitReceived");
             pushedPlayer.SetPlayerWaitAnimation();
+
+            pushedPlayer.NotifiyCollisions(true);
+            pushedPlayer.onPlayerCollided += (col) => PlayerCollide(pushedPlayer, col, ref stopPushing);
         }
 
 
@@ -89,18 +94,8 @@ public class Hitter : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
 
-            if (Vector3.Distance(pushedRigidbody.position, lastPosition) + 0.01f < Vector3.Distance(pushedRigidbody.position, nextPosition))
+            if (Vector3.Distance(pushedRigidbody.position, lastPosition) + 0.01f < Vector3.Distance(pushedRigidbody.position, nextPosition) || stopPushing)
             {
-                Debug.Log(name + " Hitted something!!");
-                
-                if (pushedPlayer != null)
-                {
-                    //player pega contra algo
-                    pushedPlayer.SetStunnedPlayer();
-                    pushedPlayer.GetComponent<TeethManager>().DropTooth();
-
-                }
-
                 break;
             }
 
@@ -108,7 +103,26 @@ public class Hitter : MonoBehaviour
         
         if (pushedPlayer != null)
         {
-            pushedPlayer.SetPlayerInput(true);
+            pushedPlayer.NotifiyCollisions(false);
+            pushedPlayer.onPlayerCollided -= (col) => PlayerCollide(pushedPlayer, col, ref stopPushing);
+
+            if (!stopPushing)
+                pushedPlayer.SetPlayerInput(true);
+        }
+    }
+
+    private void PlayerCollide(Character character, Collision collision, ref bool stopPush)
+    {
+        if (collision.rigidbody == null && collision.gameObject.layer != LayerMask.NameToLayer("Object"))
+        {
+            stopPush = true;
+            character.SetStunnedPlayer();
+            character.GetComponent<TeethManager>().DropTooth();
+        }
+        else if (collision.gameObject.layer != LayerMask.NameToLayer("Object"))
+        {
+            stopPush = true;
+            character.SetStunnedPlayer();
         }
     }
 

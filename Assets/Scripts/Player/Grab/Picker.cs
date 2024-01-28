@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 
 [RequireComponent(typeof(Collider))]
 public class Picker : MonoBehaviour
@@ -74,7 +75,8 @@ public class Picker : MonoBehaviour
                     ch.SetPlayerInput(true);
                     ch.CharacterMovement.IsMovementAllowed = true;
                     ch.CharacterMovement.Jumper.enabled = true;
-                    
+
+                    ch.Animator.SetBool("Grabbed", false);
                 }
             }
 
@@ -139,6 +141,8 @@ public class Picker : MonoBehaviour
                 ch.CharacterMovement.IsMovementAllowed = false;
                 ch.CharacterMovement.Jumper.enabled = false;
                 ch.ClearPlayer();
+
+                ch.Animator.SetBool("Grabbed", true);
             }
 
             //Debug.LogWarning($"Pickear personajes esta restringido demomento");
