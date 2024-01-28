@@ -690,7 +690,7 @@ PrefabInstance:
     - target: {fileID: 5723175146846362039, guid: 1021ebabf7fc4a044914f5fa64bed152,
         type: 3}
       propertyPath: m_text
-      value: Arramblar
+      value: Arramblar / Lanzar
       objectReference: {fileID: 0}
     - target: {fileID: 6204930573562324717, guid: 1021ebabf7fc4a044914f5fa64bed152,
         type: 3}
