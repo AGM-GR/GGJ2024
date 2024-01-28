@@ -45,26 +45,23 @@ public class Jumper : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity.y < fallingVelocityThreshold)
+        bool isGround = IsGround();
+        if (rb.velocity.y < fallingVelocityThreshold && !isGround)
         {
             Fall();
         }
 
-        _character.Animator.SetBool("IsGrounded",  IsGround());
+        _character.Animator.SetBool("IsGrounded", isGround);
+
+        if(isGround){
+             StartCoroutine(Land());
+        }
     }
 
     bool IsGround(){
-        return Physics.Raycast(checkFloor.position,Vector3.down,1f,~0);
+        return Physics.Raycast(checkFloor.position,Vector3.down,1f,Physics.AllLayers);
     }
     
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            StartCoroutine(Land());
-        }
-    }
 
     IEnumerator Jump()
     {
