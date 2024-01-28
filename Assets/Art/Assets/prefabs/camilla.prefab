@@ -58,11 +58,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7822091977342914886, guid: 032d1133896f03345aa45e2d4f4f737e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7fe25ccf273649246a50c7f48ca889d2, type: 2}
     - target: {fileID: -7511558181221131132, guid: 032d1133896f03345aa45e2d4f4f737e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 45f20008efba5a84eb64153d887bef44, type: 2}
+      objectReference: {fileID: 2100000, guid: 7fe25ccf273649246a50c7f48ca889d2, type: 2}
+    - target: {fileID: -3611382923803019085, guid: 032d1133896f03345aa45e2d4f4f737e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7fe25ccf273649246a50c7f48ca889d2, type: 2}
     - target: {fileID: 919132149155446097, guid: 032d1133896f03345aa45e2d4f4f737e,
         type: 3}
       propertyPath: m_Name
@@ -71,5 +81,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 032d1133896f03345aa45e2d4f4f737e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 608548787984550254}
   m_SourcePrefab: {fileID: 100100000, guid: 032d1133896f03345aa45e2d4f4f737e, type: 3}
+--- !u!1 &7942266133893093799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 032d1133896f03345aa45e2d4f4f737e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7131996647111599350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &608548787984550254
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7942266133893093799}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.6338444, y: 1.3832866, z: 2.23}
+  m_Center: {x: 0.06955433, y: 0.24250953, z: 1.11}
