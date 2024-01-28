@@ -875,14 +875,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba28f7af4ccc1c4587aaa6a922740f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothPrefab: {fileID: 1473133768382895754, guid: 6ac47a101a9b2c847a8f832573b54640,
-    type: 3}
+  toothPrefabs:
+  - {fileID: 1473133768382895754, guid: 6ac47a101a9b2c847a8f832573b54640, type: 3}
+  - {fileID: 1473133768382895754, guid: f5b2b284eaa3f5148813447c4dfebed3, type: 3}
   SpawningPoint: {fileID: 3034965403944466235}
   ThrowForce: 5
   heightThrow: 1.5
   minThrow: 1
   maxThrow: 10
-  TeethAmount: 100
 --- !u!114 &3975860673456706496
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcc60ff88a9e214e9ee43da7943e1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teethType: 1
+  TeethType: 1
   colliderTrigger: {fileID: 3127483654275227026}
   Rigidbody: {fileID: 0}
   timeDisabled: 1

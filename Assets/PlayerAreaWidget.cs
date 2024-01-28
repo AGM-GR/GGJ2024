@@ -24,16 +24,17 @@ public class PlayerAreaWidget : MonoBehaviour
 
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvasGroup.alpha = 0;
+        Refresh(0);
     }
 
 
-    public void Init(ReactiveProperty<int> reactiveAmount)
+    public void Init(ReactiveCollection<TeethType> collection)
     {
-        reactiveAmount.Subscribe(RefreshAmount);
+        collection.ObserveCountChanged().Subscribe(Refresh);
         _canvasGroup.alpha = 1;
     }
 
-    private void RefreshAmount(int amount)
+    private void Refresh(int amount)
     {
         TeethGOs.ForEach(t => t.SetActive(false));
 
