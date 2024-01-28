@@ -11,6 +11,8 @@ public class Jumper : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float fallingVelocityThreshold = -2f;
 
+    public Transform checkFloor;
+
     public bool IsJumping = false;
     private Rigidbody rb;
     private Character _character;
@@ -48,8 +50,13 @@ public class Jumper : MonoBehaviour
             Fall();
         }
 
-        _character.Animator.SetBool("IsGrounded", !IsJumping);
+        _character.Animator.SetBool("IsGrounded",  IsGround());
     }
+
+    bool IsGround(){
+        return Physics.Raycast(checkFloor.position,Vector3.down,1f,~0);
+    }
+    
 
     void OnCollisionEnter(Collision collision)
     {
