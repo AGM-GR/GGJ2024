@@ -58,6 +58,7 @@ public class LobbyIntro : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput player)
     {
+        player.gameObject.transform.position = new Vector3(666, 666, 666);
         Debug.Log("Control scheme: " + player.currentControlScheme);
         PlayCharacterAnimation(player.playerIndex);
         ConnectedPlayersAmount++;

@@ -599,6 +599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 219142331}
   - component: {fileID: 219142332}
+  - component: {fileID: 219142333}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -693,6 +694,21 @@ PlayableDirector:
     value: {fileID: 466255882}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &219142333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219142330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b915573ca85371c4e9c7b08f3bec8da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeline: {fileID: 219142332}
+  secondToJumpTo: 28
+  keyToPress: 32
 --- !u!1 &251225563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,7 +1370,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7cd921f9683b0fc43afc327445f499d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16653216
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7cd921f9683b0fc43afc327445f499d7,
         type: 3}
