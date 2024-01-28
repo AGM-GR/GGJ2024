@@ -140,6 +140,7 @@ public class GrabController : MonoBehaviour
         canGrab = false;
          _character.CharacterMovement.IsMovementAllowed = false;
         yield return Utils.WaitAnimStateToChange(_character.Animator);
+        yield return new WaitForSeconds(0.1f);
         canGrab = true;
         _character.CharacterMovement.IsMovementAllowed = true;
 
