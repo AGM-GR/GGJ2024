@@ -198,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 3355301444201141372}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.68, z: 0}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -911,10 +911,10 @@ MonoBehaviour:
   - {fileID: 1473133768382895754, guid: 6ac47a101a9b2c847a8f832573b54640, type: 3}
   - {fileID: 1473133768382895754, guid: 15877264b7a8cb041b0c81607c2bcca9, type: 3}
   SpawningPoint: {fileID: 3034965403944466235}
-  ThrowForce: 5
-  heightThrow: 1.5
-  minThrow: 1
-  maxThrow: 10
+  ThrowForce: 15
+  heightThrow: 20
+  minThrow: 10
+  maxThrow: 25
 --- !u!114 &3975860673456706496
 MonoBehaviour:
   m_ObjectHideFlags: 0
