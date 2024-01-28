@@ -27,6 +27,8 @@ public class Hitter : MonoBehaviour
 
     void OnFirstAttack(InputValue value)
     {
+        if (!_character.IsInit) return;
+
         if (!_isHitting && value.isPressed)
         {
           

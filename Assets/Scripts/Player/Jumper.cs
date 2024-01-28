@@ -47,6 +47,9 @@ public class Jumper : MonoBehaviour
 
     void Update()
     {
+        if (!_character.IsInit) return;
+
+
         IsGrounded = IsGround();
         if (rb.velocity.y < fallingVelocityThreshold && !IsGrounded)
         {

@@ -61,14 +61,16 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void Initialize()
     {
         _mainCamera = Camera.main;
         _rb = GetComponent<Rigidbody>();
+
     }
 
     private void Update()
     {
+        if (_character != null && !_character.IsInit) return;
 
         Rotate();
 

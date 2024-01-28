@@ -3,12 +3,13 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
     public CharacterType Name => _characterData.Name;
     public Animator Animator { get; private set; }
-    public int CharacterIndex;
+    public int CharacterIndex = -1;
     public string ControlScheme;
 
     public GameObject[] CharacterGOs;
@@ -24,19 +25,26 @@ public class Character : MonoBehaviour
     private Hitter _hitter;
     private ToothHitter _toothHitter;
     private PlayerInput _playerInput;
+    private TeethManager _teethManager;
 
     public CharacterMovement CharacterMovement => _characterMovement;
 
+    public bool IsInit => CharacterIndex != -1;
 
     private void Awake()
     {
+        CharacterIndex = -1;
+
         _characterMovement = GetComponent<CharacterMovement>();
         _grabController = GetComponentInChildren<GrabController>();
         _hitter = GetComponentInChildren<Hitter>();
         _toothHitter = GetComponentInChildren<ToothHitter>();
+        _teethManager = GetComponentInChildren<TeethManager>();
 
         if (_playerInput != null)
             _playerInput = GetComponent<PlayerInput>();
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void Initialize(int index,
@@ -52,6 +60,12 @@ public class Character : MonoBehaviour
         transform.position = spawningPosition;
 
         _playerInput = GetComponent<PlayerInput>();
+
+        SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
+
+        _grabController.Initialize();
+        _teethManager.Initialize();
+        _characterMovement.Initialize();
     }
 
     private void SetupModelDependences()

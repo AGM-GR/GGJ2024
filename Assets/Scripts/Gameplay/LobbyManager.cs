@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+
+
 public class LobbyManager : MonoBehaviour
 {
     public static LobbyManager Instance { get; private set; }
@@ -101,7 +103,7 @@ public class LobbyManager : MonoBehaviour
         Vector3 randomSpawningPoint = SpawningPoints[randomIndex].position;
         SpawningPoints.RemoveAt(randomIndex);
 
-        character.Initialize(player.playerIndex, player.currentControlScheme, CharacterDatas[player.playerIndex], randomSpawningPoint);
+        //character.Initialize(player.playerIndex, player.currentControlScheme, CharacterDatas[player.playerIndex], randomSpawningPoint);
         character.SetPlayerInput(false);
     }
 
@@ -133,15 +135,5 @@ public class LobbyManager : MonoBehaviour
         {
             o.SetPlayerInput(true);
         });
-    }
-
-    private float GetPreviousAnimatorsNormalizedTime(int index)
-    {
-        return 1f;
-        /*if (index == 0) {
-            return joinTextAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        } else {
-            return characterBanners[index - 1].GetCurrentAnimatorStateInfo(1).normalizedTime;
-        }*/
     }
 }
