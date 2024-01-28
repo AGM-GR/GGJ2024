@@ -23,7 +23,7 @@ public class JoinedWidget : MonoBehaviour
         {
             text.text = $"{Data.Name.ToString().ToUpper()}";
             text.color = Data.Color;
-            text.enabled = true;
+            //text.enabled = true;
         }
     }
 }

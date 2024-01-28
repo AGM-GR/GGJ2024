@@ -1685,6 +1685,11 @@ PrefabInstance:
       propertyPath: _inputManager
       value: 
       objectReference: {fileID: 2017261281}
+    - target: {fileID: 964458397369722950, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_text
+      value: "Esperando a los jugadores... Pulsa cualquier bot\xF3n para unirte."
+      objectReference: {fileID: 0}
     - target: {fileID: 1775266207006296366, guid: 49024d38c856f1e4bbd9964718b0f003,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1785,11 +1790,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1795205228245959367, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3741707998222944239, guid: 49024d38c856f1e4bbd9964718b0f003,
         type: 3}
       propertyPath: _inputManager
       value: 
       objectReference: {fileID: 2017261281}
+    - target: {fileID: 4025489627626998852, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.44313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025489627626998852, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.06415099
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025489627626998852, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.06415099
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025489627626998852, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.06415099
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025489627626998852, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156892082248595312, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4343182410310237316, guid: 49024d38c856f1e4bbd9964718b0f003,
         type: 3}
       propertyPath: _inputManager
@@ -1804,6 +1844,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565015650389738563, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_text
+      value: Pulsa ENTER o START para empezar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565015650389738563, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 22.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565015650389738563, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565015650389738563, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565015650389738563, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565015650389738563, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 22.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565015650389738563, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565015650389738563, guid: 49024d38c856f1e4bbd9964718b0f003,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6938267884779873822, guid: 49024d38c856f1e4bbd9964718b0f003,
         type: 3}
@@ -3364,7 +3444,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 0.7
   m_FocusDistance: 0.1
-  m_FocalLength: 15
+  m_FocalLength: 12
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -3379,7 +3459,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 77.31962
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
