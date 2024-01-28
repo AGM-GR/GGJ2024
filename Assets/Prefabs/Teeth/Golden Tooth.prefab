@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3127483654275227026}
   - component: {fileID: 7343220115693575147}
   - component: {fileID: 1473133768382895754}
-  - component: {fileID: 5620425579158144965}
   m_Layer: 0
   m_Name: Golden Tooth
   m_TagString: Untagged
@@ -33,7 +32,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5770405771788461633}
+  - {fileID: 5976486039904432959}
+  - {fileID: 3391052296850392428}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &3127483654275227026
@@ -65,7 +65,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923428518581663527}
   serializedVersion: 4
-  m_Mass: 0.0000001
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -79,10 +79,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1473133768382895754
 MonoBehaviour:
@@ -101,13 +101,45 @@ MonoBehaviour:
   Rigidbody: {fileID: 0}
   timeDisabled: 1
   Spawner: {fileID: 0}
---- !u!135 &5620425579158144965
+--- !u!1 &8980546909642003509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5976486039904432959}
+  - component: {fileID: 1505267536079918349}
+  m_Layer: 9
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5976486039904432959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8980546909642003509}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9032338716329291876}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1505267536079918349
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923428518581663527}
+  m_GameObject: {fileID: 8980546909642003509}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -122,7 +154,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.38
   m_Center: {x: 0, y: 1, z: 0}
---- !u!1001 &2446293421379753625
+--- !u!1001 &6839018978882221492
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -205,9 +237,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3df1f7a8b3ad39d47839ecd9f43fb6a6, type: 3}
---- !u!4 &5770405771788461633 stripped
+--- !u!4 &3391052296850392428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8207356901737345240, guid: 3df1f7a8b3ad39d47839ecd9f43fb6a6,
     type: 3}
-  m_PrefabInstance: {fileID: 2446293421379753625}
+  m_PrefabInstance: {fileID: 6839018978882221492}
   m_PrefabAsset: {fileID: 0}
