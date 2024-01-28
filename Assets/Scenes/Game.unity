@@ -131,6 +131,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268148943534198251, guid: 0e671995169163945be05c25b068c5f7,
+        type: 3}
+      propertyPath: FinalSet
+      value: 
+      objectReference: {fileID: 1532643403}
     - target: {fileID: 2321799705468131654, guid: 0e671995169163945be05c25b068c5f7,
         type: 3}
       propertyPath: m_Name
@@ -332,6 +337,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268148943534198251, guid: 0e671995169163945be05c25b068c5f7,
+        type: 3}
+      propertyPath: FinalSet
+      value: 
+      objectReference: {fileID: 1532643403}
     - target: {fileID: 2321799705468131654, guid: 0e671995169163945be05c25b068c5f7,
         type: 3}
       propertyPath: m_Name
@@ -1039,6 +1049,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268148943534198251, guid: 0e671995169163945be05c25b068c5f7,
+        type: 3}
+      propertyPath: FinalSet
+      value: 
+      objectReference: {fileID: 1532643403}
     - target: {fileID: 2321799705468131654, guid: 0e671995169163945be05c25b068c5f7,
         type: 3}
       propertyPath: m_Name
@@ -1540,6 +1555,12 @@ PrefabInstance:
       addedObject: {fileID: 1892115116}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 509508130e97d5a4185e66a48d429905, type: 3}
+--- !u!1 &1532643403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3255861399438240826, guid: 509508130e97d5a4185e66a48d429905,
+    type: 3}
+  m_PrefabInstance: {fileID: 1532643402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1607026386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 94371ab2192dd1747b9d8ee3bd0a934e,
@@ -3458,6 +3479,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268148943534198251, guid: 0e671995169163945be05c25b068c5f7,
+        type: 3}
+      propertyPath: FinalSet
+      value: 
+      objectReference: {fileID: 1532643403}
     - target: {fileID: 2321799705468131654, guid: 0e671995169163945be05c25b068c5f7,
         type: 3}
       propertyPath: m_Name
