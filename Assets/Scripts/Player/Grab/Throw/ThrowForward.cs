@@ -26,6 +26,11 @@ public class ThrowForward : MonoBehaviour
 
     public void ThrowObject(Collider collider, Vector3 direction)
     {
+        if (collider == null) 
+        {
+            Debug.LogWarning("Throw vacio");
+            return;
+        }
 
         collider.enabled = true;
 

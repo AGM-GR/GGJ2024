@@ -90,14 +90,6 @@ public class GrabController : MonoBehaviour
         _character.CharacterMovement.isMovingSlow = false;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Drop();
-        }
-    }
-
     void OnGrab(InputValue value)
     {
         if (canGrab && value.isPressed)
