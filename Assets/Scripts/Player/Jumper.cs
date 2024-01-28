@@ -22,6 +22,8 @@ public class Jumper : MonoBehaviour
     public float ReleaseTime = 0.5f;
     public float LandingTime = 0.5f;
 
+    public bool IsGrounded {  get; private set; }
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -45,21 +47,22 @@ public class Jumper : MonoBehaviour
 
     void Update()
     {
-        bool isGround = IsGround();
-        if (rb.velocity.y < fallingVelocityThreshold && !isGround)
+        IsGrounded = IsGround();
+        if (rb.velocity.y < fallingVelocityThreshold && !IsGrounded)
         {
             Fall();
         }
 
-        _character.Animator.SetBool("IsGrounded", isGround);
+        _character.Animator.SetBool("IsGrounded", IsGrounded);
 
-        if(isGround){
+        if(IsGrounded)
+        {
              StartCoroutine(Land());
         }
     }
 
     bool IsGround(){
-        return Physics.Raycast(checkFloor.position,Vector3.down,1f,Physics.AllLayers);
+        return Physics.Raycast(checkFloor.position, Vector3.down, 0.5f, Physics.AllLayers);
     }
     
 

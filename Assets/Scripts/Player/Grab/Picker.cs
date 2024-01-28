@@ -60,20 +60,19 @@ public class Picker : MonoBehaviour
 
             if (picked.CompareTag("Player"))
             {
-                PlayerInput pi = picked.GetComponent<PlayerInput>();
-                CharacterMovement cm = picked.GetComponent<CharacterMovement>();
+                Character ch = picked.GetComponent<Character>();
                 //Character ch = picked.GetComponent<Character>();
 
-                if (pi == null || cm == null) //|| ch == null)
+                if (ch == null)
                 {
                     Debug.LogWarning("Something went wrong");
                 }
                 else
                 {
                     print("Clear");
-                    pi.enabled = true;
-                    cm.IsMovementAllowed = true;
-                    //ch.ClearPlayer();
+                    ch.SetPlayerInput(true);
+                    ch.CharacterMovement.IsMovementAllowed = true;
+                    ch.CharacterMovement.Jumper.enabled = true;
                 }
             }
 
@@ -126,18 +125,17 @@ public class Picker : MonoBehaviour
 
         if (objectToPick.CompareTag("Player"))
         {
-            PlayerInput pi = objectToPick.GetComponent<PlayerInput>();
-            CharacterMovement cm = objectToPick.GetComponent<CharacterMovement>();
             Character ch = objectToPick.GetComponent<Character>();
 
-            if (pi == null || ch == null || cm == null)
+            if (ch == null)
             {
                 Debug.LogWarning("Something went wrong");
             }
             else
             {
-                pi.enabled = false;
-                cm.IsMovementAllowed = false;
+                ch.SetPlayerInput(false);
+                ch.CharacterMovement.IsMovementAllowed = false;
+                ch.CharacterMovement.Jumper.enabled = false;
                 ch.ClearPlayer();
             }
 
