@@ -29,7 +29,7 @@ public class Hitter : MonoBehaviour
     {
         if (!_isHitting && value.isPressed)
         {
-            _isHitting = true;
+          
             _character.Animator.SetTrigger("Hit");
         }
     }
@@ -41,6 +41,7 @@ public class Hitter : MonoBehaviour
 
     IEnumerator HitEnabler()
     {
+        _isHitting = true;
         HitTrigger.enabled = true;
         yield return new WaitForFixedUpdate();
         HitTrigger.enabled = false;

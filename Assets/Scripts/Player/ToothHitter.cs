@@ -23,9 +23,18 @@ public class ToothHitter : MonoBehaviour
     {
         if (!_isHitting && value.isPressed)
         {
-            _isHitting = true;
+            
             _character.Animator.SetTrigger("ToothHit");
+            StartCoroutine(DisableInput());
         }
+    }
+
+     IEnumerator DisableInput()
+    {
+        _character.CharacterMovement.IsMovementAllowed = false;
+        yield return new WaitForSeconds(1.5f);
+        _character.CharacterMovement.IsMovementAllowed = true;
+        yield return null;
     }
 
     public void TryToothHit()
@@ -35,6 +44,7 @@ public class ToothHitter : MonoBehaviour
 
     IEnumerator ToothHitEnabler()
     {
+        _isHitting = true;
         HitTrigger.enabled = true;
         yield return new WaitForSeconds(0.5f);
         HitTrigger.enabled = false;
