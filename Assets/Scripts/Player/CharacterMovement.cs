@@ -68,7 +68,7 @@ public class CharacterMovement : MonoBehaviour
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (_character != null && !_character.IsInit) return;
 

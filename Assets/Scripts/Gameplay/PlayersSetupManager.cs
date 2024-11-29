@@ -13,8 +13,6 @@ public class PlayersSetupManager : MonoBehaviour
     public List<Transform> SpawningPoints;
     public List<CharacterData> CharacterDatas;
 
-
-
     public bool GameStarted { get; set; }
 
 
@@ -30,7 +28,7 @@ public class PlayersSetupManager : MonoBehaviour
 
 
         // Start game
-        StartGame();
+        //StartGame();
     }
 
     private void InitializeCharacter(PlayerInput player)
@@ -38,7 +36,9 @@ public class PlayersSetupManager : MonoBehaviour
         var character = player.GetComponent<Character>();
 
         int randomIndex = Random.Range(0, SpawningPoints.Count);
-        Vector3 randomSpawningPoint = SpawningPoints[randomIndex].position;
+        Transform selectedSpawningPoint = SpawningPoints[randomIndex];
+        Debug.Log($"Spawning point: {selectedSpawningPoint.gameObject.name}");
+        Vector3 randomSpawningPoint = selectedSpawningPoint.position;
         SpawningPoints.RemoveAt(randomIndex);
 
         character.Initialize(player.playerIndex, player.currentControlScheme, CharacterDatas[player.playerIndex], randomSpawningPoint);
@@ -53,19 +53,16 @@ public class PlayersSetupManager : MonoBehaviour
     public void StartGame()
     {
         AllowPlayersMovement();
-        //_inputManager.enabled = false;
         this.gameObject.SetActive(false);
-
-        //musicController.StartMusicAndGames();
         GameStarted = true;
     }
 
     private static void AllowPlayersMovement()
     {
         var characterMovements = FindObjectsOfType<Character>().ToList();
-        characterMovements.ForEach(o =>
+        characterMovements.ForEach(character =>
         {
-            o.SetPlayerInput(true);
+            character.SetPlayerInput(true);
         });
     }
 

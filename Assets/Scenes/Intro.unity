@@ -599,8 +599,8 @@ GameObject:
   m_Component:
   - component: {fileID: 219142331}
   - component: {fileID: 219142332}
-  - component: {fileID: 219142333}
   - component: {fileID: 219142334}
+  - component: {fileID: 219142335}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -695,21 +695,6 @@ PlayableDirector:
     value: {fileID: 466255882}
   m_ExposedReferences:
     m_References: []
---- !u!114 &219142333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219142330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b915573ca85371c4e9c7b08f3bec8da6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeline: {fileID: 219142332}
-  secondToJumpTo: 28
-  keyToPress: 32
 --- !u!114 &219142334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,6 +710,22 @@ MonoBehaviour:
   LobbyGo: {fileID: 535376283}
   InputManager: {fileID: 2017261281}
   PlayableDirector: {fileID: 219142332}
+--- !u!114 &219142335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219142330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2132e191da23c84ebea325b06b6a483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playableDirector: {fileID: 219142332}
+  secondToJump: 28
+  submitAction: {fileID: 392368643174621059, guid: 53eab9bc0c029654793e7f9d3f4381fe,
+    type: 3}
 --- !u!1 &251225563
 GameObject:
   m_ObjectHideFlags: 0

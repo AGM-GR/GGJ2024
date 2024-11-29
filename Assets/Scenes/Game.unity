@@ -3085,6 +3085,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1739166880953172890, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_text
+      value: LAS CARIES SALEN CARAS
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739166880953172890, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1911122138407159619, guid: 951af9a85f251c844a5fb98656e94499,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3305,6 +3315,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3076774963164850691, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: onCountdownFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076774963164850691, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: onCountdownFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076774963164850691, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: onCountdownFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1636565379}
+    - target: {fileID: 3076774963164850691, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: onCountdownFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076774963164850691, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: onCountdownFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076774963164850691, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: onCountdownFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayersSetupManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076774963164850691, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: onCountdownFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3124682134805944948, guid: 951af9a85f251c844a5fb98656e94499,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3340,6 +3385,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Hud
       objectReference: {fileID: 0}
+    - target: {fileID: 3407019313290708809, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3473668113003676306, guid: 951af9a85f251c844a5fb98656e94499,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3399,6 +3449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091231008082150718, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4711860256988020717, guid: 951af9a85f251c844a5fb98656e94499,
         type: 3}
