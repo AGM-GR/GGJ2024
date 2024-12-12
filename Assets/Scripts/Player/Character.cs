@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
     public int CharacterIndex = -1;
     public string ControlScheme;
 
+    public GameObject ModelsContainer;
     public GameObject[] CharacterGOs;
 
     public float StunnedTime = 1f;

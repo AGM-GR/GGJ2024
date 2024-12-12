@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
   m_Name: PlayerHidden
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     passTag: PlayerHidden
     Event: 300
@@ -150,11 +150,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
-  m_Name: Player Visible
+  m_Name: PlayerVisible
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    passTag: Player Visible
+    passTag: PlayerVisible
     Event: 300
     filterSettings:
       RenderQueueType: 0

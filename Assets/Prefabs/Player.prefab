@@ -984,6 +984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterIndex: 0
   ControlScheme: Keyboard
+  ModelsContainer: {fileID: 1932752198701393893}
   CharacterGOs:
   - {fileID: 7332658517253940839}
   - {fileID: 6085706283866070249}

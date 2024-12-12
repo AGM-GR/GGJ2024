@@ -35,6 +35,7 @@ public class PlayersSetupManager : MonoBehaviour
     {
         var character = player.GetComponent<Character>();
 
+        character.ModelsContainer.gameObject.SetActive(true);
         int randomIndex = Random.Range(0, SpawningPoints.Count);
         Transform selectedSpawningPoint = SpawningPoints[randomIndex];
         Debug.Log($"Spawning point: {selectedSpawningPoint.gameObject.name}");
