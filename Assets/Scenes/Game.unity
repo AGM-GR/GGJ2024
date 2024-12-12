@@ -2995,6 +2995,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -38.70375
       objectReference: {fileID: 0}
+    - target: {fileID: 544000457309043998, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 463.61865
+      objectReference: {fileID: 0}
+    - target: {fileID: 544000457309043998, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 54.436584
+      objectReference: {fileID: 0}
+    - target: {fileID: 544000457309043998, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 488.6002
+      objectReference: {fileID: 0}
     - target: {fileID: 921617001432657773, guid: 951af9a85f251c844a5fb98656e94499,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3088,7 +3103,22 @@ PrefabInstance:
     - target: {fileID: 1739166880953172890, guid: 951af9a85f251c844a5fb98656e94499,
         type: 3}
       propertyPath: m_text
-      value: LAS CARIES SALEN CARAS
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739166880953172890, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 441.83698
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739166880953172890, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 66.88312
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739166880953172890, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 479.26523
       objectReference: {fileID: 0}
     - target: {fileID: 1739166880953172890, guid: 951af9a85f251c844a5fb98656e94499,
         type: 3}
@@ -3446,6 +3476,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3578494278520827721, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820878006102245000, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -385.564
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820878006102245000, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -404.6512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820878006102245000, guid: 951af9a85f251c844a5fb98656e94499,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820878006102245000, guid: 951af9a85f251c844a5fb98656e94499,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0

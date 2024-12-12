@@ -9,6 +9,7 @@ public class Countdown : MonoBehaviour
 {
     [Tooltip("El texto que mostrará la cuenta atrás.")]
     public TextMeshProUGUI countdownText;
+    public TextMeshProUGUI messageText;
 
     [Header("Events")]
     [Tooltip("Evento invocado cuando termina la cuenta atrás.")]
@@ -23,7 +24,7 @@ public class Countdown : MonoBehaviour
     public void ShowRandomGoMessage()
     {
         List<string> msgs = new List<string> { "A ZURRAR", "A POR LOS PIÑOS", "PIÑOS FUERA", "CUESTIÓN DE MOLAR", "HINCA EL COLMILLO", "QUE SALTEN ESOS PIÑOS", "LAS CARIES SALEN CARAS" };
-        countdownText.text = msgs.GetRandomElement();
+        messageText.text = msgs.GetRandomElement();
     }
 
 
